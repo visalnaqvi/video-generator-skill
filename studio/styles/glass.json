@@ -1,0 +1,19 @@
+{
+  "id": "glass",
+  "radius": 44,
+  "shadow": "soft",
+  "card": "glass",
+  "border": 2,
+  "backdrop": "mesh",
+  "headingCase": "none",
+  "headingWeight": 800,
+  "tracking": -0.01,
+  "typeScale": 1.0,
+  "motion": "smooth",
+  "emphasis": "marker",
+  "surfaceMap": {
+    "background": "secondary",
+    "surface": "secondary",
+    "primary": "secondary"
+  }
+}

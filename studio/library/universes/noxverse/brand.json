@@ -1,0 +1,83 @@
+{
+  "slug": "noxverse",
+  "name": "Noxverse",
+  "status": "approved",
+  "version": 1,
+  "updated": "2026-10-14",
+  "sources": [
+    "Noxverse universe palette — from the Day One series look approved in chat 2026-10-14 (videos/2026-10-14-faked-death-day-one)"
+  ],
+  "colors": {
+    "primary": {
+      "hex": "#0e1626",
+      "name": "Night Navy",
+      "from": "concept: night scenes"
+    },
+    "secondary": {
+      "hex": "#111114",
+      "name": "Ink Black",
+      "from": "concept: vote card"
+    },
+    "accent": {
+      "hex": "#ff3d7f",
+      "name": "Motel Neon",
+      "from": "concept: stamps + highlights"
+    },
+    "highlight": {
+      "hex": "#ff3d7f",
+      "name": "Motel Neon",
+      "from": "caption highlight"
+    },
+    "background": {
+      "hex": "#f1ead9",
+      "name": "Case-file Cream",
+      "from": "concept: file cards"
+    },
+    "surface": {
+      "hex": "#e3d8bf",
+      "name": "Manila",
+      "from": "concept: folder tabs"
+    },
+    "ink": {
+      "hex": "#17171c",
+      "name": "Typewriter Ink",
+      "from": "concept: card text"
+    },
+    "muted": {
+      "hex": "#6f6a5f",
+      "name": "Faded Ink",
+      "from": "concept: labels"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weights": [
+        700,
+        800,
+        900
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "weights": [
+        400,
+        500,
+        600
+      ]
+    }
+  },
+  "computed": {
+    "on": {
+      "primary": "#ffffff",
+      "secondary": "#ffffff",
+      "accent": "#ffffff",
+      "highlight": "#ffffff"
+    }
+  },
+  "usage": [
+    "Neon pink only for stamps, the caption highlight and the vote button — never body text on cream",
+    "Cards on cream use ink text; night scenes put text on a dark panel"
+  ],
+  "notes": "Universe palette, used when a video names the Noxverse and no client brand. Scene art keeps its own drawn colours (scenes/make.mjs)."
+}

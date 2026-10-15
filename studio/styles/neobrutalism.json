@@ -1,0 +1,14 @@
+{
+  "id": "neobrutalism",
+  "radius": 14,
+  "shadow": "hard",
+  "card": "brutal",
+  "border": 5,
+  "backdrop": "dots",
+  "headingCase": "upper",
+  "headingWeight": 900,
+  "tracking": 0,
+  "typeScale": 1.0,
+  "motion": "bouncy",
+  "emphasis": "box"
+}

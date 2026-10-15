@@ -1,0 +1,197 @@
+{
+ "id": "prairie-road",
+ "name": "Prairie road at night",
+ "created": "2026-10-15",
+ "firstUsed": "demo/scene-depth (Last Call shots 4 and 6, test)",
+ "description": "Straight gravel road to a vanishing point through flat farmland at night: crescent moon top-left, tree line, farm with one lit window (left), small town with a water-tower beacon (right), power poles along the right shoulder, drifting ground fog, twinkling stars, wind in the near grass.",
+ "tags": [
+  "night",
+  "road",
+  "prairie",
+  "farmland",
+  "rural",
+  "midwest",
+  "fields",
+  "gravel",
+  "power lines",
+  "small town"
+ ],
+ "stage": {
+  "horizon": 52,
+  "vanish": [
+   50,
+   52
+  ],
+  "floor": "road and fields from y 52 % to the bottom; shoulders at x ≈ 30 % and 70 % around y 72 %",
+  "scale": "character height for feet at y: 65 % → 420 px · 72 % → 600 px · 80 % → 780 px (rig full body; feet = 93 % of the box)",
+  "bestAngles": [
+   "eye-level down the road (as drawn)",
+   "wide with the character small on a shoulder",
+   "push in toward the town lights"
+  ],
+  "props": "car-ditch-prop (left ditch, x 30 y 68 w 640, contact shadow feet 76 + a grass band over its wheels), car-front, fence-fg (foreground, z 0.85)"
+ },
+ "ambient": {
+  "color": "#4a5a8c",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1e2c4c",
+  "amount": 0.4
+ },
+ "focus": {
+  "z": 0.65,
+  "blur": 5
+ },
+ "lights": [
+  {
+   "id": "moon",
+   "kind": "moon",
+   "x": 18,
+   "y": 9,
+   "color": "#a9bfff",
+   "intensity": 0.45,
+   "glow": 120,
+   "under": true,
+   "z": 0.05
+  },
+  {
+   "id": "town",
+   "kind": "moon",
+   "x": 77,
+   "y": 52,
+   "color": "#f4c66b",
+   "intensity": 0.5,
+   "glow": 170,
+   "under": true,
+   "z": 0.15,
+   "glowAspect": 3.2,
+   "castShadows": false
+  },
+  {
+   "id": "beacon",
+   "x": 79.7,
+   "y": 43.2,
+   "color": "#ff4a4a",
+   "intensity": 0.9,
+   "radius": 60,
+   "glow": 18,
+   "blink": 40,
+   "under": true,
+   "z": 0.15
+  },
+  {
+   "id": "farm",
+   "x": 15.2,
+   "y": 50.8,
+   "color": "#ffd27a",
+   "intensity": 0.6,
+   "radius": 80,
+   "glow": 14,
+   "flicker": 0.1,
+   "under": true,
+   "z": 0.15
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/scenes/prairie-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.12
+  },
+  {
+   "id": "stars",
+   "type": "ambient",
+   "kind": "stars",
+   "area": [
+    0,
+    0,
+    100,
+    48
+   ],
+   "count": 35,
+   "z": 0.05
+  },
+  {
+   "id": "far",
+   "type": "image",
+   "src": "lib:universes/noxverse/scenes/prairie-far.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.15
+  },
+  {
+   "id": "fog-far",
+   "type": "ambient",
+   "kind": "fog",
+   "area": [
+    -10,
+    47,
+    120,
+    8
+   ],
+   "color": "#6f83b3",
+   "count": 6,
+   "z": 0.2
+  },
+  {
+   "id": "field",
+   "type": "image",
+   "src": "lib:universes/noxverse/scenes/prairie-field.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.4
+  },
+  {
+   "id": "poles",
+   "type": "image",
+   "src": "lib:universes/noxverse/scenes/prairie-poles.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.5
+  },
+  {
+   "id": "fog-near",
+   "type": "ambient",
+   "kind": "fog",
+   "area": [
+    -10,
+    58,
+    120,
+    12
+   ],
+   "color": "#6f83b3",
+   "count": 5,
+   "z": 0.5
+  },
+  {
+   "id": "grass-front",
+   "front": true,
+   "type": "ambient",
+   "kind": "grass",
+   "area": [
+    -5,
+    88,
+    110,
+    12
+   ],
+   "colors": [
+    "#05080f",
+    "#0a0f1b"
+   ],
+   "z": 0.9
+  }
+ ]
+}

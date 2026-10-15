@@ -1,0 +1,399 @@
+{
+  "slug": "stargate",
+  "name": "Sanjay Aggarwal Classes",
+  "aka": [
+    "Stargate"
+  ],
+  "status": "approved",
+  "version": 2,
+  "updated": "2026-10-14",
+  "sources": [
+    {
+      "type": "website",
+      "ref": "https://stargate.net.in/",
+      "read": "2026-10-14"
+    },
+    {
+      "type": "file",
+      "ref": "logo/stargate-mark.png",
+      "origin": "https://stargate.net.in/wp-content/uploads/2021/10/STARGATE-LOGO-PNG-1.png"
+    },
+    {
+      "type": "file",
+      "ref": "logo/wordmark-lowres.jpg",
+      "origin": "site header image"
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": "#3b57a4",
+      "name": "Star Blue",
+      "from": "logo (star)"
+    },
+    "secondary": {
+      "hex": "#03143b",
+      "name": "Midnight Navy",
+      "from": "site section backgrounds + wordmark bar"
+    },
+    "accent": {
+      "hex": "#ff9635",
+      "name": "Stargate Orange",
+      "from": "user (site CTA buttons)"
+    },
+    "highlight": {
+      "hex": "#ffab5e",
+      "name": "Soft Orange",
+      "from": "site theme colour"
+    },
+    "background": {
+      "hex": "#ffffff",
+      "name": "White",
+      "from": "site background"
+    },
+    "surface": {
+      "hex": "#ecf0f2",
+      "name": "Cloud Grey",
+      "from": "site theme colour"
+    },
+    "ink": {
+      "hex": "#22323d",
+      "name": "Slate Ink",
+      "from": "body text"
+    },
+    "muted": {
+      "hex": "#69727d",
+      "name": "Slate Grey",
+      "from": "site secondary text"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Montserrat",
+      "weights": [
+        700,
+        800
+      ],
+      "from": "site h1–h3 (700)",
+      "original": null
+    },
+    "body": {
+      "family": "Montserrat",
+      "weights": [
+        400,
+        500
+      ],
+      "from": "site body",
+      "original": null
+    }
+  },
+  "logo": {
+    "primary": "logo/stargate-mark.png",
+    "onDark": null,
+    "icon": "logo/stargate-mark.png",
+    "wordmark": "logo/wordmark-lowres.jpg",
+    "safeBackground": "light",
+    "notes": "Mark = 'G' arc (purple #422e65 + red) with blue star, 1600px transparent PNG — fine for video. Wordmark is only 404x108 JPEG on white — too small for 1080p; ask the client for a high-res/vector wordmark. Mark's purple arc gets lost on navy: keep it on white/light, or on navy inside a white badge."
+  },
+  "voice": {
+    "spokenName": "Sanjay Aggarwal Classes",
+    "tagline": "Greatness Achieved Through Excellence",
+    "tone": [
+      "confident",
+      "mentor-like",
+      "warm",
+      "results-focused"
+    ],
+    "cta": {
+      "default": "Book your free career counselling",
+      "phone": "7210032621",
+      "url": "https://stargate.net.in/",
+      "whatsapp": null
+    },
+    "contact": {
+      "phones": [
+        "011-43053800",
+        "7210032621",
+        "9811374374",
+        "9315009496"
+      ],
+      "email": null,
+      "address": "S-523, 1st & 2nd Floor, Vikas Marg, opp. Metro Pillar 27, Shakarpur, Delhi 110092",
+      "social": []
+    },
+    "say": [
+      "CA and CMA, Foundation to Final",
+      "Online or classroom",
+      "Free career counselling"
+    ],
+    "avoid": [
+      "India's No.1 faculty (unprovable superlative on site)",
+      "India's most Online Commerce Coaching Platform (unclear/unprovable)",
+      "Student, rank-holder or lecture counts (site counters show 0+, no real figures)"
+    ]
+  },
+  "facts": [
+    {
+      "claim": "Coaching for CA (Foundation, Inter, Final) and CMA (Foundation, Inter, Final)",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Founders have taught CA students for more than 25 years",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Co-founders: CA Sanjay Aggarwal (qualified 1998, teaches CA Final SCMPE) and CA Manoj Batra (Indirect Taxes, ICAI merit-list rank holder)",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Online and classroom classes; study at your own pace",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Google rating 5/5 from 105 ratings (average, as shown on site)",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Testimonial: Eklavya scored 87 in CA Final Costing in his first attempt",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Free career counselling session offered",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    }
+  ],
+  "notes": "Accent set to orange by the user (matches the site's CTA buttons). Logo red #ed3237 stays in the logo itself; not used as a role. Text on orange uses ink, not white.",
+  "computed": {
+    "on": {
+      "primary": "#ffffff",
+      "secondary": "#ffffff",
+      "accent": "#22323d",
+      "highlight": "#22323d"
+    },
+    "scales": {
+      "primary": {
+        "50": "#f1f5ff",
+        "100": "#dee8ff",
+        "200": "#bcd1ff",
+        "300": "#96b3f7",
+        "400": "#7796e1",
+        "500": "#5a79c9",
+        "600": "#455fa4",
+        "700": "#334985",
+        "800": "#203263",
+        "900": "#0e1c43"
+      },
+      "secondary": {
+        "50": "#f0f5ff",
+        "100": "#dce9ff",
+        "200": "#bdd2f7",
+        "300": "#9eb5de",
+        "400": "#8099c6",
+        "500": "#647dac",
+        "600": "#4d638c",
+        "700": "#3a4d70",
+        "800": "#253552",
+        "900": "#121f36"
+      },
+      "accent": {
+        "50": "#fff3ea",
+        "100": "#ffe2cc",
+        "200": "#ffc395",
+        "300": "#f39e58",
+        "400": "#db7e25",
+        "500": "#b96400",
+        "600": "#944f00",
+        "700": "#743d00",
+        "800": "#522900",
+        "900": "#331700"
+      }
+    },
+    "contrast": [
+      {
+        "pair": "ink on background",
+        "ratio": 13.19,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "muted on background",
+        "ratio": 4.88,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "ink on surface",
+        "ratio": 11.51,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "on-primary on primary",
+        "ratio": 6.81,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "on-secondary on secondary",
+        "ratio": 17.99,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "on-accent on accent",
+        "ratio": 6.07,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "primary on background",
+        "ratio": 6.81,
+        "need": 3,
+        "ok": true
+      },
+      {
+        "pair": "accent on background",
+        "ratio": 2.17,
+        "need": 3,
+        "ok": false
+      },
+      {
+        "pair": "ink on highlight",
+        "ratio": 7.06,
+        "need": 4.5,
+        "ok": true
+      }
+    ],
+    "fonts": {
+      "heading": {
+        "family": "Montserrat",
+        "google": true,
+        "weightsAvailable": true
+      },
+      "body": {
+        "family": "Montserrat",
+        "google": true,
+        "weightsAvailable": true
+      }
+    },
+    "warnings": [
+      "accent on background: contrast 2.17 < 3"
+    ],
+    "built": "2026-10-14"
+  },
+  "usage": [
+    "Accent orange is a fill colour: buttons, blocks, number backgrounds — always with ink (#22323d) text on it, never white.",
+    "Never orange text or thin orange lines on white/light backgrounds (contrast 2.2:1). Orange text is fine on Midnight Navy or Star Blue.",
+    "Logo mark goes on white/light backgrounds, or inside a white badge on navy."
+  ],
+  "team": [
+    {
+      "name": "CA Sanjay Aggarwal",
+      "role": "Co-founder; teaches CA Final SCMPE / Costing",
+      "credentials": "Qualified 1998; associate member of ICWAI; medal from NIRC",
+      "asset": "sanjay-aggarwal-portrait",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "CA Manoj Batra",
+      "role": "Co-founder; teaches Indirect Taxes (CA Final)",
+      "credentials": "ICAI merit-list rank holder",
+      "asset": "manoj-batra-portrait",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "CA Foundation",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "CA Inter (incl. combos) — e.g. Cost & Management Accounting (Paper 4)",
+      "asset": "course-ca-inter-cma",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "CA Final (incl. combos) — e.g. SCMPE / SPOM Set B",
+      "asset": "course-ca-final-spom",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "CMA Foundation",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "CMA Inter — e.g. Paper 8 Cost Accounting, Paper 12 Management Accounting",
+      "asset": "course-cma-inter-ma",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "CMA Final — e.g. Paper 16 Strategic Cost Management (incl. Fastrack)",
+      "asset": "course-cma-final-scm",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "Free career counselling session",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Eklavya",
+      "quote": "I fetched 87 marks in the subject in my first attempt",
+      "detail": "CA Final Costing; earlier struggled in IPCC; now in senior management handling costing",
+      "asset": "eklavya-photo",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "Srishti Patel",
+      "quote": "Apart from learning the subject in a crystal clear manner, I learned many things to cherish lifelong.",
+      "asset": "srishti-patel-photo",
+      "source": "https://stargate.net.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "Gaurav Varshney",
+      "quote": "The best part about Sanjay Sir teaching technique is that he explain even the toughest topics in most simplified way.",
+      "detail": "SCM",
+      "source": "https://www.stargate.net.in/stargate-feedbacks/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "Muskan Goel",
+      "quote": "The classes are full conceptual clarity and practical approach.",
+      "detail": "Costing",
+      "source": "https://www.stargate.net.in/stargate-feedbacks/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "Salim Anzer",
+      "quote": "Scmpe classes were amazing, concept were well explained and notes provided is well elaborated",
+      "detail": "SCMPE",
+      "source": "https://www.stargate.net.in/stargate-feedbacks/",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "Sanskriti Pandey",
+      "quote": "The concepts are clear and sir has explained everything very well.",
+      "source": "https://www.stargate.net.in/stargate-feedbacks/",
+      "checked": "2026-10-14"
+    }
+  ],
+  "assets": "assets.json"
+}

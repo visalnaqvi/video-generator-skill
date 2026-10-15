@@ -1,0 +1,198 @@
+{
+ "id": "prairie-road-ai",
+ "name": "Prairie road at night (AI)",
+ "status": "approved",
+ "created": "2026-10-15",
+ "description": "The code-drawn prairie road detailed by Flux.1-schnell locally (image-to-image, denoise 0.88, seed 112), colour-graded to the code-drawn Noxverse palette (grade.mjs), split into backdrop / ground / standing-object planes with Depth Anything V2. Crescent moon top-left, small town lights at the horizon left of the road, farmhouse with a lit window and a water tower beacon right, power poles with a lamp along the right shoulder, tall grass bank on the right.",
+ "source": "sets/prairie-road-ai/ — init.png (code layout) → source-ai.png (Flux detail, denoise 0.88, seed 112) → source-graded.png (grade.mjs to the code palette) → planes",
+ "tags": [
+  "night",
+  "road",
+  "prairie",
+  "farmland",
+  "rural",
+  "gravel",
+  "power lines",
+  "small town"
+ ],
+ "stage": {
+  "horizon": 44,
+  "vanish": [
+   50,
+   44
+  ],
+  "floor": "road from y 44 % down, shoulders at x ≈ 28 % and 72 % around y 75 %",
+  "scale": "character height for feet at y: 60 % → 380 px · 70 % → 560 px · 78 % → 720 px (rig full body)",
+  "bestAngles": [
+   "eye-level down the road",
+   "full shot on the right shoulder by the grass",
+   "back view toward the town lights"
+  ]
+ },
+ "ambient": {
+  "color": "#4a5a8c",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1e2c4c",
+  "amount": 0.3
+ },
+ "focus": {
+  "z": 0.65,
+  "blur": 4
+ },
+ "lights": [
+  {
+   "id": "moon",
+   "kind": "moon",
+   "x": 24.7,
+   "y": 7.6,
+   "color": "#cfd8ff",
+   "intensity": 0.45,
+   "glow": 110,
+   "under": true,
+   "z": 0.05
+  },
+  {
+   "id": "town",
+   "kind": "moon",
+   "x": 37,
+   "y": 43.6,
+   "color": "#f4c66b",
+   "intensity": 0.35,
+   "glow": 150,
+   "glowAspect": 3.2,
+   "under": true,
+   "z": 0.05,
+   "castShadows": false
+  },
+  {
+   "id": "farm",
+   "x": 75.8,
+   "y": 44,
+   "color": "#ffd27a",
+   "intensity": 0.6,
+   "radius": 90,
+   "glow": 16,
+   "flicker": 0.1,
+   "under": true,
+   "z": 0.35
+  },
+  {
+   "id": "beacon",
+   "x": 64,
+   "y": 39.3,
+   "color": "#ff4a4a",
+   "intensity": 0.9,
+   "radius": 60,
+   "glow": 16,
+   "blink": 40,
+   "under": true,
+   "z": 0.35
+  },
+  {
+   "id": "lamp",
+   "x": 87.6,
+   "y": 30.8,
+   "color": "#ffe2a8",
+   "intensity": 0.5,
+   "radius": 520,
+   "glow": 26,
+   "flicker": 0.15,
+   "z": 0.6,
+   "castShadows": false
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/prairie-road-ai/prairie-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.05
+  },
+  {
+   "id": "stars",
+   "type": "ambient",
+   "kind": "stars",
+   "area": [
+    0,
+    0,
+    100,
+    40
+   ],
+   "count": 30,
+   "z": 0.05
+  },
+  {
+   "id": "fog-far",
+   "type": "ambient",
+   "kind": "fog",
+   "area": [
+    -10,
+    40,
+    120,
+    7
+   ],
+   "color": "#6f83b3",
+   "count": 6,
+   "z": 0.2
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/prairie-road-ai/prairie-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "fog-near",
+   "type": "ambient",
+   "kind": "fog",
+   "area": [
+    -10,
+    52,
+    120,
+    12
+   ],
+   "color": "#6f83b3",
+   "count": 5,
+   "z": 0.45
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/prairie-road-ai/prairie-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.55
+  },
+  {
+   "id": "grass-front",
+   "front": true,
+   "type": "ambient",
+   "kind": "grass",
+   "area": [
+    -5,
+    90,
+    110,
+    10
+   ],
+   "colors": [
+    "#0b1424",
+    "#13203a"
+   ],
+   "z": 0.9
+  }
+ ],
+ "approved": "2026-10-15"
+}

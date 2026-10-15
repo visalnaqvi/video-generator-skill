@@ -1,0 +1,14 @@
+{
+  "id": "whiteboard-doodle",
+  "radius": 18,
+  "shadow": "none",
+  "card": "outline",
+  "border": 3,
+  "backdrop": "flat",
+  "headingCase": "none",
+  "headingWeight": 700,
+  "tracking": 0,
+  "typeScale": 1.0,
+  "motion": "smooth",
+  "emphasis": "underline"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "documentary",
+  "radius": 0,
+  "shadow": "none",
+  "card": "outline",
+  "border": 1,
+  "backdrop": "grain",
+  "headingCase": "upper",
+  "headingWeight": 700,
+  "tracking": 0.12,
+  "typeScale": 0.9,
+  "motion": "smooth",
+  "emphasis": "color",
+  "surfaceMap": {
+    "background": "secondary",
+    "surface": "secondary"
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "url": "https://stargate.net.in/",
+  "scanned": "2026-10-14",
+  "meta": {
+    "title": "Home - SANJAY AGGARWAL CLASSES",
+    "description": null,
+    "siteName": "SANJAY AGGARWAL CLASSES",
+    "themeColor": null
+  },
+  "colors": {
+    "note": "site = count in the site's own CSS; framework = plugin/library CSS (usually not brand). bg/text/border = where it is used.",
+    "brandVariables": [
+      {
+        "name": "--ast-global-color-0",
+        "hex": "#ffab5e"
+      },
+      {
+        "name": "--ast-global-color-1",
+        "hex": "#ff9635"
+      },
+      {
+        "name": "--ast-global-color-2",
+        "hex": "#000000"
+      },
+      {
+        "name": "--ast-global-color-3",
+        "hex": "#22323d"
+      },
+      {
+        "name": "--ast-global-color-4",
+        "hex": "#ffffff"
+      },
+      {
+        "name": "--ast-global-color-5",
+        "hex": "#ecf0f2"
+      },
+      {
+        "name": "--ast-global-color-6",
+        "hex": "#007991"
+      },
+      {
+        "name": "--ast-global-color-7",
+        "hex": "#2e4a66"
+      },
+      {
+        "name": "--ast-global-color-8",
+        "hex": "#bfd1ff"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor0",
+        "hex": "#ffab5e"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor1",
+        "hex": "#ff9635"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor2",
+        "hex": "#000000"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor3",
+        "hex": "#22323d"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor4",
+        "hex": "#ffffff"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor5",
+        "hex": "#ecf0f2"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor6",
+        "hex": "#007991"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor7",
+        "hex": "#2e4a66"
+      },
+      {
+        "name": "--e-global-color-astglobalcolor8",
+        "hex": "#bfd1ff"
+      },
+      {
+        "name": "--swiper-theme-color",
+        "hex": "#000000"
+      },
+      {
+        "name": "--n-tabs-color-accent-fallback",
+        "hex": "#61ce70"
+      },
+      {
+        "name": "--n-tabs-color-secondary-fallback",
+        "hex": "#54595f"
+      },
+      {
+        "name": "--n-tabs-title-background-color",
+        "hex": "#f1f2f3"
+      },
+      {
+        "name": "--e-global-color-primary",
+        "hex": "#6ec1e4"
+      },
+      {
+        "name": "--e-global-color-secondary",
+        "hex": "#54595f"
+      },
+      {
+        "name": "--e-global-color-text",
+        "hex": "#7a7a7a"
+      },
+      {
+        "name": "--e-global-color-accent",
+        "hex": "#61ce70"
+      }
+    ],
+    "top": [
+      {
+        "hex": "#ffffff",
+        "site": 146,
+        "framework": 173,
+        "bg": 88,
+        "text": 187,
+        "border": 21,
+        "svg": 12,
+        "other": 11,
+        "lightness": 1,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#000000",
+        "site": 39,
+        "framework": 40,
+        "bg": 31,
+        "text": 33,
+        "border": 6,
+        "svg": 3,
+        "other": 6,
+        "lightness": 0,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#002b5b",
+        "site": 32,
+        "framework": 0,
+        "bg": 10,
+        "text": 8,
+        "border": 14,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.29,
+        "chroma": 0.097,
+        "neutral": false
+      },
+      {
+        "hex": "#ff9110",
+        "site": 25,
+        "framework": 0,
+        "bg": 14,
+        "text": 4,
+        "border": 2,
+        "svg": 2,
+        "other": 3,
+        "lightness": 0.76,
+        "chroma": 0.175,
+        "neutral": false
+      },
+      {
+        "hex": "#f96b24",
+        "site": 19,
+        "framework": 0,
+        "bg": 14,
+        "text": 3,
+        "border": 0,
+        "svg": 2,
+        "other": 0,
+        "lightness": 0.69,
+        "chroma": 0.19,
+        "neutral": false
+      },
+      {
+        "hex": "#7497b9",
+        "site": 18,
+        "framework": 0,
+        "bg": 14,
+        "text": 2,
+        "border": 2,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.66,
+        "chroma": 0.064,
+        "neutral": false
+      },
+      {
+        "hex": "#4b6e90",
+        "site": 14,
+        "framework": 0,
+        "bg": 12,
+        "text": 2,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.53,
+        "chroma": 0.067,
+        "neutral": false
+      },
+      {
+        "hex": "#0274be",
+        "site": 11,
+        "framework": 0,
+        "bg": 5,
+        "text": 3,
+        "border": 3,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.54,
+        "chroma": 0.144,
+        "neutral": false
+      },
+      {
+        "hex": "#69727d",
+        "site": 9,
+        "framework": 0,
+        "bg": 3,
+        "text": 4,
+        "border": 2,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.55,
+        "chroma": 0.02,
+        "neutral": true
+      },
+      {
+        "hex": "#808285",
+        "site": 8,
+        "framework": 0,
+        "bg": 0,
+        "text": 8,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.61,
+        "chroma": 0.005,
+        "neutral": true
+      },
+      {
+        "hex": "#eeeeee",
+        "site": 6,
+        "framework": 10,
+        "bg": 7,
+        "text": 3,
+        "border": 2,
+        "svg": 2,
+        "other": 2,
+        "lightness": 0.95,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#003399",
+        "site": 6,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 6,
+        "lightness": 0.37,
+        "chroma": 0.173,
+        "neutral": false
+      },
+      {
+        "hex": "#cccccc",
+        "site": 5,
+        "framework": 16,
+        "bg": 3,
+        "text": 2,
+        "border": 16,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.85,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#d9534f",
+        "site": 5,
+        "framework": 1,
+        "bg": 3,
+        "text": 2,
+        "border": 1,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.62,
+        "chroma": 0.169,
+        "neutral": false
+      },
+      {
+        "hex": "#3a3a3a",
+        "site": 5,
+        "framework": 0,
+        "bg": 0,
+        "text": 5,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.35,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#03143b",
+        "site": 5,
+        "framework": 0,
+        "bg": 5,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.21,
+        "chroma": 0.079,
+        "neutral": false
+      },
+      {
+        "hex": "#d9d9d9",
+        "site": 4,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 4,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.89,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#666666",
+        "site": 3,
+        "framework": 2,
+        "bg": 0,
+        "text": 3,
+        "border": 2,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.51,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#ff6900",
+        "site": 3,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 3,
+        "lightness": 0.7,
+        "chroma": 0.202,
+        "neutral": false
+      },
+      {
+        "hex": "#f0ad4e",
+        "site": 3,
+        "framework": 0,
+        "bg": 2,
+        "text": 1,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.79,
+        "chroma": 0.135,
+        "neutral": false
+      }
+    ]
+  },
+  "fonts": {
+    "googleFontsLoaded": [
+      "Montserrat",
+      "Roboto",
+      "Roboto Slab"
+    ],
+    "fontFace": [
+      "Astra",
+      "ysm-fontello",
+      "qlwapp-whatsapp",
+      "qltgm-telegram"
+    ],
+    "byUsage": [
+      {
+        "family": "Astra",
+        "weight": 67
+      },
+      {
+        "family": "Montserrat",
+        "weight": 36
+      },
+      {
+        "family": "Open Sans",
+        "weight": 6
+      },
+      {
+        "family": "Courier 10 Pitch",
+        "weight": 3
+      },
+      {
+        "family": "Roboto Slab",
+        "weight": 3
+      },
+      {
+        "family": "ysm-fontello",
+        "weight": 2
+      },
+      {
+        "family": "qlwapp-whatsapp",
+        "weight": 2
+      },
+      {
+        "family": "qltgm-telegram",
+        "weight": 2
+      },
+      {
+        "family": "Source Serif Pro",
+        "weight": 1
+      }
+    ]
+  },
+  "logoCandidates": [
+    {
+      "url": "https://stargate.net.in/wp-content/uploads/2022/08/WhatsApp-Image-2026-08-24-at-3.12.16-PM.jpeg",
+      "alt": "WhatsApp Image 2026-08-24 at 3.12.16 PM",
+      "score": 6
+    },
+    {
+      "url": "https://stargate.net.in/wp-content/uploads/2021/10/cropped-STARGATE-LOGO-PNG-1-180x180.png",
+      "alt": "apple-touch-icon",
+      "score": 1.5
+    },
+    {
+      "url": "https://stargate.net.in/wp-content/uploads/2023/07/WhatsApp-Image-2026-08-26-at-5.48.37-PM-768x768.jpeg",
+      "alt": "WhatsApp Image 2026-08-26 at 5.48",
+      "score": 1
+    },
+    {
+      "url": "https://stargate.net.in/wp-content/uploads/2022/10/WhatsApp-Image-2026-08-27-at-1.44.00-PM-768x768.jpeg",
+      "alt": "WhatsApp Image 2026-08-27 at 1.44",
+      "score": 1
+    },
+    {
+      "url": "https://stargate.net.in/wp-content/uploads/2021/10/cropped-STARGATE-LOGO-PNG-1-32x32.png",
+      "alt": "icon",
+      "score": 1
+    },
+    {
+      "url": "https://stargate.net.in/wp-content/uploads/2021/10/cropped-STARGATE-LOGO-PNG-1-192x192.png",
+      "alt": "icon",
+      "score": 1
+    }
+  ],
+  "contacts": {
+    "phones": [
+      "7210032621"
+    ],
+    "emails": [],
+    "whatsapp": [],
+    "social": []
+  },
+  "headings": [
+    "Greatness Achieved Through Excellence",
+    "Start Your CA Journey With Us",
+    "Why Choose Us?",
+    "Our Leaders",
+    "CA CMA Sanjay Aggarwal",
+    "CA Manoj Batra",
+    "Trusted by Thousand of Students and Tutors",
+    "Attractive Numbers",
+    "India's Most Loved Educational Platform"
+  ],
+  "cssFiles": {
+    "read": 46,
+    "failed": 0
+  }
+}

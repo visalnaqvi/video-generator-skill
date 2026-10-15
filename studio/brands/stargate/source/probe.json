@@ -1,0 +1,12 @@
+{
+  "url": "https://stargate.net.in/",
+  "probed": "2026-10-14",
+  "viewport": "hidden (backgrounds weighted by element area, less exact)",
+  "backgroundsByArea": [{"value":"#03143b","share":26},{"value":"gradient","share":25},{"value":"#ffffff","share":25},{"value":"#5a4bda","share":22},{"value":"#0a1435","share":1}],
+  "textColorsByAmount": [{"value":"#ffffff","share":67},{"value":"#22323d","share":24},{"value":"#000000","share":5},{"value":"#2e4a66","share":3},{"value":"#ff9110","share":1}],
+  "buttons": [{"value":"#ff9635 on #ffffff","share":25},{"value":"#002b5b on #ffffff","share":25},{"value":"#25d366 on #ffffff","share":25},{"value":"#37afe2 on #ffffff","share":25}],
+  "headingFonts": [{"value":"Montserrat 700","share":90},{"value":"Montserrat 600","share":10}],
+  "bodyFonts": [{"value":"Montserrat 400","share":67},{"value":"Montserrat 500","share":16},{"value":"Montserrat 700","share":15}],
+  "loadedFontFaces": ["Montserrat"],
+  "logos": [{"src":"https://stargate.net.in/wp-content/uploads/2022/08/WhatsApp-Image-2026-08-24-at-3.12.16-PM.jpeg","size":"404x108","bgBehind":"#ffffff"}]
+}

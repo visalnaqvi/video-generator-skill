@@ -1,0 +1,14 @@
+{
+  "id": "data-infographic",
+  "radius": 16,
+  "shadow": "none",
+  "card": "solid",
+  "border": 0,
+  "backdrop": "grid",
+  "headingCase": "none",
+  "headingWeight": 800,
+  "tracking": -0.01,
+  "typeScale": 1.0,
+  "motion": "snappy",
+  "emphasis": "box"
+}

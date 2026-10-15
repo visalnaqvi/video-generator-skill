@@ -1,0 +1,18 @@
+{
+  "id": "bold-gradient",
+  "radius": 40,
+  "shadow": "glow",
+  "card": "glass",
+  "border": 2,
+  "backdrop": "gradient",
+  "headingCase": "none",
+  "headingWeight": 900,
+  "tracking": -0.01,
+  "typeScale": 1.05,
+  "motion": "bouncy",
+  "emphasis": "marker",
+  "surfaceMap": {
+    "background": "primary",
+    "surface": "primary"
+  }
+}

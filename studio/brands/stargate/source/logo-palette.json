@@ -1,0 +1,116 @@
+[
+  {
+    "input": "https://stargate.net.in/wp-content/uploads/2022/08/WhatsApp-Image-2026-08-24-at-3.12.16-PM.jpeg",
+    "file": "studio\\brands\\stargate\\logo\\WhatsApp-Image-2026-08-24-at-3-12-16-PM.jpg",
+    "format": "jpeg",
+    "size": "404x108",
+    "transparentShare": 0,
+    "tone": "mid",
+    "colors": [
+      {
+        "hex": "#f8f7f8",
+        "share": 57,
+        "lightness": 0.98,
+        "chroma": 0.001
+      },
+      {
+        "hex": "#080656",
+        "share": 11,
+        "lightness": 0.22,
+        "chroma": 0.133
+      },
+      {
+        "hex": "#a62729",
+        "share": 7,
+        "lightness": 0.48,
+        "chroma": 0.164
+      },
+      {
+        "hex": "#c89698",
+        "share": 4,
+        "lightness": 0.72,
+        "chroma": 0.06
+      },
+      {
+        "hex": "#b5b4c8",
+        "share": 4,
+        "lightness": 0.78,
+        "chroma": 0.028
+      },
+      {
+        "hex": "#3a365a",
+        "share": 4,
+        "lightness": 0.35,
+        "chroma": 0.061
+      },
+      {
+        "hex": "#fad9d8",
+        "share": 4,
+        "lightness": 0.91,
+        "chroma": 0.036
+      },
+      {
+        "hex": "#b75757",
+        "share": 3,
+        "lightness": 0.58,
+        "chroma": 0.125
+      }
+    ]
+  },
+  {
+    "input": "https://stargate.net.in/wp-content/uploads/2021/10/STARGATE-LOGO-PNG-1.png",
+    "file": "studio\\brands\\stargate\\logo\\STARGATE-LOGO-PNG-1.png",
+    "format": "png",
+    "size": "1600x1661",
+    "transparentShare": 51,
+    "tone": "mid",
+    "colors": [
+      {
+        "hex": "#3b57a4",
+        "share": 40,
+        "lightness": 0.48,
+        "chroma": 0.129
+      },
+      {
+        "hex": "#422e65",
+        "share": 32,
+        "lightness": 0.35,
+        "chroma": 0.094
+      },
+      {
+        "hex": "#ed3237",
+        "share": 27,
+        "lightness": 0.62,
+        "chroma": 0.221
+      }
+    ]
+  },
+  {
+    "input": "https://stargate.net.in/wp-content/uploads/2021/10/cropped-STARGATE-LOGO-PNG-1-180x180.png",
+    "file": "studio\\brands\\stargate\\logo\\cropped-STARGATE-LOGO-PNG-1-180x180.png",
+    "format": "png",
+    "size": "180x180",
+    "transparentShare": 51,
+    "tone": "mid",
+    "colors": [
+      {
+        "hex": "#3b57a4",
+        "share": 40,
+        "lightness": 0.48,
+        "chroma": 0.128
+      },
+      {
+        "hex": "#422e65",
+        "share": 32,
+        "lightness": 0.35,
+        "chroma": 0.094
+      },
+      {
+        "hex": "#ed3237",
+        "share": 27,
+        "lightness": 0.62,
+        "chroma": 0.221
+      }
+    ]
+  }
+]

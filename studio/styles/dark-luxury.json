@@ -1,0 +1,20 @@
+{
+  "id": "dark-luxury",
+  "radius": 4,
+  "shadow": "none",
+  "card": "outline",
+  "border": 2,
+  "backdrop": "glow",
+  "headingCase": "upper",
+  "headingWeight": 700,
+  "tracking": 0.08,
+  "typeScale": 0.9,
+  "motion": "smooth",
+  "emphasis": "color",
+  "surfaceMap": {
+    "background": "secondary",
+    "surface": "secondary",
+    "primary": "secondary",
+    "accent": "secondary"
+  }
+}

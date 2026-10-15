@@ -1,0 +1,14 @@
+{
+  "id": "exam-paper",
+  "radius": 6,
+  "shadow": "soft",
+  "card": "solid",
+  "border": 0,
+  "backdrop": "grid",
+  "headingCase": "upper",
+  "headingWeight": 800,
+  "tracking": 0,
+  "typeScale": 1.0,
+  "motion": "snappy",
+  "emphasis": "marker"
+}

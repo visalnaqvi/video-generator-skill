@@ -1,0 +1,307 @@
+{
+  "slug": "pilotdesk",
+  "name": "PilotDesk",
+  "aka": [
+    "MockPilot",
+    "pilotdesk.in"
+  ],
+  "status": "approved",
+  "version": 1,
+  "updated": "2026-10-14",
+  "sources": [
+    {
+      "type": "website",
+      "ref": "https://pilotdesk.in/",
+      "read": "2026-10-14"
+    },
+    {
+      "type": "app",
+      "ref": "https://pilotdesk.in/tests (signed in, built-in browser)",
+      "read": "2026-10-14"
+    },
+    {
+      "type": "file",
+      "ref": "logo/pilotdesk-logo.png",
+      "origin": "re-drawn from the site's CSS logo (violet rounded square + 'P', 'PilotDesk' Montserrat 800) — the site has no logo image file"
+    },
+    {
+      "type": "file",
+      "ref": "logo/mockpilot-wordmark.png",
+      "origin": "re-drawn from the app header wordmark ('MOCKPILOT', indigo-600, Montserrat 900)"
+    }
+  ],
+  "colors": {
+    "primary": {
+      "hex": "#6556e8",
+      "name": "Pilot Violet",
+      "from": "logo mark + site buttons/headline accent"
+    },
+    "secondary": {
+      "hex": "#4f46e5",
+      "name": "MockPilot Indigo",
+      "from": "site --brand-primary + app wordmark/links"
+    },
+    "accent": {
+      "hex": "#24a765",
+      "name": "Growth Green",
+      "from": "buttons (site WhatsApp CTA)"
+    },
+    "highlight": {
+      "hex": "#e9e6ff",
+      "name": "Lavender Mist",
+      "from": "site tinted section/cards"
+    },
+    "background": {
+      "hex": "#f6f7fb",
+      "name": "Cloud",
+      "from": "site background"
+    },
+    "surface": {
+      "hex": "#ffffff",
+      "name": "White",
+      "from": "site cards"
+    },
+    "ink": {
+      "hex": "#101828",
+      "name": "Night Ink",
+      "from": "body text + dark sections"
+    },
+    "muted": {
+      "hex": "#5b6478",
+      "name": "Slate",
+      "from": "derived (site secondary text)"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Montserrat",
+      "weights": [
+        800,
+        900
+      ],
+      "from": "site h1–h3 (900)",
+      "original": null
+    },
+    "body": {
+      "family": "Montserrat",
+      "weights": [
+        500,
+        700
+      ],
+      "from": "site body (500)",
+      "original": null
+    }
+  },
+  "logo": {
+    "primary": "logo/pilotdesk-logo.png",
+    "onDark": "logo/pilotdesk-logo-ondark.png",
+    "icon": "logo/pilotdesk-icon.png",
+    "wordmark": "logo/mockpilot-wordmark.png",
+    "safeBackground": "any",
+    "notes": "The site's logo is CSS, not an image: re-drawn at 2-4x size as transparent PNGs. Violet 'P' mark works on light and dark; use the -ondark lockup on #101828. 'MOCKPILOT' is the name of the mock-test module inside the app (indigo wordmark) — use it for in-product scenes, PilotDesk for the brand sign-off."
+  },
+  "voice": {
+    "spokenName": "PilotDesk",
+    "tagline": "Grow your institute. Run it smarter.",
+    "tone": [
+      "practical",
+      "clear",
+      "confident",
+      "friendly to non-technical teachers"
+    ],
+    "cta": {
+      "default": "Get a free consultation",
+      "phone": "+91 89201 52023",
+      "url": "https://pilotdesk.in/",
+      "whatsapp": "https://wa.me/918920152023"
+    },
+    "contact": {
+      "phones": [
+        "+91 89201 52023"
+      ],
+      "email": null,
+      "address": null,
+      "social": []
+    },
+    "say": [
+      "Built for coaching institutes",
+      "One simple platform",
+      "Marketing, mock tests, attendance, fees and parent updates in one place"
+    ],
+    "avoid": [
+      "Hero-card numbers (184 leads, 92% attendance, ₹2.4L, 1,248 tests) — illustrative dashboard figures, not real claims",
+      "Customer counts, rankings or 'India's best' style superlatives (none on site)"
+    ]
+  },
+  "facts": [
+    {
+      "claim": "PilotDesk brings marketing, mock tests, attendance, fees and parent updates into one platform for coaching institutes",
+      "source": "https://pilotdesk.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Services include Google & Meta ads, creatives, lead management, daily mock tests, PYQs, assignments, attendance, timetable, parents portal, fees and online payments",
+      "source": "https://pilotdesk.in/",
+      "checked": "2026-10-14"
+    },
+    {
+      "claim": "Free consultation via call or WhatsApp on +91 89201 52023",
+      "source": "https://pilotdesk.in/",
+      "checked": "2026-10-14"
+    }
+  ],
+  "offerings": [
+    {
+      "name": "MockPilot — Tests",
+      "detail": "Test library for students and staff: filter by access, exam, category and test; each card shows questions, marks, duration; Start test or Create assignment. Access modes: Public, Private (institute students), Assigned (only via a live assignment).",
+      "asset": null,
+      "source": "https://pilotdesk.in/tests",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "MockPilot — Manage tests",
+      "detail": "Edit or soft-delete tests (active / deleted views); test builder with title, exam, category, description, duration, access mode; question types plain text, equation, image with text, live preview, marks; every question is saved to the question bank. Question bank with revisions and archive.",
+      "asset": null,
+      "source": "https://pilotdesk.in/manage/tests",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "MockPilot — AI generator",
+      "detail": "Build a mock test with AI from an exam + topic (topic is checked first) or from uploaded material (up to 5 files: PDF, Word export, text, images; 20 MB each) so questions are grounded in your notes. Steps: Topic check → Configure → Generate → Review → Publish. Review every question: AI-inferred answers flagged, edit, insert equations, reorder, approve/reject, preview the learner test, then publish with visibility.",
+      "asset": null,
+      "source": "https://pilotdesk.in/manage/tests/generate",
+      "checked": "2026-10-14"
+    },
+    {
+      "name": "MockPilot — Submissions",
+      "detail": "Review attempts from institute members; filter by test, exam, category, student and date range; sort submissions.",
+      "asset": null,
+      "source": "https://pilotdesk.in/submissions",
+      "checked": "2026-10-14"
+    }
+  ],
+  "assets": "assets.json",
+  "usage": [
+    "Growth Green is a fill colour (badges, ticks, success chips) with dark ink on it; never green text on the light background (2.9:1).",
+    "Primary violet and secondary indigo are close in hue: use violet for brand moments, indigo only inside MockPilot app recreations."
+  ],
+  "notes": "The website has no photos — scenes should use designed UI recreations of the app (no pasted screenshots).",
+  "computed": {
+    "on": {
+      "primary": "#ffffff",
+      "secondary": "#ffffff",
+      "accent": "#101828",
+      "highlight": "#101828"
+    },
+    "scales": {
+      "primary": {
+        "50": "#f3f4ff",
+        "100": "#e3e6ff",
+        "200": "#c9ccff",
+        "300": "#a8abff",
+        "400": "#8987ff",
+        "500": "#6f63f4",
+        "600": "#574bc9",
+        "700": "#4436a5",
+        "800": "#2f207e",
+        "900": "#1b0958"
+      },
+      "secondary": {
+        "50": "#f2f4ff",
+        "100": "#e2e6ff",
+        "200": "#c5ceff",
+        "300": "#a1adff",
+        "400": "#808aff",
+        "500": "#6362ff",
+        "600": "#4d4ad4",
+        "700": "#3b35ae",
+        "800": "#281e85",
+        "900": "#17065e"
+      },
+      "accent": {
+        "50": "#deffe8",
+        "100": "#b5fbcd",
+        "200": "#97e6b3",
+        "300": "#70cb93",
+        "400": "#45b073",
+        "500": "#009556",
+        "600": "#007743",
+        "700": "#005d33",
+        "800": "#004122",
+        "900": "#002712"
+      }
+    },
+    "contrast": [
+      {
+        "pair": "ink on background",
+        "ratio": 16.58,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "muted on background",
+        "ratio": 5.54,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "ink on surface",
+        "ratio": 17.75,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "on-primary on primary",
+        "ratio": 5.19,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "on-secondary on secondary",
+        "ratio": 6.29,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "on-accent on accent",
+        "ratio": 5.74,
+        "need": 4.5,
+        "ok": true
+      },
+      {
+        "pair": "primary on background",
+        "ratio": 4.84,
+        "need": 3,
+        "ok": true
+      },
+      {
+        "pair": "accent on background",
+        "ratio": 2.89,
+        "need": 3,
+        "ok": false
+      },
+      {
+        "pair": "ink on highlight",
+        "ratio": 14.56,
+        "need": 4.5,
+        "ok": true
+      }
+    ],
+    "fonts": {
+      "heading": {
+        "family": "Montserrat",
+        "google": true,
+        "weightsAvailable": true
+      },
+      "body": {
+        "family": "Montserrat",
+        "google": true,
+        "weightsAvailable": true
+      }
+    },
+    "warnings": [
+      "accent on background: contrast 2.89 < 3"
+    ],
+    "built": "2026-10-14"
+  }
+}

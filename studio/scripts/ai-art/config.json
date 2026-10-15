@@ -1,0 +1,7 @@
+{
+  "comfyRoot": "C:/Users/admin/studio-tools/ComfyUI_windows_portable",
+  "model": "flux1-schnell-fp8.safetensors",
+  "depthModel": "depth-anything/Depth-Anything-V2-Small-hf",
+  "port": 8188,
+  "args": []
+}

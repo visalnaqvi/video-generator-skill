@@ -1,0 +1,158 @@
+{
+ "id": "river-night-ai",
+ "name": "River at night (AI)",
+ "status": "approved",
+ "created": "2026-10-15",
+ "description": "A river winding out of a dark pine forest toward the bottom right, moonlight glinting on the water, moon top left, banks with rocks and reeds.",
+ "source": "sets/river-night-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "night",
+  "river",
+  "forest",
+  "woods",
+  "water",
+  "search",
+  "moon"
+ ],
+ "stage": {
+  "horizon": 40,
+  "floor": "the river fills the middle and bottom; stand characters on the right bank (x 72–92 %, feet at y 72–86 %) — not in the water",
+  "scale": "feet at y 72 % → 560 px · 80 % → 700 px · 86 % → 820 px",
+  "bestAngles": [
+   "on the right bank looking upriver (profile-left)",
+   "high angle down the river",
+   "back view toward the trees"
+  ]
+ },
+ "ambient": {
+  "color": "#4a5a8c",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1e2c4c",
+  "amount": 0.3
+ },
+ "focus": {
+  "z": 0.65,
+  "blur": 4
+ },
+ "lights": [
+  {
+   "id": "moon",
+   "kind": "moon",
+   "x": 28.5,
+   "y": 7,
+   "color": "#f3e7b8",
+   "intensity": 0.5,
+   "glow": 110,
+   "under": true,
+   "z": 0.05
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/river-night-ai/river-night-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.05
+  },
+  {
+   "id": "stars",
+   "type": "ambient",
+   "kind": "stars",
+   "area": [
+    0,
+    0,
+    100,
+    35
+   ],
+   "count": 30,
+   "z": 0.05
+  },
+  {
+   "id": "fog-far",
+   "type": "ambient",
+   "kind": "fog",
+   "area": [
+    -10,
+    40,
+    120,
+    8
+   ],
+   "color": "#6f83b3",
+   "count": 6,
+   "z": 0.2
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/river-night-ai/river-night-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "fog-near",
+   "type": "ambient",
+   "kind": "fog",
+   "area": [
+    -10,
+    58,
+    120,
+    12
+   ],
+   "color": "#6f83b3",
+   "count": 5,
+   "z": 0.45
+  },
+  {
+   "id": "fireflies",
+   "type": "ambient",
+   "kind": "fireflies",
+   "area": [
+    0,
+    50,
+    100,
+    30
+   ],
+   "count": 7,
+   "size": 0.8,
+   "z": 0.5
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/river-night-ai/river-night-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.55
+  },
+  {
+   "id": "grass-front",
+   "type": "ambient",
+   "kind": "grass",
+   "area": [
+    -5,
+    92,
+    110,
+    8
+   ],
+   "front": true,
+   "colors": [
+    "#0b1424",
+    "#13203a"
+   ],
+   "z": 0.92
+  }
+ ],
+ "approved": "2026-10-15"
+}

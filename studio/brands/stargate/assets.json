@@ -1,0 +1,139 @@
+{
+  "brand": "stargate",
+  "updated": "2026-10-14",
+  "rights": "All images from the client's own website (stargate.net.in). Confirm with the client before using student photos in paid ads.",
+  "assets": [
+    {
+      "id": "sanjay-aggarwal-portrait",
+      "file": "people/sanjay-aggarwal.jpg",
+      "kind": "people",
+      "subject": "CA, CMA Sanjay Aggarwal — Stargate co-founder",
+      "description": "Waist-up portrait, smiling, white shirt, bookshelf background. Name label cropped off the bottom.",
+      "bakedText": false,
+      "source": "https://stargate.net.in/ (Beige-Client-Reviews-Instagram-Post-7.png)",
+      "size": "1080x880",
+      "quality": "full"
+    },
+    {
+      "id": "manoj-batra-portrait",
+      "file": "people/manoj-batra.jpg",
+      "kind": "people",
+      "subject": "CA Manoj Batra — Stargate co-founder",
+      "description": "Portrait, dark blazer, arms folded, bookshelf background. Name label cropped off the bottom.",
+      "bakedText": false,
+      "source": "https://stargate.net.in/ (Beige-Client-Reviews-Instagram-Post-1.png)",
+      "size": "1080x880",
+      "quality": "full"
+    },
+    {
+      "id": "eklavya-photo",
+      "file": "testimonials/eklavya.jpg",
+      "kind": "testimonial",
+      "subject": "Eklavya — student, 87 in CA Final Costing (first attempt)",
+      "description": "Small headshot from the testimonial section. Avatar use only.",
+      "bakedText": false,
+      "source": "https://stargate.net.in/ (Eklavya.png)",
+      "size": "80x80",
+      "quality": "avatar-only"
+    },
+    {
+      "id": "srishti-patel-photo",
+      "file": "testimonials/srishti-patel.jpg",
+      "kind": "testimonial",
+      "subject": "Srishti Patel — student",
+      "description": "Small headshot from the testimonial section. Avatar use only.",
+      "bakedText": false,
+      "source": "https://stargate.net.in/ (Srishti-Patel.png)",
+      "size": "80x80",
+      "quality": "avatar-only"
+    },
+    {
+      "id": "feedback-chats-1",
+      "file": "testimonials/feedback-chats-1.jpg",
+      "kind": "testimonial",
+      "subject": "Collage of real WhatsApp feedback messages",
+      "description": "Phone-chat screenshots with a 'FEEDBACK' banner. Works as background proof; text too small to read on its own.",
+      "bakedText": true,
+      "source": "https://www.stargate.net.in/stargate-feedbacks/",
+      "size": "1080x1080",
+      "quality": "full"
+    },
+    {
+      "id": "feedback-chats-2",
+      "file": "testimonials/feedback-chats-2.jpg",
+      "kind": "testimonial",
+      "subject": "Collage of real WhatsApp feedback messages",
+      "description": "Second chat-screenshot collage with 'FEEDBACK' banner.",
+      "bakedText": true,
+      "source": "https://www.stargate.net.in/stargate-feedbacks/",
+      "size": "1080x1080",
+      "quality": "full"
+    },
+    {
+      "id": "course-ca-inter-cma",
+      "file": "offerings/ca-inter-cost-management-accounting.jpg",
+      "kind": "offering",
+      "subject": "CA Inter — Cost & Management Accounting, regular batch",
+      "description": "Course poster with Sanjay Aggarwal photo, hours/validity, phone and site. Shows course details.",
+      "bakedText": true,
+      "source": "https://stargate.net.in/",
+      "size": "1254x1254",
+      "quality": "full"
+    },
+    {
+      "id": "course-ca-final-spom",
+      "file": "offerings/ca-final-spom-set-b.jpg",
+      "kind": "offering",
+      "subject": "CA Final — SPOM (SCPM) Set B",
+      "description": "Course poster; shows a price (₹5,500) — prices may be outdated, prefer cropping or using only with current pricing confirmed.",
+      "bakedText": true,
+      "source": "https://stargate.net.in/",
+      "size": "1254x1254",
+      "quality": "full"
+    },
+    {
+      "id": "course-cma-inter-ma",
+      "file": "offerings/cma-inter-management-accounting.jpg",
+      "kind": "offering",
+      "subject": "CMA Inter — Management Accounting (Paper 12)",
+      "description": "Course poster with features list.",
+      "bakedText": true,
+      "source": "https://stargate.net.in/",
+      "size": "1254x1254",
+      "quality": "full"
+    },
+    {
+      "id": "course-cma-final-scm",
+      "file": "offerings/cma-final-scm.jpg",
+      "kind": "offering",
+      "subject": "CMA Final — Strategic Cost Management (Paper 16)",
+      "description": "Course poster ('Breaking News' style) with features and duration.",
+      "bakedText": true,
+      "source": "https://stargate.net.in/",
+      "size": "1080x1080",
+      "quality": "full"
+    },
+    {
+      "id": "sanjay-aggarwal-cutout",
+      "file": "people/sanjay-aggarwal-cutout.png",
+      "kind": "people",
+      "subject": "CA, CMA Sanjay Aggarwal — Stargate co-founder",
+      "description": "Background removed (transparent PNG), waist-up; use fade: bottom.",
+      "bakedText": false,
+      "size": "1080x811",
+      "quality": "full",
+      "source": "cut out from the portrait above with studio/scripts/cutout.mjs"
+    },
+    {
+      "id": "manoj-batra-cutout",
+      "file": "people/manoj-batra-cutout.png",
+      "kind": "people",
+      "subject": "CA Manoj Batra — Stargate co-founder",
+      "description": "Background removed (transparent PNG), waist-up; use fade: bottom.",
+      "bakedText": false,
+      "size": "835x771",
+      "quality": "full",
+      "source": "cut out from the portrait above with studio/scripts/cutout.mjs"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+ "id": "farm-porch-ai",
+ "name": "Farmhouse porch at night (AI)",
+ "status": "approved",
+ "created": "2026-10-15",
+ "description": "A lonely farmhouse seen from the dark yard: one warm porch bulb by the door, a glowing pool on the steps and gravel, a mailbox and fence on the right, tall grass.",
+ "source": "sets/farm-porch-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "night",
+  "farmhouse",
+  "house",
+  "porch",
+  "yard",
+  "rural",
+  "door"
+ ],
+ "stage": {
+  "horizon": 55,
+  "floor": "yard from y 60 % down; steps at (55 %, 60 %)",
+  "scale": "feet at y 62 % → 380 px · 75 % → 620 px · 88 % → 860 px",
+  "bestAngles": [
+   "wide from the yard (as drawn)",
+   "full shot on the steps in the porch light",
+   "back view walking up to the door"
+  ]
+ },
+ "ambient": {
+  "color": "#4a5a8c",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1e2c4c",
+  "amount": 0.3
+ },
+ "focus": {
+  "z": 0.65,
+  "blur": 4
+ },
+ "lights": [
+  {
+   "id": "porch",
+   "x": 54.3,
+   "y": 43.6,
+   "color": "#ffcf7a",
+   "intensity": 0.9,
+   "radius": 750,
+   "glow": 34,
+   "flicker": 0.1,
+   "z": 0.35
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/farm-porch-ai/farm-porch-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.05
+  },
+  {
+   "id": "stars",
+   "type": "ambient",
+   "kind": "stars",
+   "area": [
+    0,
+    0,
+    100,
+    45
+   ],
+   "count": 35,
+   "z": 0.05
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/farm-porch-ai/farm-porch-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/farm-porch-ai/farm-porch-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.55
+  },
+  {
+   "id": "moths",
+   "type": "ambient",
+   "kind": "moths",
+   "area": [
+    48,
+    40,
+    12,
+    7
+   ],
+   "count": 5,
+   "z": 0.4
+  },
+  {
+   "id": "fireflies",
+   "type": "ambient",
+   "kind": "fireflies",
+   "area": [
+    0,
+    58,
+    100,
+    25
+   ],
+   "count": 6,
+   "size": 0.8,
+   "z": 0.5
+  },
+  {
+   "id": "grass-front",
+   "type": "ambient",
+   "kind": "grass",
+   "area": [
+    -5,
+    92,
+    110,
+    8
+   ],
+   "front": true,
+   "colors": [
+    "#0b1424",
+    "#13203a"
+   ],
+   "z": 0.92
+  }
+ ],
+ "approved": "2026-10-15"
+}

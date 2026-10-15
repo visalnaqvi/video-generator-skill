@@ -1,0 +1,39 @@
+{
+ "size": "2160x3840",
+ "horizon": 40,
+ "sky": 0.362,
+ "near": 0.157,
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "river-night-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.1
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "river-night-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "river-night-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6
+  }
+ ]
+}

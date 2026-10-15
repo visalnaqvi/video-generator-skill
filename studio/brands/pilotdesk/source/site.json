@@ -1,0 +1,412 @@
+{
+  "url": "https://pilotdesk.in/",
+  "scanned": "2026-10-14",
+  "meta": {
+    "title": "PilotDesk | Grow & Manage Your Coaching Institute",
+    "description": "Get more admissions and manage mock tests, attendance, fees, assignments, parents and more with PilotDesk.",
+    "siteName": "PilotDesk",
+    "themeColor": null
+  },
+  "colors": {
+    "note": "site = count in the site's own CSS; framework = plugin/library CSS (usually not brand). bg/text/border = where it is used.",
+    "brandVariables": [
+      {
+        "name": "--brand-primary",
+        "hex": "#4f46e5"
+      },
+      {
+        "name": "--brand-secondary",
+        "hex": "#f4f4fd"
+      },
+      {
+        "name": "--brand-accent",
+        "hex": "#7c3aed"
+      },
+      {
+        "name": "--background",
+        "hex": "#f8fafc"
+      },
+      {
+        "name": "--fc-button-bg-color",
+        "hex": "#ffffff"
+      },
+      {
+        "name": "--fc-button-border-color",
+        "hex": "#cbd5e1"
+      },
+      {
+        "name": "--fc-button-text-color",
+        "hex": "#334155"
+      },
+      {
+        "name": "--fc-button-hover-bg-color",
+        "hex": "#f8fafc"
+      },
+      {
+        "name": "--fc-button-hover-border-color",
+        "hex": "#94a3b8"
+      }
+    ],
+    "top": [
+      {
+        "hex": "#ffffff",
+        "site": 19,
+        "framework": 0,
+        "bg": 11,
+        "text": 2,
+        "border": 1,
+        "svg": 0,
+        "other": 5,
+        "lightness": 1,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#e2e8f0",
+        "site": 9,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 4,
+        "svg": 0,
+        "other": 5,
+        "lightness": 0.93,
+        "chroma": 0.013,
+        "neutral": true
+      },
+      {
+        "hex": "#6556e8",
+        "site": 7,
+        "framework": 0,
+        "bg": 2,
+        "text": 2,
+        "border": 2,
+        "svg": 0,
+        "other": 1,
+        "lightness": 0.55,
+        "chroma": 0.212,
+        "neutral": false
+      },
+      {
+        "hex": "#f8fafc",
+        "site": 5,
+        "framework": 0,
+        "bg": 3,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 2,
+        "lightness": 0.98,
+        "chroma": 0.003,
+        "neutral": true
+      },
+      {
+        "hex": "#eef2ff",
+        "site": 4,
+        "framework": 0,
+        "bg": 3,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 1,
+        "lightness": 0.96,
+        "chroma": 0.018,
+        "neutral": true
+      },
+      {
+        "hex": "#cbd5e1",
+        "site": 4,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 2,
+        "svg": 0,
+        "other": 2,
+        "lightness": 0.87,
+        "chroma": 0.02,
+        "neutral": true
+      },
+      {
+        "hex": "#020618",
+        "site": 3,
+        "framework": 0,
+        "bg": 3,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.13,
+        "chroma": 0.043,
+        "neutral": false
+      },
+      {
+        "hex": "#172033",
+        "site": 3,
+        "framework": 0,
+        "bg": 0,
+        "text": 2,
+        "border": 0,
+        "svg": 0,
+        "other": 1,
+        "lightness": 0.24,
+        "chroma": 0.039,
+        "neutral": false
+      },
+      {
+        "hex": "#94a3b8",
+        "site": 3,
+        "framework": 0,
+        "bg": 0,
+        "text": 2,
+        "border": 0,
+        "svg": 0,
+        "other": 1,
+        "lightness": 0.71,
+        "chroma": 0.035,
+        "neutral": false
+      },
+      {
+        "hex": "#334155",
+        "site": 3,
+        "framework": 0,
+        "bg": 0,
+        "text": 2,
+        "border": 0,
+        "svg": 0,
+        "other": 1,
+        "lightness": 0.37,
+        "chroma": 0.039,
+        "neutral": false
+      },
+      {
+        "hex": "#4f46e5",
+        "site": 2,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 2,
+        "lightness": 0.51,
+        "chroma": 0.23,
+        "neutral": false
+      },
+      {
+        "hex": "#f4f4fd",
+        "site": 2,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 2,
+        "lightness": 0.97,
+        "chroma": 0.012,
+        "neutral": true
+      },
+      {
+        "hex": "#7c3aed",
+        "site": 2,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 2,
+        "lightness": 0.54,
+        "chroma": 0.247,
+        "neutral": false
+      },
+      {
+        "hex": "#101828",
+        "site": 2,
+        "framework": 0,
+        "bg": 1,
+        "text": 1,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.21,
+        "chroma": 0.034,
+        "neutral": false
+      },
+      {
+        "hex": "#5949d6",
+        "site": 2,
+        "framework": 0,
+        "bg": 1,
+        "text": 1,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.51,
+        "chroma": 0.207,
+        "neutral": false
+      },
+      {
+        "hex": "#dcd8ff",
+        "site": 2,
+        "framework": 0,
+        "bg": 2,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.9,
+        "chroma": 0.053,
+        "neutral": false
+      },
+      {
+        "hex": "#000000",
+        "site": 2,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 2,
+        "lightness": 0,
+        "chroma": 0,
+        "neutral": true
+      },
+      {
+        "hex": "#475569",
+        "site": 2,
+        "framework": 0,
+        "bg": 0,
+        "text": 2,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.45,
+        "chroma": 0.037,
+        "neutral": false
+      },
+      {
+        "hex": "#64748b",
+        "site": 2,
+        "framework": 0,
+        "bg": 0,
+        "text": 2,
+        "border": 0,
+        "svg": 0,
+        "other": 0,
+        "lightness": 0.55,
+        "chroma": 0.041,
+        "neutral": false
+      },
+      {
+        "hex": "#e7e6fb",
+        "site": 1,
+        "framework": 0,
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "other": 1,
+        "lightness": 0.93,
+        "chroma": 0.028,
+        "neutral": true
+      }
+    ]
+  },
+  "fonts": {
+    "googleFontsLoaded": [],
+    "fontFace": [
+      "Montserrat",
+      "KaTeX_AMS",
+      "KaTeX_Caligraphic",
+      "KaTeX_Fraktur",
+      "KaTeX_Main",
+      "KaTeX_Math",
+      "KaTeX_SansSerif",
+      "KaTeX_Script",
+      "KaTeX_Size1",
+      "KaTeX_Size2",
+      "KaTeX_Size3",
+      "KaTeX_Size4",
+      "KaTeX_Typewriter"
+    ],
+    "byUsage": [
+      {
+        "family": "Montserrat",
+        "weight": 93
+      },
+      {
+        "family": "KaTeX_Main",
+        "weight": 48
+      },
+      {
+        "family": "KaTeX_SansSerif",
+        "weight": 33
+      },
+      {
+        "family": "KaTeX_Math",
+        "weight": 24
+      },
+      {
+        "family": "KaTeX_Size1",
+        "weight": 24
+      },
+      {
+        "family": "KaTeX_Fraktur",
+        "weight": 21
+      },
+      {
+        "family": "KaTeX_Caligraphic",
+        "weight": 18
+      },
+      {
+        "family": "KaTeX_Size2",
+        "weight": 18
+      },
+      {
+        "family": "KaTeX_Size4",
+        "weight": 18
+      },
+      {
+        "family": "KaTeX_Typewriter",
+        "weight": 15
+      }
+    ]
+  },
+  "logoCandidates": [
+    {
+      "url": "https://pilotdesk.in/favicon.ico?603d046c9a6fdfbb",
+      "alt": "icon",
+      "score": 1
+    },
+    {
+      "url": "https://pilotdesk.in/og.png",
+      "alt": "og:image",
+      "score": 0.5
+    }
+  ],
+  "contacts": {
+    "phones": [
+      "+918920152023"
+    ],
+    "emails": [],
+    "whatsapp": [
+      "https://wa.me/918920152023?text=Hi%20PilotDesk%2C%20I%27d%20like%20to%20know%20more%20about%20your%20institute%20growth%20platform."
+    ],
+    "social": []
+  },
+  "headings": [
+    "Grow your institute. Run it smarter.",
+    "Everything you need to grow and manage your institute",
+    "Turn attention into admissions",
+    "Everything your academic team needs",
+    "A smoother experience for every family",
+    "Your growth plan, without the complexity",
+    "Tell us your goals",
+    "Get your setup",
+    "Grow with clarity",
+    "Ready to make your institute easier to grow?",
+    "Tell us about your institute"
+  ],
+  "cssFiles": {
+    "read": 3,
+    "failed": 0
+  }
+}

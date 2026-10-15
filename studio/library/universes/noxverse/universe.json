@@ -1,0 +1,47 @@
+{
+  "id": "noxverse",
+  "name": "Noxverse",
+  "created": "2026-10-14",
+  "firstVideo": "videos/2026-10-14-faked-death-day-one",
+  "tagline": "Bad decisions, real consequences, after dark.",
+  "description": "Faceless story-reel universe: simple big-headed cartoon characters in flat-vector night scenes, intercut with cream case-file cards where every real-world consequence is stamped in neon pink while a score bar worsens.",
+  "useWhen": "ONLY when the user names the Noxverse or one of its characters (e.g. 'with Nox', 'in the Noxverse'). Never offer or apply it otherwise — other videos go through the regular pipeline. A client brand is combined with it only when the user explicitly asks.",
+  "palette": "brand.json (roles: primary Night Navy, secondary Ink Black, accent/highlight Motel Neon pink, background Case-file Cream, surface Manila, ink, muted). With a client brand (only on request) the client's roles re-skin the components; characters and scene art keep their drawn colours.",
+  "style": "data-infographic",
+  "fonts": {
+    "heading": "Inter 800–900",
+    "body": "Inter",
+    "labels": "JetBrains Mono (font: mono)",
+    "handwritten": "Caveat (font: hand)"
+  },
+  "characters": {
+    "nox": "lead — cap + hoodie everyman; 5 poses, 3 busts (characters/nox/character.json)"
+  },
+  "rig": "rig.mjs — shared body, outline, proportions, ARMS (down, crossed, up, sign) and FACES (worried, smug, shock, focused, sideeye). New characters = new character.json on the same rig.",
+  "components": [
+    "noxverse/hud-tally",
+    "noxverse/stamp",
+    "noxverse/document",
+    "noxverse/id-card",
+    "noxverse/tv-screen",
+    "noxverse/searchlight",
+    "noxverse/choice-buttons",
+    "noxverse/character",
+    "noxverse/call-bar"
+  ],
+  "scenes": "scenes/index.json (night sea, empty boat, shore, helicopter + beam, motel exterior, front desk + counter, TV frame, room with door, prairie road at night, car in a ditch, car headlights, barbed-wire fence, river at night, search dog, farmhouse porch light)",
+  "sets": "sets/*.json — whole lit locations used as \"set\": \"noxverse/<id>\". AI sets (route B, local Flux + depth planes, graded to the code palette): prairie-road-ai, coast-night-ai, motel-exterior-ai, motel-desk-ai, motel-room-ai, river-night-ai, farm-porch-ai (all approved 2026-10-15). Code-drawn: prairie-road. Prompts: sets/prompts.json; measured lights + stage notes: sets/make-sets.cjs.",
+  "formats": {
+    "day-one": "formats/day-one.md — 'You just ___. Day one goes worse than you think.' second-person consequence story with score bar + vote ending",
+    "true-case": "formats/true-case.md — a real, documented case told straight by a narrator, Nox playing the real person; serious, no humour, one motif (e.g. call-bar), quiet sound"
+  },
+  "look": "look.md (+ look-frames.png, look-board.png)",
+  "music": "node studio/scripts/make-music.mjs --mood tense --drop <turn word s> --silence <from>-<to>",
+  "voice": {
+    "engine": "edge",
+    "name": "en-US-AndrewMultilingualNeural",
+    "rate": "+8%",
+    "note": "audition it first for English Noxverse videos; offer 2–3 alternatives. Rate +8% is for Day One; true-case videos start at -3% (formats/true-case.md)."
+  },
+  "sfx": "restrained: stamp hits on stamps, one marker/pen, one ambience per location (helicopter, tv static), one cliffhanger sound (door knock). Day One defaults; true-case videos: no stamp/boom sounds, location ambience only (formats/true-case.md)."
+}

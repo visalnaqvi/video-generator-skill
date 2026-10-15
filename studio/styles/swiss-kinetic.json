@@ -1,0 +1,14 @@
+{
+  "id": "swiss-kinetic",
+  "radius": 0,
+  "shadow": "none",
+  "card": "solid",
+  "border": 0,
+  "backdrop": "flat",
+  "headingCase": "upper",
+  "headingWeight": 900,
+  "tracking": -0.02,
+  "typeScale": 1.08,
+  "motion": "snappy",
+  "emphasis": "box"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "clean-premium",
+  "radius": 28,
+  "shadow": "soft",
+  "card": "solid",
+  "border": 0,
+  "backdrop": "flat",
+  "headingCase": "none",
+  "headingWeight": 700,
+  "tracking": -0.01,
+  "typeScale": 0.96,
+  "motion": "smooth",
+  "emphasis": "underline"
+}

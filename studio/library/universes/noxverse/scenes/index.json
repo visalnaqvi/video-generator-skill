@@ -1,0 +1,327 @@
+{
+  "note": "Code-drawn scene art (free). kind: bg = full-frame background · fg = foreground strip · prop = object. Sizes are the PNG size; place with w/h in px at 1080 wide. Regenerate/extend with make.mjs.",
+  "scenes": [
+    {
+      "id": "sea-night",
+      "file": "sea-night.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "night",
+        "sea",
+        "ocean",
+        "moon",
+        "coast",
+        "water"
+      ],
+      "hints": "horizon at ~52%; moon top-right (73%, 20%) with reflection; oversize to 1160x2062 for camera moves"
+    },
+    {
+      "id": "boat-empty",
+      "file": "boat-empty.png",
+      "kind": "prop",
+      "size": "880x500",
+      "tags": [
+        "boat",
+        "empty",
+        "drifting",
+        "sea"
+      ],
+      "hints": "side view, bottom 20% is water; loop 'float'; rotate -4..-6"
+    },
+    {
+      "id": "shore-fg",
+      "file": "shore-fg.png",
+      "kind": "fg",
+      "size": "1080x700",
+      "tags": [
+        "shore",
+        "beach",
+        "ground",
+        "night"
+      ],
+      "hints": "place at y 83 (w 1160 h 752); the ground line sits at ~74% of the frame — stand characters on it"
+    },
+    {
+      "id": "helicopter",
+      "file": "helicopter.png",
+      "kind": "prop",
+      "size": "1040x480",
+      "tags": [
+        "helicopter",
+        "search",
+        "police",
+        "coast guard",
+        "night"
+      ],
+      "hints": "silhouette; searchlight at (150,176)/(520x240); use the searchlight component for beam geometry"
+    },
+    {
+      "id": "searchlight-beam",
+      "file": "searchlight-beam.png",
+      "kind": "prop",
+      "size": "760x1500",
+      "tags": [
+        "beam",
+        "light",
+        "spotlight",
+        "search"
+      ],
+      "hints": "blend 'screen'; spot at 92.7% of height; the searchlight component aims it"
+    },
+    {
+      "id": "motel-exterior",
+      "file": "motel-exterior.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "motel",
+        "hotel",
+        "night",
+        "neon",
+        "roadside"
+      ],
+      "bakedText": "MOTEL",
+      "hints": "neon sign top-left (28%, 34%); doors along 61–71%; ground from 72%"
+    },
+    {
+      "id": "front-desk-bg",
+      "file": "front-desk-bg.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "front desk",
+        "reception",
+        "lobby",
+        "motel",
+        "hotel",
+        "wall"
+      ],
+      "hints": "key board at right (75%, 36%); use with counter-fg in front of a character"
+    },
+    {
+      "id": "counter-fg",
+      "file": "counter-fg.png",
+      "kind": "fg",
+      "size": "1080x820",
+      "tags": [
+        "counter",
+        "desk",
+        "ledger",
+        "bell",
+        "reception"
+      ],
+      "hints": "place at y 78.6 (w 1080 h 820); counter top at 59%; ledger right page ≈ (62%, 63.4%) for a brush signature"
+    },
+    {
+      "id": "tv-frame",
+      "file": "tv-frame.png",
+      "kind": "fg",
+      "size": "1080x1920",
+      "tags": [
+        "tv",
+        "television",
+        "news",
+        "screen",
+        "crt"
+      ],
+      "hints": "screen hole (transparent) at x 50%, y 47.9%, 740x550; put content behind it; or use the tv-screen component"
+    },
+    {
+      "id": "room-door",
+      "file": "room-door.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "room",
+        "door",
+        "night",
+        "motel",
+        "knock",
+        "dark"
+      ],
+      "hints": "door on the right (74%, 57%) with light under it; blue TV light from the left; character at x 30"
+    },
+    {
+      "id": "prairie-night",
+      "file": "prairie-night.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "night",
+        "prairie",
+        "farmland",
+        "field",
+        "road",
+        "gravel road",
+        "rural",
+        "town lights",
+        "minnesota",
+        "power lines"
+      ],
+      "hints": "horizon at ~52%; gravel road from the vanishing point (50%, 52%) down the centre; warm distant town lights + grain elevator at right (73–80%, 51%); power poles recede on the right; oversize to 1160x2062 for camera moves"
+    },
+    {
+      "id": "car-ditch",
+      "file": "car-ditch.png",
+      "kind": "prop",
+      "size": "900x520",
+      "tags": [
+        "car",
+        "sedan",
+        "ditch",
+        "stuck",
+        "crash",
+        "headlights"
+      ],
+      "hints": "side view, nose down to the left with headlight glow; ditch grass in the bottom ~35%; place on the road edge of prairie-night (e.g. x 34, y 66, w 620 h 358)"
+    },
+    {
+      "id": "car-front",
+      "file": "car-front.png",
+      "kind": "prop",
+      "size": "900x900",
+      "tags": [
+        "car",
+        "headlights",
+        "front",
+        "search",
+        "parents",
+        "driving"
+      ],
+      "hints": "front view, car in the top 40%, headlight cones fall to the bottom edge; on prairie-night put it small at the vanishing point and grow it (zoom) for an approach"
+    },
+    {
+      "id": "fence-fg",
+      "file": "fence-fg.png",
+      "kind": "fg",
+      "size": "1080x760",
+      "tags": [
+        "fence",
+        "barbed wire",
+        "field",
+        "grass",
+        "foreground",
+        "farm"
+      ],
+      "hints": "place at y 82 (w 1160 h 816); ground line at ~45% of the strip; stand a character behind it (feet hidden) or in front of it"
+    },
+    {
+      "id": "river-night",
+      "file": "river-night.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "river",
+        "water",
+        "night",
+        "trees",
+        "mist",
+        "search",
+        "creek"
+      ],
+      "hints": "tree line at ~44%; the river winds from (50%, 47%) to the bottom centre-right; mist bands at 51% and 62%"
+    },
+    {
+      "id": "search-dog",
+      "file": "search-dog.png",
+      "kind": "prop",
+      "size": "560x380",
+      "tags": [
+        "dog",
+        "bloodhound",
+        "search dog",
+        "k9",
+        "scent",
+        "tracking"
+      ],
+      "hints": "side view facing left, nose to the ground; pink leash runs to the top-right corner (a handler off-frame); feet at ~90%"
+    },
+    {
+      "id": "porch-light",
+      "file": "porch-light.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "house",
+        "farmhouse",
+        "porch",
+        "light",
+        "home",
+        "waiting",
+        "night"
+      ],
+      "hints": "farmhouse centre; lit porch bulb at (59%, 56%) with a warm pool on the steps; ground from 66%"
+    },
+    {
+      "id": "prairie-sky",
+      "file": "prairie-sky.png",
+      "kind": "bg",
+      "size": "2160x3840 (2×; place at w 1160 h 2062)",
+      "tags": [
+        "night",
+        "sky",
+        "prairie",
+        "moon",
+        "stars"
+      ],
+      "hints": "set layer (sets/prairie-road.json): sky + crescent moon top-left (18%, 9%), horizon at 52%; z 0.05, haze 0.12"
+    },
+    {
+      "id": "prairie-far",
+      "file": "prairie-far.png",
+      "kind": "bg",
+      "size": "2160x3840 (2×; place at w 1160 h 2062)",
+      "tags": [
+        "night",
+        "horizon",
+        "town",
+        "farm",
+        "tree line",
+        "water tower"
+      ],
+      "hints": "set layer: transparent except the horizon band (y 45–53%): tree line, farm with lit window (15%, 51%), town + water tower (beacon 79.7%, 43.2%); z 0.15"
+    },
+    {
+      "id": "prairie-field",
+      "file": "prairie-field.png",
+      "kind": "bg",
+      "size": "2160x3840 (2×; place at w 1160 h 2062)",
+      "tags": [
+        "night",
+        "field",
+        "road",
+        "gravel",
+        "ditch",
+        "farmland"
+      ],
+      "hints": "set layer: field + gravel road to (50%, 52%), ditches both sides, ruts, puddle; z 0.4"
+    },
+    {
+      "id": "prairie-poles",
+      "file": "prairie-poles.png",
+      "kind": "prop",
+      "size": "2160x3840 (2×; place at w 1160 h 2062)",
+      "tags": [
+        "power lines",
+        "poles",
+        "road"
+      ],
+      "hints": "set layer: poles + double wires along the right shoulder; z 0.5"
+    },
+    {
+      "id": "car-ditch-prop",
+      "file": "car-ditch-prop.png",
+      "kind": "prop",
+      "size": "1800x1040 (2×)",
+      "tags": [
+        "car",
+        "ditch",
+        "stuck",
+        "crash",
+        "night"
+      ],
+      "hints": "car-ditch without its ground patch, for sets: x 30 y 68 w 640; castShadow contactOnly feet 76 + grass band over the wheels; headlight at (6.6%, 70.9%), taillight (53.7%, 64.4%) at that placement"
+    }
+  ]
+}

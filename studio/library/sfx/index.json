@@ -1,0 +1,235 @@
+{
+  "note": "Cue words → files. Put your own sounds in \"custom\" (checked first): { \"file\": \"x.wav\", \"keywords\": [\"...\"], \"gain\": 1 }.",
+  "custom": [
+    {
+      "file": "bright-impact.wav",
+      "keywords": [
+        "shimmer"
+      ],
+      "gain": 0.6
+    },
+    {
+      "file": "whoosh.wav",
+      "keywords": [
+        "swish"
+      ],
+      "gain": 0.6
+    },
+    {
+      "file": "pop.wav",
+      "keywords": [
+        "tap"
+      ],
+      "gain": 0.8
+    }
+  ],
+  "generated": [
+    {
+      "file": "call-drop.wav",
+      "keywords": [
+        "call drop",
+        "hang up",
+        "hang-up",
+        "disconnect",
+        "line dead"
+      ]
+    },
+    {
+      "file": "phone-ring.wav",
+      "keywords": [
+        "ringing",
+        "ring",
+        "phone dial",
+        "ringback"
+      ]
+    },
+    {
+      "file": "night-crickets.wav",
+      "keywords": [
+        "crickets",
+        "night crickets",
+        "night bed"
+      ]
+    },
+    {
+      "file": "night-wind.wav",
+      "keywords": [
+        "wind",
+        "field night"
+      ]
+    },
+    {
+      "file": "car-pass.wav",
+      "keywords": [
+        "engine",
+        "car passing",
+        "car pass"
+      ]
+    },
+    {
+      "file": "footsteps-grass.wav",
+      "keywords": [
+        "footsteps",
+        "footstep",
+        "walking"
+      ]
+    },
+    {
+      "file": "river-water.wav",
+      "keywords": [
+        "river",
+        "water",
+        "stream"
+      ]
+    },
+    {
+      "file": "door-knock.wav",
+      "keywords": [
+        "knock",
+        "door"
+      ]
+    },
+    {
+      "file": "helicopter.wav",
+      "keywords": [
+        "helicopter",
+        "rotor"
+      ]
+    },
+    {
+      "file": "tv-static.wav",
+      "keywords": [
+        "static",
+        "tv"
+      ]
+    },
+    {
+      "file": "pen-scribble.wav",
+      "keywords": [
+        "scribble"
+      ]
+    },
+    {
+      "file": "pen-tick.wav",
+      "keywords": [
+        "tick",
+        "check"
+      ]
+    },
+    {
+      "file": "pen-scratch.wav",
+      "keywords": [
+        "pen",
+        "scratch",
+        "write",
+        "draw"
+      ]
+    },
+    {
+      "file": "marker-swipe.wav",
+      "keywords": [
+        "marker",
+        "swipe",
+        "highlight",
+        "underline"
+      ]
+    },
+    {
+      "file": "counter-ticks.wav",
+      "keywords": [
+        "counter",
+        "count"
+      ]
+    },
+    {
+      "file": "stamp-hit.wav",
+      "keywords": [
+        "stamp",
+        "slam"
+      ]
+    },
+    {
+      "file": "low-hit.wav",
+      "keywords": [
+        "tension",
+        "low hit",
+        "boom",
+        "dread"
+      ]
+    },
+    {
+      "file": "drone.wav",
+      "keywords": [
+        "drone",
+        "ambience",
+        "ambient"
+      ]
+    },
+    {
+      "file": "bright-impact.wav",
+      "keywords": [
+        "bright",
+        "impact",
+        "reveal",
+        "sparkle"
+      ]
+    },
+    {
+      "file": "punch.wav",
+      "keywords": [
+        "punch",
+        "hit",
+        "thump"
+      ]
+    },
+    {
+      "file": "riser.wav",
+      "keywords": [
+        "riser",
+        "build"
+      ],
+      "alignEnd": true
+    },
+    {
+      "file": "chime.wav",
+      "keywords": [
+        "chime",
+        "ding",
+        "bell",
+        "success"
+      ]
+    },
+    {
+      "file": "card-flick.wav",
+      "keywords": [
+        "card",
+        "flick",
+        "paper",
+        "flip"
+      ]
+    },
+    {
+      "file": "whoosh-up.wav",
+      "keywords": [
+        "whoosh up",
+        "swoosh up"
+      ]
+    },
+    {
+      "file": "whoosh.wav",
+      "keywords": [
+        "whoosh",
+        "swoosh",
+        "transition"
+      ]
+    },
+    {
+      "file": "pop.wav",
+      "keywords": [
+        "pop",
+        "click",
+        "bubble"
+      ]
+    }
+  ]
+}

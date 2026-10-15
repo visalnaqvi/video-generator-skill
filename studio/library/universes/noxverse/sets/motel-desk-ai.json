@@ -1,0 +1,90 @@
+{
+ "id": "motel-desk-ai",
+ "name": "Motel front desk (AI)",
+ "status": "approved",
+ "created": "2026-10-15",
+ "description": "Shabby lobby: a hanging lamp, striped plum wallpaper, wall clocks, a key board with pink tags, a clipboard; a wooden counter in front with an open ledger and a pen.",
+ "source": "sets/motel-desk-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "interior",
+  "motel",
+  "lobby",
+  "reception",
+  "counter",
+  "front desk",
+  "hotel"
+ ],
+ "stage": {
+  "horizon": 0,
+  "floor": "behind the counter: a character stands at x 40–60 behind the counter (near plane: everything below image y 68 % = frame y ≈ 69 %), which hides the legs; z between 0.2 and 0.6",
+  "scale": "clerk or guest behind the counter: h 1000–1150 at y 52–56 (feet below the counter)",
+  "bestAngles": [
+   "across the counter (as drawn)",
+   "close on the ledger and hands",
+   "over the shoulder of whoever stands at the counter"
+  ]
+ },
+ "ambient": {
+  "color": "#5a4a6e",
+  "amount": 0.45
+ },
+ "atmosphere": {
+  "color": "#2a2036",
+  "amount": 0.15
+ },
+ "focus": {
+  "z": 0.45,
+  "blur": 3
+ },
+ "lights": [
+  {
+   "id": "lamp",
+   "x": 28.5,
+   "y": 4.9,
+   "color": "#ffd27a",
+   "intensity": 0.8,
+   "radius": 1200,
+   "glow": 60,
+   "flicker": 0.06,
+   "z": 0.3
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/motel-desk-ai/motel-desk-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.2,
+   "haze": 0
+  },
+  {
+   "id": "dust",
+   "type": "ambient",
+   "kind": "dust",
+   "area": [
+    10,
+    5,
+    45,
+    50
+   ],
+   "count": 25,
+   "z": 0.3
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/motel-desk-ai/motel-desk-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6,
+   "front": true
+  }
+ ],
+ "approved": "2026-10-15"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "editorial",
+  "radius": 0,
+  "shadow": "none",
+  "card": "solid",
+  "border": 0,
+  "backdrop": "flat",
+  "headingCase": "none",
+  "headingWeight": 700,
+  "tracking": -0.015,
+  "typeScale": 1.0,
+  "motion": "smooth",
+  "emphasis": "underline"
+}

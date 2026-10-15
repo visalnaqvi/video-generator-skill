@@ -1,0 +1,39 @@
+{
+ "size": "2160x3840",
+ "horizon": 0,
+ "sky": 0,
+ "near": 0.212,
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "motel-room-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.1
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "motel-room-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "motel-room-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6
+  }
+ ]
+}

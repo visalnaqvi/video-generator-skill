@@ -1,0 +1,14 @@
+{
+  "id": "pop-art",
+  "radius": 0,
+  "shadow": "hard",
+  "card": "brutal",
+  "border": 6,
+  "backdrop": "dots",
+  "headingCase": "upper",
+  "headingWeight": 900,
+  "tracking": 0,
+  "typeScale": 1.05,
+  "motion": "bouncy",
+  "emphasis": "box"
+}

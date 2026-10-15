@@ -1,0 +1,123 @@
+{
+  "id": "nox",
+  "name": "Nox",
+  "universe": "noxverse",
+  "created": "2026-10-14",
+  "firstUsed": "videos/2026-10-14-faked-death-day-one",
+  "description": "Nox — the Noxverse lead. A faceless-channel everyman for second-person stories (\"You just ___\"): big round white head, navy baseball cap with the peak to one side, charcoal hoodie with drawstrings and pocket, dark jeans, white sneakers.",
+  "style": "Flat vector, 7px outlines, minimal dot-eye faces; drawn in code by make.mjs (free, deterministic). Reads at phone size down to ~300 px tall.",
+  "voice": {
+    "engine": "edge",
+    "name": "en-US-BrianMultilingualNeural",
+    "rate": "+10%",
+    "pitch": "+0Hz",
+    "status": "approved",
+    "note": "Nox's own voice for his dialogue lines (VO (Nox): …) in every video — keep it the same across videos. Auditions in context with the narrator: characters/nox/demo/dialogue/audio/audition/. Narrator stays the universe voice.",
+    "approved": "2026-10-15"
+  },
+  "colors": {},
+  "poses": {
+    "stand-worried": {
+      "arms": "down",
+      "face": "worried",
+      "sweat": true
+    },
+    "stand-smug": {
+      "arms": "crossed",
+      "face": "smug"
+    },
+    "hands-up-shock": {
+      "arms": "up",
+      "face": "shock"
+    },
+    "sign-focused": {
+      "arms": "sign",
+      "face": "focused"
+    },
+    "stand-sideeye": {
+      "arms": "down",
+      "face": "sideeye",
+      "sweat": true
+    },
+    "phone-worried": {
+      "arms": "phone",
+      "face": "worried",
+      "sweat": true
+    },
+    "phone-shock": {
+      "arms": "phone",
+      "face": "shock"
+    },
+    "point-worried": {
+      "arms": "point",
+      "face": "worried",
+      "sweat": true
+    },
+    "point-shock": {
+      "arms": "point",
+      "face": "shock"
+    },
+    "shrug-smug": {
+      "arms": "shrug",
+      "face": "smug"
+    },
+    "shrug-worried": {
+      "arms": "shrug",
+      "face": "worried",
+      "sweat": true
+    }
+  },
+  "heads": {
+    "shock": {
+      "sweat": false
+    },
+    "worried": {
+      "sweat": true
+    },
+    "sideeye": {
+      "sweat": true
+    }
+  },
+  "poseNotes": {
+    "stand-worried": "arms down, worried brows, sweat drop — default 'you' pose, the hook",
+    "stand-smug": "arms crossed, smug closed-eye smile — the plan, false confidence",
+    "hands-up-shock": "hands up by the head, wide eyes, open mouth — caught, panic",
+    "sign-focused": "right hand forward holding a pen, eyes down — signing, writing, paying; hand at ~(54%, 61%) of the box",
+    "stand-sideeye": "arms down, eyes looking right, sweat — suspicion; put the threat (door, cop, phone) on the RIGHT",
+    "phone-worried": "phone held to the right ear, worried brows, sweat — on a call, lost, waiting",
+    "phone-shock": "phone at the ear, wide eyes, open mouth — the moment something happens mid-call",
+    "point-worried": "right arm out pointing right, worried — \"that one\", accusing, noticing; put the target on the RIGHT",
+    "point-shock": "pointing right, wide eyes, open mouth — \"THAT'S my landlord\", the reveal",
+    "shrug-smug": "elbows out, open hands up, smug — \"what can you do?\", false innocence",
+    "shrug-worried": "shrug with worried brows + sweat — helpless, \"no idea\""
+  },
+  "headNotes": {
+    "shock": "wide eyes, open mouth — vote / cliffhanger cards, reaction cut-ins",
+    "worried": "worried brows, sweat — ID photos, TV/news, missing posters",
+    "sideeye": "eyes right, sweat — reaction cut-ins"
+  },
+  "canvas": {
+    "pose": "640x1000 (aspect 0.64) — feet at ~92%, head top at ~3%",
+    "head": "680x640 bust (head + shoulders)"
+  },
+  "animation": [
+    "Use the noxverse/character component: it is LIVE by default (drawn every frame by the rig) — breathes, blinks, glances, shifts weight, drips sweat. Never add a loop on top of it.",
+    "Idle acting follows the face (worried/sideeye → nervous, smug → smug, shock → shock, focused → focused); override with idle: calm|nervous|smug|shock|focused|still, scale with amount (0.5 subtler).",
+    "Put the threat (door, cop, phone) on one side and set look: left|right so the eyes rest there.",
+    "Acting: acting beats change pose/face on the word that motivates them (anticipation → overshooting move → settle; face swaps hide in a blink), shift where he looks (eyes → head → body), or play a gesture: nod, shake, shrug, flinch, gulp, take, lookBack, point. 2–4 beats a shot with holds between; give repeated poses different seeds.",
+    "Talking: talk: true lip-syncs only his own dialogue lines (VO (Nox): … in the script, spoken in his saved voice); talk: \"all\" mouths every line (on-screen narrator); talk: [ids] picks lines. The head dips and brows lift on stressed syllables, eyes steady, a blink as each line ends.",
+    "Second-person narration (\"You just…\") is not Nox speaking: he reacts and his mouth rests. His own lines are dialogue in the script (VO (Nox): …); give him talk: true in every shot where he might speak.",
+    "Mouth shapes: characters/nox/mouths.png (node rig.mjs nox --mouths) — 9 shapes bent to each face's emotion; the smug smirk stays while he talks.",
+    "Give the character its own depth (z 0.6–0.7) between background (0.1) and foreground props (0.8) so camera pushes create parallax.",
+    "Full body 450–800 px tall; bust 600–760 px; ground the feet on a floor/shore line (feet at 92% of the box).",
+    "Front-facing only: show direction with eyes (sideeye, look) and with where props sit, not by turning the body.",
+    "live: false places the old still PNG (with a breathe loop) — only for decks or matching a finished video."
+  ],
+  "use": {
+    "component": "{ \"type\": \"component\", \"use\": \"noxverse/character\", \"x\": 30, \"y\": 63, \"props\": { \"name\": \"nox\", \"pose\": \"stand-smug\", \"h\": 750 } }",
+    "still": "{ \"type\": \"image\", \"src\": \"lib:universes/noxverse/characters/nox/poses/stand-smug.png\", \"w\": 480, \"h\": 750 }",
+    "live": "demo: characters/nox/demo/storyboard.json → still-vs-live.mp4",
+    "acting": "{ \"type\": \"component\", \"use\": \"noxverse/character\", \"props\": { \"pose\": \"stand-worried\", \"talk\": true, \"acting\": [{ \"sync\": \"inside\", \"pose\": \"point-shock\", \"look\": \"right\" }, { \"sync\": \"Right\", \"do\": \"lookBack\" }] } } — demo: characters/nox/demo/dialogue/ (render/acting.mp4)"
+  },
+  "addPose": "Add an entry to poses (arms: down|crossed|up|sign|phone|point|shrug; face: worried|smug|shock|focused|sideeye; sweat) or heads, then: node studio/library/universes/noxverse/rig.mjs nox. New arms/faces go in rig-parts.mjs (ARMS, FACE_PARTS — eyes, brows and mouth kept separate so the live rig can blink and talk) (shared by every Noxverse character)."
+}

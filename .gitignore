@@ -1,0 +1,28 @@
+# Dependencies and environments
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Videos (produced per client, kept out of git)
+videos/
+
+# Temporary render staging
+studio/.stage/
+
+# Universe demo / test shots
+studio/library/universes/**/demo/
+
+# AI set-art working files (final sky/near/ground/depth planes are kept)
+studio/library/universes/*/sets/*/cand-*.png
+studio/library/universes/*/sets/*/cands.png
+studio/library/universes/*/sets/*/init.png
+studio/library/universes/*/sets/*/source-ai.png
+studio/library/universes/*/sets/*/source-graded.png
+studio/library/universes/*/sets/*/depth16.png
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log

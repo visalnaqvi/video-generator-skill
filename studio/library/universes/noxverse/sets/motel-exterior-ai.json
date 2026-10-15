@@ -1,0 +1,145 @@
+{
+ "id": "motel-exterior-ai",
+ "name": "Roadside motel at night (AI)",
+ "status": "approved",
+ "created": "2026-10-15",
+ "description": "Pink neon MOTEL pole sign top left, a low row of rooms with lit amber windows and a walkway lamp, an ice machine on the right, a cracked parking lot with neon puddles.",
+ "source": "sets/motel-exterior-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "night",
+  "motel",
+  "neon",
+  "parking lot",
+  "roadside",
+  "hotel"
+ ],
+ "stage": {
+  "horizon": 52,
+  "floor": "parking lot from y 60 % down",
+  "scale": "feet at y 65 % → 420 px · 75 % → 620 px · 88 % → 880 px",
+  "bestAngles": [
+   "wide with the sign and the rooms",
+   "full shot at a door",
+   "low angle under the sign"
+  ]
+ },
+ "ambient": {
+  "color": "#4a5a8c",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1e2c4c",
+  "amount": 0.3
+ },
+ "focus": {
+  "z": 0.65,
+  "blur": 4
+ },
+ "lights": [
+  {
+   "id": "neon",
+   "x": 19.9,
+   "y": 9.2,
+   "color": "#ff3d7f",
+   "intensity": 0.85,
+   "radius": 1100,
+   "glow": 70,
+   "flicker": 0.08,
+   "z": 0.4
+  },
+  {
+   "id": "window-1",
+   "x": 46.8,
+   "y": 52.1,
+   "color": "#ffb35a",
+   "intensity": 0.5,
+   "radius": 320,
+   "glow": 30,
+   "under": true,
+   "z": 0.35
+  },
+  {
+   "id": "window-2",
+   "x": 71.5,
+   "y": 52.1,
+   "color": "#ffb35a",
+   "intensity": 0.5,
+   "radius": 320,
+   "glow": 30,
+   "under": true,
+   "z": 0.35
+  },
+  {
+   "id": "ice",
+   "x": 93,
+   "y": 56.4,
+   "color": "#8fe3ff",
+   "intensity": 0.3,
+   "radius": 220,
+   "glow": 20,
+   "under": true,
+   "z": 0.35,
+   "castShadows": false
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/motel-exterior-ai/motel-exterior-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.05
+  },
+  {
+   "id": "stars",
+   "type": "ambient",
+   "kind": "stars",
+   "area": [
+    0,
+    0,
+    100,
+    40
+   ],
+   "count": 25,
+   "z": 0.05
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/motel-exterior-ai/motel-exterior-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/motel-exterior-ai/motel-exterior-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.55
+  },
+  {
+   "id": "moths",
+   "type": "ambient",
+   "kind": "moths",
+   "area": [
+    64,
+    45,
+    12,
+    7
+   ],
+   "count": 5,
+   "z": 0.4
+  }
+ ],
+ "approved": "2026-10-15"
+}

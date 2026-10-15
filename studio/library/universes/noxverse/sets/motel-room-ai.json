@@ -1,0 +1,99 @@
+{
+ "id": "motel-room-ai",
+ "name": "Motel room at night (AI)",
+ "status": "approved",
+ "created": "2026-10-15",
+ "description": "Dim cheap room: cold blue TV on the left wall, a window with blinds, a warm bedside lamp at the right, the door on the right, worn carpet.",
+ "source": "sets/motel-room-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "interior",
+  "motel",
+  "room",
+  "bedroom",
+  "tv",
+  "door",
+  "hotel"
+ ],
+ "stage": {
+  "horizon": 0,
+  "floor": "carpet from y 66 % down",
+  "scale": "feet at y 75 % → 640 px · 85 % → 860 px · 95 % → 1080 px",
+  "bestAngles": [
+   "from the window side toward the door",
+   "close on the face lit by the TV",
+   "back view watching the door"
+  ]
+ },
+ "ambient": {
+  "color": "#3e4a78",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1a2238",
+  "amount": 0.15
+ },
+ "focus": {
+  "z": 0.5,
+  "blur": 3
+ },
+ "lights": [
+  {
+   "id": "tv",
+   "x": 7,
+   "y": 41.4,
+   "color": "#7fd8ff",
+   "intensity": 0.7,
+   "radius": 900,
+   "glow": 40,
+   "flicker": 0.35,
+   "z": 0.3
+  },
+  {
+   "id": "lamp",
+   "x": 76.8,
+   "y": 56.4,
+   "color": "#ffb35a",
+   "intensity": 0.7,
+   "radius": 650,
+   "glow": 30,
+   "z": 0.35
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/motel-room-ai/motel-room-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.2,
+   "haze": 0
+  },
+  {
+   "id": "dust",
+   "type": "ambient",
+   "kind": "dust",
+   "area": [
+    60,
+    40,
+    35,
+    25
+   ],
+   "count": 18,
+   "z": 0.4
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/motel-room-ai/motel-room-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6
+  }
+ ],
+ "approved": "2026-10-15"
+}
