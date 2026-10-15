@@ -21,6 +21,9 @@ studio/library/universes/*/sets/*/source-ai.png
 studio/library/universes/*/sets/*/source-graded.png
 studio/library/universes/*/sets/*/depth16.png
 
+# Per-PC tool paths (setup.mjs writes it)
+studio/scripts/ai-art/config.local.json
+
 # OS / editor
 Thumbs.db
 desktop.ini

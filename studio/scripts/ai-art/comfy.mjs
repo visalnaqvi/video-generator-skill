@@ -14,9 +14,10 @@ import { spawn } from 'node:child_process';
 import { readFile, writeFile, copyFile, mkdir } from 'node:fs/promises';
 import { dirname, join, resolve, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { aiConfig } from './paths.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const cfg = JSON.parse(await readFile(join(HERE, 'config.json'), 'utf8'));
+const cfg = aiConfig(); // per-PC tool paths: paths.mjs
 const API = `http://127.0.0.1:${cfg.port ?? 8188}`;
 const args = process.argv.slice(2);
 const cmd = args[0];

@@ -10,9 +10,10 @@ import { spawnSync } from 'node:child_process';
 import { copyFile, readFile } from 'node:fs/promises';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { aiConfig } from './paths.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const cfg = JSON.parse(await readFile(join(HERE, 'config.json'), 'utf8'));
+const cfg = aiConfig(); // per-PC tool paths: paths.mjs
 const args = process.argv.slice(2);
 const opt = (k, d) => { const i = args.indexOf(`--${k}`); return i >= 0 ? args[i + 1] : d; };
 const dir = resolve(args[0]);

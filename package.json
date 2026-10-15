@@ -41,8 +41,13 @@
     "typescript": "^7.0.2"
   },
   "scripts": {
+    "setup": "node studio/scripts/setup.mjs",
+    "doctor": "node studio/scripts/doctor.mjs",
     "studio": "remotion studio studio/remotion/src/index.ts",
     "sheet": "node studio/scripts/render.mjs",
     "typecheck": "tsc -p studio/remotion/tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

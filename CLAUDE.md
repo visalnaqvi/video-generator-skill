@@ -55,6 +55,49 @@ videos/<YYYY-MM-DD>-<slug>/
   JSON, review images as one small contact sheet rather than many full frames, and
   use free drafts (draft voice, low-res preview) before any paid or final generation.
 
+## Working with the user (standing preferences — follow on every PC)
+
+The owner is a freelance digital marketer making client and story videos; casual English,
+content often Hinglish. Quality first, but token-conscious.
+
+- **Recommend, then build step by step.** Give the recommendation and the reason first; build in
+  stages and stop for approval at each gate. Variants are built side by side and adopted only on
+  the user's say-so.
+- **Free tools first.** Edge voice, code-made music/SFX, local AI art (ComfyUI + Flux on this
+  PC's GPU) are the defaults — including for finals. Paid tools (ElevenLabs, paid image APIs) run
+  only after the user asks or approves a cost estimate in chat.
+- **Save tokens without losing quality:** scripts print compact JSON; review one contact sheet,
+  not many frames; free drafts before any paid or final generation.
+- **Single-purpose skills:** write = words only; visuals and direction = storyboard; brand kits =
+  brand-kit. Keep `videos/` + `studio/brands/` as they are.
+- **Connected beats.** Every script join must make sense to a first-time viewer: one possible
+  referent per pronoun (name the person when two people are "he"), a stated reason for every
+  action, a time anchor for every new event, and the next beat answers the question the last one
+  opened (write skill → script-craft.md §3; show the Joins line). The user has had to repeat this
+  — check it before showing any script.
+- **Restrained sound.** Only signature moments (≈ 1 cue per 2 s at most), SFX ≈ -12 dB under
+  voice and music, no whoosh on every transition (opt-in). Every sound matches what is on screen
+  (no footsteps unless the character walks, ambience fits the place, no tone over a silent text
+  moment, one ring not two). No "boom" stamp hits in serious or mystery stories.
+- **Universes are opt-in.** Use one (Noxverse / Nox) only when the user names it or its
+  character; never suggest it; never mix a client brand with a universe unless asked.
+- **AI set art keeps the universe's palette.** Always grade AI art to the code-drawn reference
+  (`studio/scripts/ai-art/grade.mjs`) and show it next to the reference; the user rejects colour
+  drift (e.g. teal-green on the navy Noxverse).
+- **Upgrades are proven on test shots,** in a demo folder with a before/after clip — never by
+  re-rendering or editing a video the user has already posted. Build every engine/skill upgrade
+  universe-neutral (per-universe values live in the universe's files) and off by default, so
+  finished videos render unchanged.
+- **Git:** the repo is `github.com/visalnaqvi/video-generator-skill`. Commit or push only when
+  the user asks; media (`videos/`, demo folders, AI working files) stays out of git.
+
+## Setup on a new PC
+
+`npm run setup` (Node packages, Remotion's browser, the Python voice env) · `npm run setup -- --ai`
+(adds ComfyUI + Flux.1-schnell for making new AI sets, ~19 GB, Windows + NVIDIA, checksum-verified)
+· `npm run doctor` (health check with the fix for anything missing). Tool paths are per PC
+(`studio/scripts/ai-art/paths.mjs`), never hard-coded. Existing sets render without the AI tools.
+
 ## Studio setup — status (v1, 2026-10-14)
 
 Status of any video: `node studio/scripts/status.mjs [videos/<video>]`.
@@ -124,9 +167,9 @@ Next:
   `RIG_META.views`). Guide: compose.md "Camera language and character staging". Test:
   `universes/noxverse/demo/camera-views/`.
 - Local AI set art (2026-10-15, Phase 3 route B): ComfyUI portable v0.40.0 + Flux.1-schnell fp8
-  in `C:\Users\admin\studio-tools\ComfyUI_windows_portable` (RTX 5060, ~20 s/image, free), driven by
+  in `<home>/studio-tools/ComfyUI_windows_portable` by default (RTX 5060, ~20 s/image, free), driven by
   `studio/scripts/ai-art/` (`comfy.mjs` gen/detail, `grade.mjs` palette match, `depth.py` Depth Anything V2, `split.mjs` planes;
-  paths in `config.json`). Universe skill → "Sets". Pilot: `universes/noxverse/demo/ai-art/`.
+  per-PC paths via `paths.mjs`; install with `npm run setup -- --ai`). Universe skill → "Sets". Pilot: `universes/noxverse/demo/ai-art/`.
 - Storyboard QC for universe boards (2026-10-15, Phase 5): `node studio/scripts/board-check.mjs <video>`
   (coverage + staging: pasted-on characters, framing variety, horizon, foreground, screen direction)
   → storyboard-check.json; status.mjs blocks storyboard approval while it has errors.

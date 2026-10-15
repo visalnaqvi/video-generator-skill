@@ -1,7 +1,7 @@
 {
-  "comfyRoot": "C:/Users/admin/studio-tools/ComfyUI_windows_portable",
   "model": "flux1-schnell-fp8.safetensors",
   "depthModel": "depth-anything/Depth-Anything-V2-Small-hf",
   "port": 8188,
-  "args": []
+  "args": [],
+  "note": "Paths are per PC: env STUDIO_COMFY_ROOT, or config.local.json (gitignored, written by setup.mjs), else ~/studio-tools/ComfyUI_windows_portable — see paths.mjs."
 }
