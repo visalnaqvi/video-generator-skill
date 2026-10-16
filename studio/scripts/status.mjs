@@ -54,13 +54,14 @@ async function status(dir) {
     const deck = await st(f('storyboard-deck.pdf'));
     // universe boards: the coverage/staging check (board-check.mjs) must pass before approval
     let check = '', checkNext = null;
-    if (sb.universe && sb.status !== 'approved') {
+    const boardOk = sb.status === 'approved' || sb.status === 'final';
+    if (sb.universe && !boardOk) {
       const rep = await json(f('storyboard-check.json'));
       const fresh = rep && (await mt('storyboard-check.json')) >= (await mt('storyboard.json'));
       if (!fresh) { check = ' · check not run'; checkNext = `Run node studio/scripts/board-check.mjs ${dir.replace(/\\/g, '/')}`; }
       else { check = rep.ok ? ` · check ✓ (${rep.warnings.length} warnings)` : ` · check ✗ ${rep.errors.length} errors`; if (!rep.ok) checkNext = 'Fix the board-check errors (storyboard-check.json), re-run the check'; }
     }
-    add('storyboard', staleBoard ? 'stale' : sb.status === 'approved' ? 'done' : 'awaiting approval', `${sb.concept?.title ?? sb.style ?? ''} · ${sb.scenes?.length ?? 0} shots · v${sb.version ?? 1}${deck ? ' · deck' : ''}${check}`, staleBoard ? 'Script changed — update affected shots' : checkNext ?? (sb.status !== 'approved' ? 'Review contact sheet + deck, approve storyboard' : null));
+    add('storyboard', staleBoard ? 'stale' : boardOk ? 'done' : 'awaiting approval', `${sb.concept?.title ?? sb.style ?? ''} · ${sb.scenes?.length ?? 0} shots · v${sb.version ?? 1}${deck ? ' · deck' : ''}${check}`, staleBoard ? 'Script changed — update affected shots' : checkNext ?? (!boardOk ? 'Review contact sheet + deck, approve storyboard' : null));
   }
 
   // 4 voiceover
@@ -72,15 +73,20 @@ async function status(dir) {
     add('voiceover', state, `${vs.voice?.name ?? 'no voice'} ${vs.voice?.rate ?? ''}${fitted ? ` · fitted (${sb.timing.voDuration}s)` : ' · not fitted'}`, scriptNewer ? 'Script changed — regenerate changed lines, re-fit' : state === 'done' ? null : fitted ? 'Review preview, approve voice' : 'Fit storyboard to the voice');
   }
 
-  // 5 render
-  const final = await st(f('render/final.mp4'));
-  if (!final) add('render', 'not started', sb?.finalAudio ? 'mix ready' : '', vs?.status === 'approved' ? 'Run render (music → SFX → captions → mix → final → QC)' : null);
+  // 5 render — a video joined from parts (studio/scripts/master.mjs: pre-hook + main) mixes, renders and QCs in master/
+  const mdir = (await st(join(dir, 'master', 'storyboard.json'))) ? join(dir, 'master') : dir;
+  const rf = (p) => join(mdir, p);
+  const rsb = mdir === dir ? sb : await json(rf('storyboard.json'));
+  const rqc = mdir === dir ? qc : await json(rf('render/qc.json'));
+  const final = await st(rf('render/final.mp4'));
+  if (!final) add('render', 'not started', rsb?.finalAudio ? 'mix ready' : '', vs?.status === 'approved' ? `Run render (music → SFX → captions → mix → final → QC)${mdir === dir ? '' : ' on master/'}` : null);
   else {
-    const passed = qc?.checks?.every((c) => c.status !== 'FAIL');
-    const rec = await json(f('render/final.json'));
-    const outdated = rec ? rec.fingerprint !== (await renderFingerprint(sb, dir)) : (await mt('audio/mix.wav')) > final.mtimeMs + 1000;
-    const isFinal = sb?.render?.status === 'final';
-    add('render', outdated ? 'stale' : isFinal ? 'done' : 'awaiting approval', `final.mp4 ${(final.size / 1048576).toFixed(1)} MB · QC ${qc ? (passed ? 'passed' : 'FAILED') : 'not run'}${isFinal ? ' · FINAL' : ''}`, outdated ? 'Storyboard/mix changed — re-render + QC' : isFinal ? null : 'Watch final, approve');
+    const passed = rqc?.checks?.every((c) => c.status !== 'FAIL');
+    const rec = await json(rf('render/final.json'));
+    const mixT = (await st(rf('audio/mix.wav')))?.mtimeMs ?? 0;
+    const outdated = rec ? rec.fingerprint !== (await renderFingerprint(rsb, mdir)) : mixT > final.mtimeMs + 1000;
+    const isFinal = rsb?.render?.status === 'final';
+    add('render', outdated ? 'stale' : isFinal ? 'done' : 'awaiting approval', `${mdir === dir ? '' : 'master/ · '}final.mp4 ${(final.size / 1048576).toFixed(1)} MB · QC ${rqc ? (passed ? 'passed' : 'FAILED') : 'not run'}${isFinal ? ' · FINAL' : ''}`, outdated ? 'Storyboard/mix changed — re-render + QC' : isFinal ? null : 'Watch final, approve');
   }
 
   const next = S.find((s) => s.next)?.next ?? 'Done — video is final';

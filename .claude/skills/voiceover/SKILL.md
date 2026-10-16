@@ -124,8 +124,20 @@ script is too long for the target and suggest trims via the write skill. Never c
    report (old → new shot lengths, anchors, warnings), then run it without `--dry`.
 
 It starts each shot just before its first words, holds the last shot ~2 s after the VO
-(`--hold`), resolves every `sync`, sets `audio` and bumps `version`. Fix any warning
-(an anchor word not spoken in its shot, a shot under ~1.2 s) before rendering.
+(`--hold`), resolves every `sync` — layers, exits (`exitSync`), sfx, effects, shakes, component props, **rig
+`acting` beats and scene `lights`** — shortens walks that would run past their shot, sets `audio` and bumps
+`version`. Fix any warning (an anchor word not spoken in its shot, a shot under ~1.2 s) before rendering.
+
+Gotchas (Gold in the Backyard):
+- **"sync word not spoken in this shot" after the storyboard changed shot ids** → the voice script still maps
+  lines to the old shots: re-run `voice-script.mjs` (edits and pauses are kept) and `assemble.mjs` (no new TTS
+  needed), then fit again.
+- **Line ids shift** when a beat gains or loses `VO:` lines (L03 becomes L04…) and clips are stored by id:
+  delete `audio/clips/<voice>/` and regenerate all lines (free, about a minute) instead of `--only`.
+- **Room for an action** (a walk, a door shutting): the script splits the line into separate `VO:` lines and the
+  voice script gets `pauseAfter` on the line before the action; a shot can open inside that pause with
+  `leadIn`. A pause after the last line of a beat gives a slam time to land.
+- Pauses are set by line text, not id, so they survive a rebuild: find the line by its opening words.
 
 3. **Talking characters** (universe videos where a character has `talk` in the storyboard):
    `node studio/scripts/lipsync.mjs videos/<video>` → `audio/lipsync.json` (one mouth shape per
@@ -142,6 +154,11 @@ node studio/scripts/render.mjs videos/<video>/storyboard.json --preview
 Look at the contact sheet once (timing changes can push text off a frame's `sheetFrame`);
 don't watch the MP4. Send `render/preview.mp4` to the user. Ask for: voice OK? pace OK?
 anything landing early/late? Apply fixes (gaps, `sync`, rate, `tts`) and re-run Steps 3–5.
+
+**Iterating beat by beat (the user's preferred loop for longer videos):** instead of one preview, render each
+beat as its own clip with its own slice of the voice — `node studio/scripts/render-beats.mjs videos/<video>
+--scale 0.4` (432p; `--beats 5,7` for just the changed ones) → `render/beats/beatNN.mp4`. A change in one beat
+re-renders only that beat. Preview scales must give whole pixels: 0.4 or 0.5 (1/3 fails).
 
 ## Step 6 — Approve (or upgrade)
 

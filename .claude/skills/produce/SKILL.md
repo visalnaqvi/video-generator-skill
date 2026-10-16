@@ -64,6 +64,16 @@ Approval must come from the user in chat for **this** video and gate. "Looks goo
 "approved", "go ahead" count; silence or a question doesn't. One approval never covers
 the next gate. After each gate, give a one-line status and the next step.
 
+## Iterating after the first preview (how the user works on longer story videos)
+
+Once voice and storyboard exist, the user reviews **beat by beat**, giving words and animation changes for a
+few beats at a time. Loop per message: words → write (script.md + story.md, grammar tidied, present tense
+kept, said in one line), visuals → storyboard (the board script in `<video>/board/`), voice → re-record only
+the changed lines (all lines if ids shifted), fit, then `render-beats.mjs --beats <changed>` and send just those
+432p clips. A cold open the user asks for goes in `<video>/prehook/` as its own small video; at the end
+`master.mjs` joins the parts and the render stage runs once on `<video>/master/`. Fast path for universe
+boards: `.claude/skills/storyboard/references/board-kit.md`.
+
 ## Changes after approval
 
 - Name the stage that owns the change: words → write; look, animation, transitions, sound

@@ -21,6 +21,15 @@ This stage **doesn't change visuals or words.** Wrong animation or timing → st
 voiceover skills. **Free by default:** library or code-generated music, code-generated
 sound effects. Paid music (AI generation) only if the user asks or approves an estimate.
 
+## Step 0 — One video from several parts (pre-hook)
+
+A pre-hook / cold open built as its own small video in `<video>/prehook/` (its own script, voice and fit) is
+joined to the main board **before** this stage: `node studio/scripts/master.mjs videos/<video>` → `<video>/master/`
+(one storyboard, one voice track, one timings file; music / captions / sfxDb settings kept on rebuild). Run
+Steps 1–5 on `videos/<video>/master`, then copy `master/render/final.mp4`, `cover.png`, `qc.json` to
+`<video>/render/`. After any part changes: re-fit that part, rebuild the master, re-mix, re-render.
+Compute music times (the lift, `--silence`) on the master's timeline (part 1's length shifts everything).
+
 ## Step 1 — Music
 
 1. Read the storyboard's `music.mood` / `notes` and the video length.
@@ -47,6 +56,14 @@ prefers restrained sound: signature moments only (≈ 1 cue per 2 s at most, non
 transitions). If a storyboard has far more cues than that, thin them to the key moments
 before mixing and say so. Fix any "No sound matched" lines from the mixer by adding
 keywords or a custom sound — never by changing the storyboard's design.
+
+Keywords match at the start of a word ("ping" no longer catches "scraping"); still read `audio/mix.json` once
+and check each cue's file fits what is on screen: a "door" cue must not land on the knock when the shot is a
+cell door or cupboard (use "cell door" → metal-clang, "thud" → punch). Library additions 2026-10-16:
+coin-jingle, metal-clang, soil-scrape; custom keywords rustle → card-flick, notification → chime,
+shutter / pin into → pop, thud → punch. A ticking bed comes from the tense music after `--silence` — don't add a
+"clock tick" cue (it maps to a pen tick). New sounds go in `make-sfx.mjs` (deterministic; re-running leaves the
+existing files byte-identical — check with `cmp`) or as files in `custom`.
 
 ## Step 3 — Mix
 
@@ -85,6 +102,8 @@ send `render/final.mp4` (and the cover) to the user with the QC summary and what
 mix (music source, number of sound events, captions on/off).
 
 ## Step 6 — Approve
+
+The final render of a ~100 s video takes several minutes: run final + cover + QC as one background command.
 
 User happy → `"status": "final"` in `storyboard.json` → `render`, done. Changes:
 music/sound/caption tweaks → Steps 1–5 here; visual or timing changes → storyboard /

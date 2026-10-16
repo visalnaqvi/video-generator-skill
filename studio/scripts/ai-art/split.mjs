@@ -48,6 +48,9 @@ for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { const i = y * W + x; i
 // a foreground mass that fills whole rows (a counter, a desk, a ledge) is not nearer than its own row: everything
 // below --front-below (% from the top) joins the near plane
 if (frontBelow !== null) for (let y = Math.round(frontBelow * H); y < H; y++) near.fill(255, y * W, (y + 1) * W);
+// …and only that: with --front-below the near plane is drawn in front of characters (`front: true`), so depth-near
+// things above the line (cabinet frames, shelf edges) stay in the backdrop instead of cutting across faces.
+if (frontBelow !== null) near.fill(0, 0, Math.max(0, Math.round((frontBelow - 0.01) * H)) * W);
 
 // clean masks: blur + threshold removes specks, a second small blur feathers the edge
 const clean = async (m, r) => sharp(Buffer.from(m), { raw: { width: W, height: H, channels: 1 } }).blur(Math.max(0.3, r)).threshold(128).blur(Math.max(0.3, feather)).extractChannel(0).raw().toBuffer(); // one channel (threshold returns 3)

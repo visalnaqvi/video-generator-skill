@@ -1,0 +1,99 @@
+{
+ "id": "penthouse-night-ai",
+ "name": "Penthouse at night (AI)",
+ "status": "review",
+ "created": "2026-10-16",
+ "description": "Luxury apartment at night: a floor-to-ceiling window wall over a glittering skyline (amber windows, pink neon tops), a dark sofa and coffee table on a plum rug, a warm floor lamp on the right, a polished floor reflecting the city.",
+ "source": "sets/penthouse-night-ai/ — init.png (code layout) → cand-3.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "interior",
+  "penthouse",
+  "apartment",
+  "luxury",
+  "rich",
+  "city",
+  "skyline",
+  "window",
+  "night"
+ ],
+ "stage": {
+  "horizon": 0,
+  "floor": "polished floor from y 67 % down; sofa at (47 %, 62 %) — Alex stands in front of it (feet 74–82 %) or at the window (back view)",
+  "scale": "feet at y 75 % → 640 px · 85 % → 860 px · 95 % → 1080 px",
+  "bestAngles": [
+   "wide from the room toward the window (as drawn)",
+   "back view at the window over the city",
+   "close on the face lit by the phone with the city out of focus"
+  ]
+ },
+ "ambient": {
+  "color": "#3e4a78",
+  "amount": 0.45
+ },
+ "atmosphere": {
+  "color": "#1a2238",
+  "amount": 0.12
+ },
+ "focus": {
+  "z": 0.5,
+  "blur": 3
+ },
+ "lights": [
+  {
+   "id": "city",
+   "x": 50,
+   "y": 32.8,
+   "color": "#9fb8ff",
+   "intensity": 0.35,
+   "radius": 1400,
+   "glow": 0,
+   "z": 0.1
+  },
+  {
+   "id": "lamp",
+   "x": 94,
+   "y": 50,
+   "color": "#ffcf7a",
+   "intensity": 0.75,
+   "radius": 700,
+   "glow": 34,
+   "z": 0.35
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/penthouse-night-ai/penthouse-night-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.2,
+   "haze": 0
+  },
+  {
+   "id": "dust",
+   "type": "ambient",
+   "kind": "dust",
+   "area": [
+    70,
+    40,
+    28,
+    25
+   ],
+   "count": 12,
+   "z": 0.4
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/penthouse-night-ai/penthouse-night-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6
+  }
+ ]
+}

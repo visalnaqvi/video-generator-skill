@@ -1,0 +1,120 @@
+{
+ "id": "investigator-office-ai",
+ "name": "Investigator office at night (AI)",
+ "status": "review",
+ "created": "2026-10-16",
+ "description": "A bare investigator office: a big empty cork board on the back wall (pin the evidence-board component over it), window blinds with city lights on the right, a bare bulb and a hanging lamp, a grey metal desk across the foreground.",
+ "source": "sets/investigator-office-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "interior",
+  "police",
+  "investigator",
+  "detective",
+  "office",
+  "cork board",
+  "evidence",
+  "interrogation",
+  "desk"
+ ],
+ "stage": {
+  "horizon": 0,
+  "floor": "desk top from image y 67 % (front plane below it); the cork board spans x 32–66, y 30–60 — keep it clear or cover it with noxverse/evidence-board (x 49, y 45, ~620×560)",
+  "scale": "behind the desk: h 1100 at y 62 (x 70–85 leaves the board visible)",
+  "bestAngles": [
+   "across the desk (as drawn) with the board behind",
+   "over the shoulder at the board (back view in the foreground)",
+   "low angle on the investigator under the lamp"
+  ]
+ },
+ "ambient": {
+  "color": "#3e4a78",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1a2238",
+  "amount": 0.12
+ },
+ "focus": {
+  "z": 0.5,
+  "blur": 3
+ },
+ "lights": [
+  {
+   "id": "bulb",
+   "x": 28.5,
+   "y": 7,
+   "color": "#fff1c4",
+   "intensity": 0.5,
+   "radius": 650,
+   "glow": 30,
+   "z": 0.2
+  },
+  {
+   "id": "lamp",
+   "x": 52.1,
+   "y": 19.9,
+   "color": "#ffcf7a",
+   "intensity": 0.6,
+   "radius": 800,
+   "glow": 24,
+   "z": 0.3
+  },
+  {
+   "id": "city",
+   "x": 95.1,
+   "y": 39.3,
+   "color": "#9fb8ff",
+   "intensity": 0.35,
+   "radius": 700,
+   "glow": 0,
+   "z": 0.1
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/investigator-office-ai/investigator-office-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.2,
+   "haze": 0
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/investigator-office-ai/investigator-office-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "dust",
+   "type": "ambient",
+   "kind": "dust",
+   "area": [
+    30,
+    15,
+    40,
+    40
+   ],
+   "count": 14,
+   "z": 0.3
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/investigator-office-ai/investigator-office-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6,
+   "front": true
+  }
+ ]
+}

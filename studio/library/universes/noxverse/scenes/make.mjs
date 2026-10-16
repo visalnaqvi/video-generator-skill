@@ -388,6 +388,277 @@ function porchBg() {
   NIGHT_SKY);
 }
 
+// ---------- Gold in the Backyard (2026-10-16): back garden at night, penthouse, treasure chest, gold coin ----------
+function backyardBg() {
+  const r = rng(53);
+  let trees = '', planks = '', grass = '';
+  for (let i = 0; i < 14; i++) { const x = i * 85 + r() * 40, h = 90 + r() * 140; trees += `<ellipse cx="${x.toFixed(0)}" cy="${(930 - h / 2).toFixed(0)}" rx="${(60 + r() * 40).toFixed(0)}" ry="${(h / 2 + 30).toFixed(0)}" fill="#0b1120"/>`; }
+  for (let x = 380; x < 1100; x += 46) planks += `<rect x="${x}" y="${(905 + r() * 10).toFixed(0)}" width="40" height="${(150 - r() * 10).toFixed(0)}" fill="#1e2433" stroke="#11151f" stroke-width="4"/>`;
+  for (let i = 0; i < 160; i++) { const x = r() * 1080, y = 1780 + r() * 140; grass += `<path d="M${x.toFixed(0)},${y.toFixed(0)} l${(r() * 14 - 7).toFixed(0)},-${(30 + r() * 50).toFixed(0)}" stroke="#0a1220" stroke-width="5" stroke-linecap="round"/>`; }
+  return W(1080, 1920, `<rect width="1080" height="1920" fill="url(#nsky)"/>${starsIn(r, 70, 820)}
+  <circle cx="820" cy="250" r="54" fill="${C.moon}"/><circle cx="820" cy="250" r="140" fill="${C.moon}" opacity="0.12" filter="url(#b20)"/>
+  ${trees}
+  <path d="M640,860 L760,790 L880,860 Z" fill="#121a2a"/><rect x="660" y="855" width="200" height="70" fill="#141c2c"/><rect x="740" y="875" width="34" height="30" fill="#e8b25a" opacity="0.8"/>
+  ${planks}<rect x="380" y="955" width="720" height="10" fill="#151b28"/><rect x="380" y="1010" width="720" height="10" fill="#151b28"/>
+  <rect y="1050" width="1080" height="870" fill="url(#lawn)"/>
+  <path d="M-20,560 L250,430 L470,560 L470,1270 L-20,1270 Z" fill="#1a2132" stroke="${C.out}" stroke-width="8"/>
+  <path d="M-30,566 L250,420 L484,566" fill="none" stroke="#0e121c" stroke-width="26"/>
+  <rect x="70" y="760" width="230" height="200" rx="6" fill="#ffd38a" stroke="${C.out}" stroke-width="8"/><path d="M185,760 L185,960 M70,860 L300,860" stroke="${C.out}" stroke-width="7"/>
+  <rect x="340" y="860" width="110" height="410" fill="#252033" stroke="${C.out}" stroke-width="7"/><circle cx="430" cy="1070" r="7" fill="#d4a64a"/>
+  <path d="M60,1270 L320,1270 L560,1700 L-60,1700 Z" fill="#ffd38a" opacity="0.12" filter="url(#b20)"/>
+  <ellipse cx="185" cy="860" rx="210" ry="170" fill="#ffd38a" opacity="0.18" filter="url(#b20)"/>
+  <rect x="-10" y="1270" width="500" height="30" fill="#2a2e3a"/>
+  <rect x="40" y="1420" width="300" height="70" fill="#3a2a20" stroke="${C.out}" stroke-width="6"/><rect x="50" y="1400" width="280" height="30" fill="#2a1d16"/>
+  <ellipse cx="640" cy="1500" rx="250" ry="70" fill="#2b1d16"/><ellipse cx="640" cy="1490" rx="170" ry="42" fill="#120c0a"/>
+  <path d="M480,1470 Q560,1420 640,1430 Q600,1460 520,1480 Z" fill="#3a2a1f"/><path d="M790,1460 Q850,1440 900,1480 Q840,1500 780,1490 Z" fill="#3a2a1f"/>
+  <path d="M860,1490 L900,1250" stroke="#5a4636" stroke-width="16" stroke-linecap="round"/><path d="M846,1500 L834,1560 Q860,1590 888,1566 L896,1506 Z" fill="#7b8494" stroke="${C.out}" stroke-width="6"/><path d="M882,1240 L922,1250" stroke="${C.out}" stroke-width="14" stroke-linecap="round"/>
+  <path d="M900,1660 L1060,1660 L1040,1720 L920,1720 Z" fill="#30394c" stroke="${C.out}" stroke-width="6"/><circle cx="930" cy="1740" r="26" fill="#15151a"/>
+  ${grass}`,
+  NIGHT_SKY + '<linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16233a"/><stop offset="1" stop-color="#0a101c"/></linearGradient>');
+}
+
+function penthouseBg() {
+  const r = rng(61);
+  let city = '';
+  for (let i = 0; i < 26; i++) {
+    const w = 50 + r() * 70, x = -20 + i * 44 + r() * 20, h = 220 + r() * 600, top = 1240 - h;
+    city += `<rect x="${x.toFixed(0)}" y="${top.toFixed(0)}" width="${w.toFixed(0)}" height="${h.toFixed(0)}" fill="${i % 3 ? '#121a2e' : '#0e1426'}"/>`;
+    for (let wy = top + 20; wy < 1230; wy += 34) for (let wx = x + 8; wx < x + w - 12; wx += 20) if (r() < 0.32) city += `<rect x="${wx.toFixed(0)}" y="${wy.toFixed(0)}" width="9" height="14" fill="${r() < 0.08 ? C.pink : '#f4c66b'}" opacity="${(0.45 + r() * 0.5).toFixed(2)}"/>`;
+  }
+  return W(1080, 1920, `<rect width="1080" height="1920" fill="#0c1020"/>
+  <rect y="140" width="1080" height="1160" fill="url(#psky)"/>${starsIn(r, 30, 500)}
+  ${city}<rect y="1180" width="1080" height="120" fill="#f4c66b" opacity="0.08" filter="url(#b20)"/>
+  <rect y="0" width="1080" height="150" fill="#141826" stroke="${C.out}" stroke-width="8"/>
+  <path d="M270,150 L270,1300 M540,150 L540,1300 M810,150 L810,1300" stroke="#1b2030" stroke-width="22"/>
+  <rect y="1290" width="1080" height="630" fill="url(#pfloor)"/>
+  <rect x="0" y="1286" width="1080" height="16" fill="#1b2030"/>
+  <rect x="80" y="1300" width="920" height="140" fill="#f4c66b" opacity="0.05" filter="url(#b20)"/>
+  <path d="M120,1560 L900,1560 L1000,1820 L20,1820 Z" fill="#3a2a34" opacity="0.9"/>
+  <rect x="140" y="1380" width="640" height="150" rx="40" fill="#2b2f3f" stroke="${C.out}" stroke-width="8"/><rect x="120" y="1460" width="680" height="120" rx="30" fill="#353a4d" stroke="${C.out}" stroke-width="8"/>
+  <rect x="500" y="1640" width="300" height="70" rx="10" fill="#1d2130" stroke="${C.out}" stroke-width="6"/>
+  <path d="M930,1660 L930,1180" stroke="#1a1d26" stroke-width="12"/><path d="M880,1180 L980,1180 L960,1100 L900,1100 Z" fill="#ffe2a8" stroke="${C.out}" stroke-width="6"/><ellipse cx="930" cy="1180" rx="200" ry="160" fill="#ffd98a" opacity="0.2" filter="url(#b20)"/>`,
+  '<linearGradient id="psky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070b18"/><stop offset="1" stop-color="#22305a"/></linearGradient><linearGradient id="pfloor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2236"/><stop offset="1" stop-color="#0a0d16"/></linearGradient>');
+}
+
+// interior helpers: back wall, floor, a desk across the foreground (its top edge at y = top)
+const wallFloor = (floorY, wall = 'url(#iwall)') => `<rect width="1080" height="${floorY}" fill="${wall}"/><rect y="${floorY}" width="1080" height="${1920 - floorY}" fill="#0c0f19"/><rect y="${floorY - 6}" width="1080" height="12" fill="#1a1f2e"/>`;
+const desk = (top, fill = '#3a2a22') => `<rect x="-20" y="${top}" width="1120" height="40" fill="${fill}" stroke="${C.out}" stroke-width="6"/><rect x="-20" y="${top + 40}" width="1120" height="${1920 - top}" fill="#24191a"/><path d="M-20,${top + 120} L1100,${top + 120}" stroke="#1a1213" stroke-width="10"/>`;
+const IWALL = '<linearGradient id="iwall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121729"/><stop offset="1" stop-color="#1c2338"/></linearGradient>';
+
+// collector's private study: lit glass cabinets of coins on the back wall, a lamp, a big desk in front
+function collectorStudy() {
+  const r = rng(91);
+  let cab = '';
+  for (const cx of [190, 540, 890]) {
+    cab += `<rect x="${cx - 150}" y="420" width="300" height="700" fill="#2a2018" stroke="${C.out}" stroke-width="8"/><rect x="${cx - 130}" y="440" width="260" height="660" fill="#ffcf7a" opacity="0.18"/>`;
+    for (let sy = 520; sy < 1080; sy += 140) { cab += `<rect x="${cx - 130}" y="${sy}" width="260" height="8" fill="#5a4330"/>`; for (let k = 0; k < 5; k++) cab += `<circle cx="${cx - 100 + k * 50}" cy="${sy - 22}" r="16" fill="#e6ad34" opacity="${(0.6 + r() * 0.4).toFixed(2)}"/>`; }
+  }
+  return W(1080, 1920, `${wallFloor(1180)}${cab}
+  <ellipse cx="540" cy="760" rx="520" ry="380" fill="#ffcf7a" opacity="0.08" filter="url(#b20)"/>
+  <rect x="380" y="240" width="320" height="130" rx="8" fill="#2a2018" stroke="${C.out}" stroke-width="6"/>
+  ${desk(1400)}
+  <path d="M820,1400 L860,1220 L900,1220 L870,1400 Z" fill="#1a1d26"/><path d="M800,1230 L960,1230 L930,1170 L830,1170 Z" fill="#3f5a3a" stroke="${C.out}" stroke-width="6"/><ellipse cx="880" cy="1300" rx="220" ry="140" fill="#ffd98a" opacity="0.22" filter="url(#b20)"/>
+  <rect x="260" y="1360" width="220" height="40" fill="#e9e3d6" opacity="0.8"/><circle cx="620" cy="1385" r="22" fill="#e6ad34"/>`, IWALL);
+}
+
+// museum curator's office: shelves of old catalogues, a desk with a glowing monitor, a tall window with moonlight
+function museumOffice() {
+  const r = rng(97);
+  let books = '';
+  for (const [x0, x1] of [[0, 330], [750, 1080]]) for (let sy = 300; sy < 1150; sy += 170) {
+    books += `<rect x="${x0}" y="${sy + 150}" width="${x1 - x0}" height="14" fill="#3a2a22"/>`;
+    for (let bx = x0 + 10; bx < x1 - 20;) { const w = 24 + r() * 26, h = 100 + r() * 45; books += `<rect x="${bx.toFixed(0)}" y="${(sy + 150 - h).toFixed(0)}" width="${w.toFixed(0)}" height="${h.toFixed(0)}" fill="${['#4a2b2b', '#2b3a4a', '#4a4026', '#33294a'][Math.floor(r() * 4)]}" stroke="${C.out}" stroke-width="3"/>`; bx += w + 3; }
+  }
+  return W(1080, 1920, `${wallFloor(1200)}
+  <rect x="380" y="260" width="320" height="700" fill="#0a1022" stroke="#2a3042" stroke-width="16"/><path d="M540,260 L540,960 M380,610 L700,610" stroke="#2a3042" stroke-width="12"/><circle cx="620" cy="400" r="40" fill="${C.moon}" opacity="0.9"/>
+  ${books}
+  ${desk(1380, '#4a3326')}
+  <rect x="420" y="1120" width="300" height="200" rx="10" fill="#9fd3ff" stroke="${C.out}" stroke-width="8"/><rect x="555" y="1320" width="30" height="60" fill="#1a1d26"/><ellipse cx="570" cy="1220" rx="260" ry="200" fill="#9fd3ff" opacity="0.18" filter="url(#b20)"/>
+  <rect x="160" y="1340" width="200" height="40" fill="#e9dcc0" stroke="${C.out}" stroke-width="4"/>`, IWALL);
+}
+
+// investigator's office: an empty cork board on the back wall, blinds with city light, overhead lamp, a metal table in front
+function investigatorOffice() {
+  let blinds = '';
+  for (let y = 300; y < 900; y += 34) blinds += `<rect x="760" y="${y}" width="300" height="20" fill="#2a3552" opacity="0.9"/>`;
+  return W(1080, 1920, `${wallFloor(1220, '#141a2a')}
+  <rect x="740" y="280" width="340" height="640" fill="#0a0f1e" stroke="#2a3042" stroke-width="14"/>${blinds}
+  <rect x="80" y="380" width="600" height="560" fill="#6b4f36" stroke="#2a1d14" stroke-width="18"/>
+  <path d="M380,0 L380,140" stroke="#15151a" stroke-width="8"/><path d="M300,140 L460,140 L420,190 L340,190 Z" fill="#2a2f3a" stroke="${C.out}" stroke-width="6"/><path d="M340,190 L120,1200 L640,1200 L420,190 Z" fill="#dfe8ff" opacity="0.08"/>
+  <rect x="860" y="980" width="180" height="240" fill="#2a2f3a" stroke="${C.out}" stroke-width="6"/>
+  ${desk(1420, '#4a5060')}
+  <rect x="300" y="1370" width="180" height="50" fill="#e9e3d6" opacity="0.7"/><rect x="560" y="1380" width="120" height="40" fill="#1a1d26"/>`, IWALL);
+}
+
+// an old auction catalogue lying open: yellowed pages, text columns, an empty photo plate on the right page
+// (place the coin photo over the plate at 74 %, 47 % of the prop, ~34 % of its width)
+function catalogueOpen() {
+  let lines = '';
+  for (let i = 0; i < 14; i++) lines += `<rect x="90" y="${150 + i * 34}" width="${(300 - (i % 4) * 30)}" height="10" rx="5" fill="#6b5a3e" opacity="0.55"/>`;
+  return W(1000, 700, `<path d="M40,80 Q270,40 500,90 Q730,40 960,80 L960,660 Q730,620 500,670 Q270,620 40,660 Z" fill="#2a1d14"/>
+  <path d="M60,90 Q280,56 496,100 L496,650 Q280,610 60,646 Z" fill="#e8dcbc" stroke="${C.out}" stroke-width="5"/>
+  <path d="M504,100 Q720,56 940,90 L940,646 Q720,610 504,650 Z" fill="#efe4c6" stroke="${C.out}" stroke-width="5"/>
+  <rect x="90" y="110" width="220" height="18" rx="6" fill="#4a3c28"/>${lines}
+  <rect x="570" y="160" width="340" height="340" fill="#d9ccaa" stroke="#6b5a3e" stroke-width="6"/>
+  <rect x="600" y="530" width="280" height="12" rx="6" fill="#6b5a3e" opacity="0.6"/><rect x="640" y="556" width="200" height="10" rx="5" fill="#6b5a3e" opacity="0.45"/>
+  <path d="M496,100 L504,100 L504,650 L496,650 Z" fill="#b8a982"/>`);
+}
+
+// a sheet of official paper (forged papers, a will): heading, lines, signature, seal
+function paperDoc() {
+  let lines = '';
+  for (let i = 0; i < 9; i++) lines += `<rect x="80" y="${210 + i * 46}" width="${440 - (i % 3) * 40}" height="12" rx="6" fill="#3a3326" opacity="0.35"/>`;
+  return W(600, 800, `<rect x="20" y="20" width="560" height="760" rx="8" fill="#f1e9d2" stroke="${C.out}" stroke-width="6"/>
+  <rect x="140" y="80" width="320" height="26" rx="6" fill="#3a3326" opacity="0.8"/><rect x="190" y="124" width="220" height="14" rx="6" fill="#3a3326" opacity="0.45"/>${lines}
+  <path d="M90,690 Q140,650 180,690 T270,680" fill="none" stroke="#1f2a55" stroke-width="5"/><rect x="80" y="702" width="220" height="4" fill="#3a3326" opacity="0.5"/>
+  <circle cx="460" cy="680" r="56" fill="none" stroke="#9a2b3a" stroke-width="8" opacity="0.7"/><circle cx="460" cy="680" r="38" fill="#9a2b3a" opacity="0.25"/>`);
+}
+
+// foreground houseplant silhouette for interiors (sits in front of characters, out of focus)
+function plantFg() {
+  const r = rng(83);
+  let leaves = '';
+  for (let i = 0; i < 9; i++) {
+    const a = -150 + i * 32 + (r() - 0.5) * 14, len = 360 + r() * 200, rad = (a * Math.PI) / 180;
+    const ex = 300 + Math.cos(rad) * len, ey = 820 + Math.sin(rad) * len;
+    leaves += `<path d="M300,820 Q${(300 + Math.cos(rad - 0.5) * len * 0.6).toFixed(0)},${(820 + Math.sin(rad - 0.5) * len * 0.6).toFixed(0)} ${ex.toFixed(0)},${ey.toFixed(0)} Q${(300 + Math.cos(rad + 0.5) * len * 0.6).toFixed(0)},${(820 + Math.sin(rad + 0.5) * len * 0.6).toFixed(0)} 300,820 Z" fill="${i % 2 ? '#0b0f1a' : '#0e1322'}"/>`;
+  }
+  return W(600, 900, `${leaves}<path d="M190,800 L410,800 L380,900 L220,900 Z" fill="#090c15"/>`);
+}
+
+// treasure chest, lid open, heaped with gold coins and glowing (prop, no ground patch)
+function chestOpen() {
+  const r = rng(71);
+  let coins = '';
+  for (let i = 0; i < 46; i++) { const x = 150 + r() * 600, y = 250 + r() * 90 - Math.sin(((x - 150) / 600) * Math.PI) * 70; coins += `<ellipse cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" rx="34" ry="14" fill="${r() < 0.5 ? '#f2c14e' : '#e0a92e'}" stroke="#8a5a12" stroke-width="4"/>`; }
+  return W(900, 640, `<ellipse cx="450" cy="250" rx="420" ry="200" fill="#ffd36b" opacity="0.35" filter="url(#b20)"/>
+  <path d="M130,60 L770,60 L790,250 L110,250 Z" fill="#6b4524" stroke="${C.out}" stroke-width="8"/><path d="M150,90 L750,90" stroke="#4e3119" stroke-width="10"/><rect x="420" y="190" width="60" height="60" fill="#c79a3a" stroke="${C.out}" stroke-width="6"/>
+  ${coins}
+  <path d="M110,300 L790,300 L760,600 L140,600 Z" fill="#7a4f2a" stroke="${C.out}" stroke-width="8"/>
+  <path d="M120,380 L780,380 M128,480 L772,480" stroke="#4e3119" stroke-width="12"/><rect x="130" y="296" width="640" height="26" fill="#a3793c" stroke="${C.out}" stroke-width="6"/>
+  <rect x="410" y="330" width="80" height="90" rx="8" fill="#c79a3a" stroke="${C.out}" stroke-width="6"/><circle cx="450" cy="370" r="12" fill="${C.out}"/>
+  <path d="M160,320 L200,590 M740,320 L700,590" stroke="#3a2412" stroke-width="10" opacity="0.6"/>`);
+}
+
+// the same chest shut (same 900x640 canvas and body as chest-open, so the two crossfade in place)
+function chestClosed() {
+  return W(900, 640, `
+  <path d="M110,300 L790,300 L760,600 L140,600 Z" fill="#7a4f2a" stroke="${C.out}" stroke-width="8"/>
+  <path d="M120,380 L780,380 M128,480 L772,480" stroke="#4e3119" stroke-width="12"/>
+  <path d="M160,320 L200,590 M740,320 L700,590" stroke="#3a2412" stroke-width="10" opacity="0.6"/>
+  <path d="M96,312 Q100,190 450,182 Q800,190 804,312 Z" fill="#6b4524" stroke="${C.out}" stroke-width="8"/>
+  <path d="M150,300 Q160,222 450,214 Q740,222 750,300" fill="none" stroke="#4e3119" stroke-width="10"/>
+  <path d="M260,300 Q262,205 300,196 M640,300 Q638,205 600,196" stroke="#a3793c" stroke-width="16" fill="none"/>
+  <rect x="96" y="296" width="708" height="26" fill="#a3793c" stroke="${C.out}" stroke-width="6"/>
+  <rect x="410" y="270" width="80" height="110" rx="8" fill="#c79a3a" stroke="${C.out}" stroke-width="6"/><circle cx="450" cy="320" r="12" fill="${C.out}"/>
+  <path d="M440,300 L460,300" stroke="#ffe58a" stroke-width="4" opacity="0.7"/>`);
+}
+
+// front lip of a freshly dug hole: dark soil ridge with clods (stands in front of whatever comes out of the hole)
+function holeLip() {
+  const r = rng(77);
+  let clods = '';
+  for (let i = 0; i < 18; i++) { const x = 80 + r() * 740, y = 52 + Math.sin(((x - 80) / 740) * Math.PI) * 40 + r() * 16; clods += `<ellipse cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" rx="${(8 + r() * 16).toFixed(0)}" ry="${(5 + r() * 8).toFixed(0)}" fill="${r() < 0.5 ? '#2a1e16' : '#33251b'}"/>`; }
+  return W(900, 160, `<path d="M10,60 Q450,150 890,60 Q880,120 760,140 Q450,175 140,140 Q20,120 10,60 Z" fill="#17110d"/>
+  <path d="M10,60 Q450,150 890,60" fill="none" stroke="#3a2a1f" stroke-width="12" stroke-linecap="round" opacity="0.9"/>${clods}`);
+}
+
+// a wooden cupboard seen from the front, doors open, full frame: dark inside, one shelf (top at y 1150) for an object
+function cupboard() {
+  let grain = '';
+  for (let i = 0; i < 26; i++) grain += `<path d="M${60 + i * 37},0 L${60 + i * 37},1920" stroke="#2a1a12" stroke-width="2" opacity="0.25"/>`;
+  return W(1080, 1920, `<rect width="1080" height="1920" fill="#3a2418"/>${grain}
+  <rect x="70" y="90" width="940" height="1740" fill="url(#cin)" stroke="${C.out}" stroke-width="10"/>
+  <rect x="70" y="520" width="940" height="34" fill="#4a3022" stroke="${C.out}" stroke-width="6"/>
+  <rect x="140" y="420" width="250" height="100" rx="10" fill="#3b4150"/><rect x="160" y="350" width="220" height="70" rx="10" fill="#5a2438"/><rect x="430" y="440" width="180" height="80" rx="10" fill="#2a3552"/>
+  <rect x="70" y="1150" width="940" height="40" fill="#4a3022" stroke="${C.out}" stroke-width="6"/>
+  <rect x="70" y="1190" width="940" height="18" fill="#0a0604" opacity="0.6"/>
+  <rect x="160" y="1500" width="300" height="160" rx="12" fill="#2b2f3a"/><rect x="620" y="1520" width="260" height="140" rx="12" fill="#3a2a22"/>
+  <rect x="0" y="1830" width="1080" height="90" fill="#24160f"/>`,
+  '<linearGradient id="cin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#140c08"/><stop offset="0.6" stop-color="#1e130d"/><stop offset="1" stop-color="#0e0806"/></linearGradient>');
+}
+// cupboard door halves (540x1920 each): place left at x 25, right at x 75, w 580, h 2062 over the cupboard; close with maskRight / maskLeft
+function cupboardDoor(side) {
+  const knobX = side === 'l' ? 480 : 60;
+  return () => W(540, 1920, `<rect x="0" y="0" width="540" height="1920" fill="#5a3824" stroke="${C.out}" stroke-width="10"/>
+  <rect x="60" y="110" width="420" height="760" rx="10" fill="#4e3020" stroke="#2a1a12" stroke-width="8"/>
+  <rect x="60" y="1010" width="420" height="760" rx="10" fill="#4e3020" stroke="#2a1a12" stroke-width="8"/>
+  <path d="M90,140 L90,840 M90,1040 L90,1740" stroke="#7a5034" stroke-width="10" opacity="0.6"/>
+  <circle cx="${knobX}" cy="960" r="22" fill="#c79a3a" stroke="${C.out}" stroke-width="6"/>`);
+}
+
+// a fat bundle of banknotes with a paper band (held in a hand, slid across a desk)
+function cashBundle() {
+  let edges = '';
+  for (let i = 0; i < 6; i++) edges += `<rect x="${30 + i * 2}" y="${150 - i * 14}" width="420" height="16" rx="4" fill="${i % 2 ? '#7fae6a' : '#6f9e5c'}" stroke="#2c4a24" stroke-width="3"/>`;
+  return W(480, 260, `${edges}
+  <rect x="40" y="40" width="420" height="120" rx="10" fill="#8fbf78" stroke="#2c4a24" stroke-width="6"/>
+  <rect x="62" y="56" width="376" height="88" rx="8" fill="none" stroke="#4d7a3e" stroke-width="4"/>
+  <circle cx="250" cy="100" r="30" fill="#a9d293" stroke="#4d7a3e" stroke-width="4"/>
+  <path d="M243,84 Q232,92 244,100 Q258,108 246,116 M250,78 L250,122" stroke="#2c4a24" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="210" y="34" width="80" height="132" fill="#f1e9d2" stroke="#2c4a24" stroke-width="4"/>`);
+}
+
+// a smartphone held in a hand: screen lit (blank) or showing the story coin
+function phoneProp(withCoin) {
+  return () => W(240, 440, `<rect x="10" y="10" width="220" height="420" rx="34" fill="#15151a" stroke="#3a3f4f" stroke-width="6"/>
+  <rect x="24" y="44" width="192" height="352" rx="14" fill="${withCoin ? '#10131c' : '#9fd3ff'}"/>
+  <rect x="96" y="22" width="48" height="10" rx="5" fill="#2a2f3a"/>
+  ${withCoin ? `<circle cx="120" cy="200" r="78" fill="#e6ad34" stroke="#8a5a12" stroke-width="6"/><circle cx="120" cy="200" r="66" fill="none" stroke="#b8841f" stroke-width="4" stroke-dasharray="4 6"/>
+  <path d="M100,160 Q130,148 142,170 Q150,186 146,200 L150,210 Q146,226 128,232 L104,232 Q110,214 104,200 Q94,184 100,160 Z" fill="#d9a032" stroke="#8a5a12" stroke-width="4"/>
+  <path d="M118,196 L146,178" stroke="#fff3c2" stroke-width="4" stroke-linecap="round"/>
+  <rect x="40" y="310" width="160" height="14" rx="7" fill="#ff3d7f"/><rect x="40" y="334" width="110" height="10" rx="5" fill="#ffffff" opacity="0.4"/>` : '<rect x="24" y="44" width="192" height="352" rx="14" fill="#ffffff" opacity="0.25"/>'}`);
+}
+
+// a magnifying glass (lens catches the light)
+function magnifier() {
+  return W(400, 400, `<path d="M250,250 L370,370" stroke="#3a2418" stroke-width="44" stroke-linecap="round"/><path d="M250,250 L370,370" stroke="#6b4524" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="160" cy="160" r="122" fill="#bfe3ff" fill-opacity="0.22" stroke="#c79a3a" stroke-width="22"/>
+  <circle cx="160" cy="160" r="122" fill="none" stroke="${C.out}" stroke-width="6"/>
+  <path d="M95,110 Q120,78 160,72" stroke="#ffffff" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.7"/>`);
+}
+
+// an old sepia photograph of a 1940s soldier (helmet, uniform, rifle strap), white border
+function soldierPhoto() {
+  return W(420, 520, `<rect x="0" y="0" width="420" height="520" fill="#efe6cf"/><rect x="30" y="30" width="360" height="400" fill="#7a6545"/>
+  <rect x="30" y="30" width="360" height="400" fill="#a88c62" opacity="0.6"/>
+  <path d="M110,430 Q120,320 210,300 Q300,320 310,430 Z" fill="#4a3a26"/>
+  <path d="M150,300 L270,300 L262,360 L158,360 Z" fill="#3e3020"/>
+  <ellipse cx="210" cy="230" rx="58" ry="66" fill="#c9b08a"/>
+  <path d="M138,206 Q140,140 210,134 Q280,140 282,206 Q246,196 210,196 Q174,196 138,206 Z" fill="#4e5a3a" stroke="#2c3220" stroke-width="5"/>
+  <path d="M128,210 Q210,188 292,210" stroke="#2c3220" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M120,340 L300,430" stroke="#2c2016" stroke-width="12"/>
+  <rect x="30" y="30" width="360" height="400" fill="none" stroke="#5a4a32" stroke-width="4"/>
+  <text x="210" y="482" font-family="Georgia, serif" font-size="34" fill="#5a4a32" text-anchor="middle" font-style="italic">1945</text>`);
+}
+
+// prison-cell bars across the whole frame (transparent between the bars): put it in front of a character, front: true
+function jailBars() {
+  let bars = '';
+  for (let i = 0; i < 7; i++) {
+    const x = 70 + i * 157;
+    bars += `<rect x="${x - 22}" y="-20" width="44" height="1960" fill="url(#steel)" stroke="${C.out}" stroke-width="6"/>`;
+    bars += `<rect x="${x - 10}" y="-20" width="8" height="1960" fill="#c8d2e6" opacity="0.35"/>`;
+  }
+  const rail = (y) => `<rect x="-20" y="${y}" width="1120" height="56" fill="url(#steelH)" stroke="${C.out}" stroke-width="6"/><rect x="-20" y="${y + 8}" width="1120" height="8" fill="#c8d2e6" opacity="0.3"/>`;
+  return W(1080, 1920, `${bars}${rail(260)}${rail(1500)}`,
+    '<linearGradient id="steel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1c2230"/><stop offset="0.45" stop-color="#5b6578"/><stop offset="1" stop-color="#151a25"/></linearGradient><linearGradient id="steelH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5468"/><stop offset="1" stop-color="#171c28"/></linearGradient>');
+}
+
+// one gold coin, close-up (the story's coin: crowned profile, beaded rim, one diagonal scratch across the cheek)
+function goldCoin() {
+  let beads = '';
+  for (let i = 0; i < 72; i++) { const a = (i / 72) * Math.PI * 2; beads += `<circle cx="${(400 + Math.cos(a) * 330).toFixed(1)}" cy="${(400 + Math.sin(a) * 330).toFixed(1)}" r="7" fill="#b8841f"/>`; }
+  return W(800, 800, `<circle cx="400" cy="400" r="380" fill="url(#cg)" stroke="#7a5310" stroke-width="12"/>
+  <circle cx="400" cy="400" r="350" fill="none" stroke="#a8761a" stroke-width="6"/>${beads}
+  <path d="M330,230 Q420,170 480,240 Q520,300 500,360 Q540,400 520,430 L500,440 Q510,480 470,500 Q480,560 420,580 L320,580 Q340,520 320,470 Q280,420 300,330 Q300,270 330,230 Z" fill="#d9a032" stroke="#8a5a12" stroke-width="8"/>
+  <path d="M320,240 L340,180 L370,220 L400,170 L430,220 L460,180 L470,250" fill="#e8b84a" stroke="#8a5a12" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="470" cy="330" r="8" fill="#8a5a12"/>
+  <path d="M410,380 L540,300" stroke="#fff3c2" stroke-width="6" stroke-linecap="round" opacity="0.9"/><path d="M412,386 L542,306" stroke="#7a5310" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="300" cy="230" rx="120" ry="60" fill="#fff6d0" opacity="0.35" transform="rotate(-30 300 230)"/>`,
+  '<radialGradient id="cg" cx="0.4" cy="0.35"><stop offset="0" stop-color="#ffe58a"/><stop offset="0.6" stop-color="#e6ad34"/><stop offset="1" stop-color="#b47a14"/></radialGradient>');
+}
+
 async function png(svg, file, width) {
   await mkdir(dirname(file), { recursive: true });
   let s = sharp(Buffer.from(svg), { density: 144 });
@@ -407,6 +678,9 @@ const RUN = {
   'counter-fg': [counterFg, 1080], 'tv-frame': [tvFrame, 1080], 'room-door': [roomBg, 1080],
   'prairie-night': [prairieBg, 1080], 'car-ditch': [carDitch, 900], 'car-ditch-prop': [carDitchProp, 1800], 'car-front': [carFront, 900], 'fence-fg': [fenceFg, 1080],
   'river-night': [riverBg, 1080], 'prairie-sky': [prairieSky, 2160], 'prairie-far': [prairieFar, 2160], 'prairie-field': [prairieField, 2160], 'prairie-poles': [prairiePoles, 2160], 'search-dog': [searchDog, 560], 'porch-light': [porchBg, 1080],
+  'backyard-night': [backyardBg, 1080], 'penthouse-night': [penthouseBg, 1080], 'chest-open': [chestOpen, 900], 'chest-closed': [chestClosed, 900], 'hole-lip': [holeLip, 900], 'jail-bars': [jailBars, 1080], 'cash-bundle': [cashBundle, 480], 'phone': [phoneProp(false), 240], 'phone-coin': [phoneProp(true), 240], 'magnifier': [magnifier, 400], 'soldier-photo': [soldierPhoto, 420], 'cupboard': [cupboard, 1080], 'cupboard-door-l': [cupboardDoor('l'), 540], 'cupboard-door-r': [cupboardDoor('r'), 540], 'gold-coin': [goldCoin, 800], 'plant-fg': [plantFg, 600],
+  'collector-study': [collectorStudy, 1080], 'museum-office': [museumOffice, 1080], 'investigator-office': [investigatorOffice, 1080],
+  'catalogue-open': [catalogueOpen, 1000], 'paper-doc': [paperDoc, 600],
 };
 const pick = process.argv.slice(2).filter((a) => RUN[a]);
 const made = [];

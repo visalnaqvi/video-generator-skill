@@ -70,6 +70,12 @@ user one sheet before calling an addition done.
    have yet (hair, glasses, another hat) is added to `rig-parts.mjs` as an optional part whose default
    keeps existing characters unchanged. Build, show the sheet, get approval, list it in
    `universe.json` → `characters`.
+   Fast way (Gold in the Backyard): copy `nox/character.json` (same poses/heads), change `id`, `name`,
+   `description` and `colors` only, drop `voice` unless they speak; show 2–3 colour variants side by side
+   (one sheet, the same two poses each, next to the existing cast) and recommend the one that stays readable
+   next to the others and does not fight the story's motif colour. **Name every new side character** (the
+   user wants them reusable): Noxverse cast so far — Nox (lead / plays investigators), Alex (cream cap,
+   burgundy hoodie), Victor (collector, tan cap, olive jacket), Mira (curator, she/her, plum cap, indigo).
 3. **Scene art** — SVG function + `RUN` entry in `scenes/make.mjs`; `node …/scenes/make.mjs <id>`;
    add `{id, file, kind bg|fg|prop, size, tags, hints}` to `scenes/index.json` (hints: floor line,
    screen hole, where hands/props sit).
@@ -94,6 +100,13 @@ user one sheet before calling an addition done.
       reference (sky to sky, land to land, in Lab), keeps warm lights and bright highlights (moon,
       windows, lamps) their own colour; `--l-amount` (default 0.6) sets how far brightness follows.
       Check it next to the reference; use the graded image from here on.
+      Draw the code layout **in the palette's own colours** (navy walls, not brown wood) — the grade pulls the
+      AI picture toward the layout, so a warm layout turns a navy interior brown. If the layout was warm,
+      grade lightly (`--amount 0.35 --l-amount 0.3`) and compare again.
+      Interiors with a desk/counter across the front: `finish.mjs … --horizon 0 --sky -1 --front-below <desk top %>`
+      (measure the desk top on the pick with a % grid); the near plane is then only the desk, drawn in front of
+      characters. Characters stand behind it with their hips at the desk top; objects ON the desk use the
+      `<u>/prop` component.
    4. `<comfyRoot>/python_embeded/python.exe -s studio/scripts/ai-art/depth.py <graded.png> <depth.png>`,
       then `node studio/scripts/ai-art/split.mjs --image <graded.png> --depth <depth.png> --out
       <dir>/<set> --horizon <%>` → backdrop / ground / near planes at 2×.

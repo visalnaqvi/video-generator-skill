@@ -199,8 +199,35 @@ S['river-water'] = () => {
   return stereoPan(normalize(w, 0.6), -0.3, 0.3);
 };
 
+S['coin-jingle'] = () => {
+  // A handful of gold coins shifting: bright metallic pings scattered over ~0.9 s, a soft clink tail.
+  const len = 1.4; const b = buf(len);
+  for (let i = 0; i < 16; i++) {
+    const at = 0.02 + ((i * 0.37) % 1) * 0.85, f = 2600 + ((i * 733) % 2200);
+    for (const [m, a, k] of [[1, 1, 30], [2.41, 0.35, 45], [3.9, 0.15, 60]]) mixInto(b, env(osc(0.25, f * m, 'sine'), expDecay(k)), at, (0.25 + (i % 3) * 0.08) * a);
+  }
+  return stereoPan(normalize(room(svf(b, 1200, 'hp'), 40, 0.3, 0.25), 0.6), -0.4, 0.4);
+};
+S['metal-clang'] = () => {
+  // A heavy steel cell door slamming shut: low inharmonic clang + short noise burst, long ring.
+  const len = 2.2; const b = buf(len);
+  for (const [f, a, k] of [[96, 1, 3], [231, 0.6, 4.5], [377, 0.4, 6], [612, 0.25, 8], [1040, 0.12, 11]]) mixInto(b, env(osc(len, f, 'sine'), expDecay(k)), 0, a);
+  mixInto(b, env(svf(noise(0.12, 81), 1800, 'bp', 0.7), expDecay(40)), 0, 0.8);
+  return stereoPan(normalize(room(drive(b, 1.4), 120, 0.5, 0.35), 0.8), -0.2, 0.2);
+};
+S['soil-scrape'] = () => {
+  // Wood dragged up through loose soil: a low gritty scrape swelling over ~0.8 s.
+  const len = 1.1;
+  const s = env(svf(noise(len, 83), (t) => 600 + 900 * t, 'bp', 0.6), adsr(0.15, 0.2, 0.8, 0.35, len));
+  mixInto(s, env(svf(noise(len, 84), 180, 'lp', 0.8), adsr(0.2, 0.2, 0.7, 0.4, len)), 0, 0.7);
+  return stereoPan(normalize(s, 0.55), -0.15, 0.15);
+};
+
 // Cue words (as written in storyboards) → file. First match wins, so specific entries come first.
 const INDEX = [
+  { file: 'coin-jingle.wav', keywords: ['coin jingle', 'jingle', 'coins shift', 'coins'] },
+  { file: 'metal-clang.wav', keywords: ['cell door', 'metal slam', 'clang', 'metallic'] },
+  { file: 'soil-scrape.wav', keywords: ['soil', 'scrape', 'scraping', 'dragged'] },
   { file: 'call-drop.wav', keywords: ['call drop', 'hang up', 'hang-up', 'disconnect', 'line dead'] },
   { file: 'phone-ring.wav', keywords: ['ringing', 'ring', 'phone dial', 'ringback'] },
   { file: 'night-crickets.wav', keywords: ['crickets', 'night crickets', 'night bed'] },

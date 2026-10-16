@@ -1,0 +1,152 @@
+{
+ "id": "backyard-night-ai",
+ "name": "Back garden at night (AI)",
+ "status": "review",
+ "created": "2026-10-16",
+ "description": "Suburban back garden under a full moon (top right): the house on the left with one warm kitchen window, a wooden fence and neighbour roofs behind, a freshly dug hole with a shovel in the middle of the lawn, a raised bed, a wheelbarrow on the right, tall grass in front.",
+ "source": "sets/backyard-night-ai/ — init.png (code layout) → cand-1.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "night",
+  "backyard",
+  "garden",
+  "yard",
+  "house",
+  "suburb",
+  "fence",
+  "digging",
+  "lawn"
+ ],
+ "stage": {
+  "horizon": 57,
+  "floor": "lawn from y 60 % down; the dug hole at (48 %, 66 %) — put the chest in it; stand Alex beside it (x 30–40 or 60–70)",
+  "scale": "feet at y 68 % → 480 px · 78 % → 700 px · 90 % → 940 px",
+  "bestAngles": [
+   "wide from the grass (as drawn)",
+   "low angle over the hole up at Alex with the moon behind",
+   "back view toward the lit kitchen window"
+  ]
+ },
+ "ambient": {
+  "color": "#4a5a8c",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1e2c4c",
+  "amount": 0.3
+ },
+ "focus": {
+  "z": 0.65,
+  "blur": 4
+ },
+ "lights": [
+  {
+   "id": "moon",
+   "kind": "moon",
+   "x": 79,
+   "y": 8.1,
+   "color": "#f3e7b8",
+   "intensity": 0.5,
+   "glow": 120,
+   "under": true,
+   "z": 0.05
+  },
+  {
+   "id": "kitchen",
+   "x": 15.6,
+   "y": 43.6,
+   "color": "#ffcf7a",
+   "intensity": 0.7,
+   "radius": 700,
+   "glow": 30,
+   "z": 0.3
+  },
+  {
+   "id": "neighbour",
+   "x": 48.9,
+   "y": 38.2,
+   "color": "#ffcf7a",
+   "intensity": 0.25,
+   "radius": 250,
+   "glow": 14,
+   "flicker": 0.05,
+   "z": 0.15
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/backyard-night-ai/backyard-night-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.05,
+   "haze": 0.05
+  },
+  {
+   "id": "stars",
+   "type": "ambient",
+   "kind": "stars",
+   "area": [
+    0,
+    0,
+    100,
+    40
+   ],
+   "count": 30,
+   "z": 0.05
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/backyard-night-ai/backyard-night-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "fireflies",
+   "type": "ambient",
+   "kind": "fireflies",
+   "area": [
+    0,
+    55,
+    100,
+    25
+   ],
+   "count": 5,
+   "size": 0.8,
+   "z": 0.5
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/backyard-night-ai/backyard-night-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.55
+  },
+  {
+   "id": "grass-front",
+   "type": "ambient",
+   "kind": "grass",
+   "area": [
+    -5,
+    92,
+    110,
+    8
+   ],
+   "front": true,
+   "colors": [
+    "#0b1424",
+    "#13203a"
+   ],
+   "z": 0.92
+  }
+ ]
+}

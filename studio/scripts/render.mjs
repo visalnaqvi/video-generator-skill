@@ -50,10 +50,13 @@ await rm(stage, { recursive: true, force: true });
 await mkdir(stage, { recursive: true });
 const exists = async (p) => { try { return (await stat(p)).isFile(); } catch { return false; } };
 
+// One copy per destination: shots that share an asset stage it in parallel, and two concurrent copies
+// to the same file fail on Windows (EBUSY).
+const staged = new Map();
 async function stageFile(src, sub) {
   const dest = join(stage, sub, basename(src));
-  await mkdir(dirname(dest), { recursive: true });
-  await cp(src, dest);
+  if (!staged.has(dest)) staged.set(dest, mkdir(dirname(dest), { recursive: true }).then(() => cp(src, dest)));
+  await staged.get(dest);
   return relative(stage, dest).replace(/\\/g, '/');
 }
 async function stageProps(v) {

@@ -322,6 +322,322 @@
         "night"
       ],
       "hints": "car-ditch without its ground patch, for sets: x 30 y 68 w 640; castShadow contactOnly feet 76 + grass band over the wheels; headlight at (6.6%, 70.9%), taillight (53.7%, 64.4%) at that placement"
+    },
+    {
+      "id": "backyard-night",
+      "file": "backyard-night.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "night",
+        "backyard",
+        "garden",
+        "yard",
+        "house",
+        "fence",
+        "suburb",
+        "digging",
+        "shovel"
+      ],
+      "hints": "code layout for the backyard-night-ai set: house back wall left with lit kitchen window (17%, 45%) and back door (36%, 55%); fence along 47–55%; dug hole + soil centre (59%, 78%), shovel at (82%, 72%); lawn from 55%"
+    },
+    {
+      "id": "penthouse-night",
+      "file": "penthouse-night.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "interior",
+        "penthouse",
+        "apartment",
+        "luxury",
+        "city",
+        "skyline",
+        "window",
+        "rich",
+        "night"
+      ],
+      "hints": "code layout for the penthouse-night-ai set: window wall 8–68% with the city skyline, floor from 67%, sofa centre-left (43%, 74%), floor lamp right (86%, 59%)"
+    },
+    {
+      "id": "chest-open",
+      "file": "chest-open.png",
+      "kind": "prop",
+      "size": "900x640",
+      "tags": [
+        "chest",
+        "treasure",
+        "gold",
+        "coins",
+        "open",
+        "glow"
+      ],
+      "hints": "open wooden chest heaped with gold coins, warm glow behind; no ground patch — place on the dug hole of a backyard set with a contact shadow; add a warm point light at the coins"
+    },
+    {
+      "id": "gold-coin",
+      "file": "gold-coin.png",
+      "kind": "prop",
+      "size": "800x800",
+      "tags": [
+        "coin",
+        "gold",
+        "rare",
+        "old",
+        "scratch",
+        "evidence"
+      ],
+      "hints": "the story coin, close-up: crowned profile facing right, beaded rim, one diagonal scratch across the cheek at (45–68%, 38–48%) — use the same coin wherever the coin appears (post photo, catalogue photo, evidence)"
+    },
+    {
+      "id": "plant-fg",
+      "file": "plant-fg.png",
+      "kind": "fg",
+      "size": "600x900",
+      "tags": [
+        "plant",
+        "foreground",
+        "interior",
+        "silhouette"
+      ],
+      "hints": "dark houseplant silhouette for interiors; place in a bottom corner in front of the character (z 0.9, front: true), it blurs with focus"
+    },
+    {
+      "id": "collector-study",
+      "file": "collector-study.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "interior",
+        "study",
+        "collector",
+        "coins",
+        "cabinets",
+        "desk",
+        "lamp"
+      ],
+      "hints": "code layout for collector-study-ai: lit coin cabinets on the back wall (y 22–58 %), desk across the foreground from y 73 %, banker lamp right (82 %, 63 %)"
+    },
+    {
+      "id": "museum-office",
+      "file": "museum-office.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "interior",
+        "museum",
+        "office",
+        "curator",
+        "bookshelves",
+        "library",
+        "monitor",
+        "desk"
+      ],
+      "hints": "code layout for museum-office-ai: shelves left and right, window centre with moon, desk from y 72 %, monitor centre (53 %, 63 %)"
+    },
+    {
+      "id": "investigator-office",
+      "file": "investigator-office.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "interior",
+        "police",
+        "investigator",
+        "office",
+        "cork board",
+        "evidence",
+        "desk",
+        "interrogation"
+      ],
+      "hints": "code layout for investigator-office-ai: cork board on the back wall (35 %, 34 %), blinds right, hanging lamp (35 %, 9 %), metal desk from y 74 %"
+    },
+    {
+      "id": "catalogue-open",
+      "file": "catalogue-open.png",
+      "kind": "prop",
+      "size": "1000x700",
+      "tags": [
+        "catalogue",
+        "book",
+        "old",
+        "auction",
+        "1939",
+        "plate"
+      ],
+      "hints": "open old catalogue; photo plate on the right page at (74 %, 47 %) of the prop, ~34 % of its width — put the coin photo (grayscale) there"
+    },
+    {
+      "id": "paper-doc",
+      "file": "paper-doc.png",
+      "kind": "prop",
+      "size": "600x800",
+      "tags": [
+        "paper",
+        "document",
+        "will",
+        "papers",
+        "certificate",
+        "forged"
+      ],
+      "hints": "one sheet of official paper with signature and seal (forged papers, a will, a deed)"
+    },
+    {
+      "id": "chest-closed",
+      "file": "chest-closed.png",
+      "kind": "prop",
+      "size": "900x640",
+      "tags": [
+        "chest",
+        "treasure",
+        "closed",
+        "wooden",
+        "locked"
+      ],
+      "hints": "same canvas and body as chest-open: place both at the same x/y/w/h and crossfade (closed exits, open enters) for the lid opening; use enter emerge to rise out of a hole"
+    },
+    {
+      "id": "hole-lip",
+      "file": "hole-lip.png",
+      "kind": "fg",
+      "size": "900x240",
+      "tags": [
+        "hole",
+        "dirt",
+        "soil",
+        "dug",
+        "foreground"
+      ],
+      "hints": "front lip of a dug hole; put it in front of what comes out of the hole (higher z), its top ridge at ~25 % of its height"
+    },
+    {
+      "id": "jail-bars",
+      "file": "jail-bars.png",
+      "kind": "fg",
+      "size": "1080x1920",
+      "tags": [
+        "jail",
+        "prison",
+        "cell",
+        "bars",
+        "arrest",
+        "caught"
+      ],
+      "hints": "full-frame prison bars (transparent between them); place at x 50 y 50 w 1160 h 2062, z 0.95, front: true, in front of a character; a cold top light sells it"
+    },
+    {
+      "id": "cupboard",
+      "file": "cupboard.png",
+      "kind": "bg",
+      "size": "1080x1920",
+      "tags": [
+        "cupboard",
+        "wardrobe",
+        "closet",
+        "hide",
+        "interior",
+        "shelf"
+      ],
+      "hints": "full-frame cupboard, doors open; shelf top at y 60 % — set an object on it (e.g. chest-open x 50 y 50 w 560); warm light inside for gold"
+    },
+    {
+      "id": "cupboard-door-l",
+      "file": "cupboard-door-l.png",
+      "kind": "fg",
+      "size": "540x1920",
+      "tags": [
+        "cupboard",
+        "door",
+        "close",
+        "shut"
+      ],
+      "hints": "left door: x 25 y 50 w 580 h 2062; enter maskRight dur 6–8 = swings shut"
+    },
+    {
+      "id": "cupboard-door-r",
+      "file": "cupboard-door-r.png",
+      "kind": "fg",
+      "size": "540x1920",
+      "tags": [
+        "cupboard",
+        "door",
+        "close",
+        "shut"
+      ],
+      "hints": "right door: x 75 y 50 w 580 h 2062; enter maskLeft dur 6–8 = swings shut"
+    },
+    {
+      "id": "cash-bundle",
+      "file": "cash-bundle.png",
+      "kind": "prop",
+      "size": "480x260",
+      "tags": [
+        "cash",
+        "money",
+        "banknotes",
+        "payment",
+        "bribe",
+        "bundle"
+      ],
+      "hints": "a banded stack of banknotes; hold it at a rig hand (measure the hand on a still) or slide it across a desk with noxverse/prop"
+    },
+    {
+      "id": "phone",
+      "file": "phone.png",
+      "kind": "prop",
+      "size": "240x440",
+      "tags": [
+        "phone",
+        "smartphone",
+        "screen",
+        "call",
+        "message"
+      ],
+      "hints": "phone in a hand (lit blank screen); place at a measured rig hand; a cold point light at it"
+    },
+    {
+      "id": "phone-coin",
+      "file": "phone-coin.png",
+      "kind": "prop",
+      "size": "240x440",
+      "tags": [
+        "phone",
+        "photo",
+        "coin",
+        "post",
+        "screen"
+      ],
+      "hints": "phone showing the story coin photo with a pink comment bar"
+    },
+    {
+      "id": "magnifier",
+      "file": "magnifier.png",
+      "kind": "prop",
+      "size": "400x400",
+      "tags": [
+        "magnifying glass",
+        "loupe",
+        "inspect",
+        "evidence",
+        "compare"
+      ],
+      "hints": "lens centre at (40 %, 40 %) of the prop; slide it over what is being compared"
+    },
+    {
+      "id": "soldier-photo",
+      "file": "soldier-photo.png",
+      "kind": "prop",
+      "size": "420x520",
+      "tags": [
+        "photo",
+        "soldier",
+        "1945",
+        "war",
+        "old",
+        "sepia",
+        "evidence"
+      ],
+      "hints": "old sepia photo of a 1940s soldier dated 1945; pin it in a scene or on the evidence board"
     }
   ]
 }

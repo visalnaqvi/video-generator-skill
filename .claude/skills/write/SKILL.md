@@ -297,6 +297,29 @@ line edits. Apply edits, re-run the self-check, save `script.md` with
   the self-check, bump `version`, keep `approved`.
 - Never delete alternatives or old content the user may want back; previous hook
   options stay in `hook.md`.
+- **The user's own lines** (pasted VO, often typed fast): fix spelling and grammar, keep the narration's tense
+  (present: "decides", not "decided"), replace an ambiguous "he/him" with the name, avoid repeating a word
+  ("immediately … immediately") — then list each fix in one line so they can object. Never change their meaning.
+- **Room for actions:** when the storyboard needs a pause for something to happen (a walk, a reaction), split
+  the beat's VO into separate `VO:` lines at those points; the voiceover stage puts the pause there.
+- A copy of the previous script goes to `concept/script-v<n>.md` before a large revision.
+
+## Story overviews from the user (plot-hole pass)
+
+When the user gives a story overview and asks to "fix loopholes", list and fix each before drafting, in a short
+table (hole → fix), saved in `story.md` → "Plot holes fixed". Questions that caught every hole on "Gold in the
+Backyard": How does the main character **find out** (a public comment, a call, someone going silent)? How do
+the authorities **verify** (physical evidence matched to a record, then the story checked against documents)?
+Where did the thing **come from** and how did it get there? Why does each person act (why a lawyer, why the
+collector reports it)? Does anything **contradict** (value in gold vs. collector value; two different
+endings)? Which "facts" are really the character's **belief** ("he figures…")? One vote/ending question, not two.
+
+## Pre-hook (cold open)
+
+If the user wants a hook before the hook, write it as its own tiny script in `<video>/prehook/script.md`
+(same frontmatter, one beat, 5–7 s, e.g. "He found ten million dollars buried in his backyard. He made one
+decision that would destroy everything.") with its own `brief.md` (universe, characters). The main script
+keeps its own hook; the two are joined at the end (render stage → `master.mjs`).
 
 ## Hand-off
 

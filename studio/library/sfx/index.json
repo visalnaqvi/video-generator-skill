@@ -21,9 +21,69 @@
         "tap"
       ],
       "gain": 0.8
+    },
+    {
+      "file": "card-flick.wav",
+      "keywords": [
+        "rustle",
+        "cash bundle"
+      ],
+      "gain": 0.8
+    },
+    {
+      "file": "chime.wav",
+      "keywords": [
+        "notification",
+        "notification ping"
+      ],
+      "gain": 0.55
+    },
+    {
+      "file": "pop.wav",
+      "keywords": [
+        "shutter",
+        "pin into cork",
+        "pin into"
+      ],
+      "gain": 0.75
+    },
+    {
+      "file": "punch.wav",
+      "keywords": [
+        "thud",
+        "book thud"
+      ],
+      "gain": 0.6
     }
   ],
   "generated": [
+    {
+      "file": "coin-jingle.wav",
+      "keywords": [
+        "coin jingle",
+        "jingle",
+        "coins shift",
+        "coins"
+      ]
+    },
+    {
+      "file": "metal-clang.wav",
+      "keywords": [
+        "cell door",
+        "metal slam",
+        "clang",
+        "metallic"
+      ]
+    },
+    {
+      "file": "soil-scrape.wav",
+      "keywords": [
+        "soil",
+        "scrape",
+        "scraping",
+        "dragged"
+      ]
+    },
     {
       "file": "call-drop.wav",
       "keywords": [

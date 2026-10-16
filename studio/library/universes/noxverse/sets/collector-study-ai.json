@@ -1,0 +1,130 @@
+{
+ "id": "collector-study-ai",
+ "name": "Collector's study at night (AI)",
+ "status": "review",
+ "created": "2026-10-16",
+ "description": "A private coin collector study: three glass cabinets of gold coins lit amber on the dark panelled back wall, a red-topped desk across the room with papers and a green banker lamp on the right.",
+ "source": "sets/collector-study-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "interior",
+  "study",
+  "collector",
+  "coins",
+  "cabinets",
+  "desk",
+  "lamp",
+  "rich",
+  "dealer"
+ ],
+ "stage": {
+  "horizon": 0,
+  "floor": "desk top from image y 55 % (front plane: everything below 55 % draws in front of characters); stand characters behind it at x 25–75",
+  "scale": "behind the desk: h 1000 at y 51 (hips at the desk top) · a guest at the side: h 1100 at y 55, x 85–92",
+  "bestAngles": [
+   "across the desk (as drawn): the collector behind it, the cabinets above",
+   "close on the collector with the lamp light",
+   "over the shoulder of a guest in the foreground (setHide the near plane)"
+  ]
+ },
+ "ambient": {
+  "color": "#3e4a78",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1a2238",
+  "amount": 0.12
+ },
+ "focus": {
+  "z": 0.5,
+  "blur": 3
+ },
+ "lights": [
+  {
+   "id": "cab-1",
+   "x": 15.6,
+   "y": 24.2,
+   "color": "#ffc35a",
+   "intensity": 0.45,
+   "radius": 450,
+   "glow": 30,
+   "z": 0.1
+  },
+  {
+   "id": "cab-2",
+   "x": 50,
+   "y": 30.7,
+   "color": "#ffc35a",
+   "intensity": 0.45,
+   "radius": 500,
+   "glow": 30,
+   "z": 0.1
+  },
+  {
+   "id": "cab-3",
+   "x": 84.4,
+   "y": 24.2,
+   "color": "#ffc35a",
+   "intensity": 0.45,
+   "radius": 450,
+   "glow": 30,
+   "z": 0.1
+  },
+  {
+   "id": "lamp",
+   "x": 88.7,
+   "y": 47.9,
+   "color": "#ffd98a",
+   "intensity": 0.7,
+   "radius": 600,
+   "glow": 26,
+   "z": 0.35
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/collector-study-ai/collector-study-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.2,
+   "haze": 0
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/collector-study-ai/collector-study-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "dust",
+   "type": "ambient",
+   "kind": "dust",
+   "area": [
+    20,
+    20,
+    60,
+    35
+   ],
+   "count": 16,
+   "z": 0.3
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/collector-study-ai/collector-study-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6,
+   "front": true
+  }
+ ]
+}

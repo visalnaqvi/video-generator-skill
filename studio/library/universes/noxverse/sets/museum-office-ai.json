@@ -1,0 +1,122 @@
+{
+ "id": "museum-office-ai",
+ "name": "Museum curator office at night (AI)",
+ "status": "review",
+ "created": "2026-10-16",
+ "description": "A curator office lined with tall shelves of old catalogues: an arched moonlit window in the middle, a wooden desk with an open old book and a glowing monitor on the right, the moon top left.",
+ "source": "sets/museum-office-ai/ — init.png (code layout) → cand-2.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes",
+ "tags": [
+  "interior",
+  "museum",
+  "office",
+  "curator",
+  "library",
+  "bookshelves",
+  "archive",
+  "monitor",
+  "desk"
+ ],
+ "stage": {
+  "horizon": 0,
+  "floor": "desk top from image y 56 % (front plane below it); stand characters behind the desk at x 25–70 (the monitor sits at x 82)",
+  "scale": "behind the desk: h 1000 at y 51",
+  "bestAngles": [
+   "across the desk (as drawn) toward the window",
+   "close on a face lit by the monitor",
+   "high angle onto the open book"
+  ]
+ },
+ "ambient": {
+  "color": "#3e4a78",
+  "amount": 0.5
+ },
+ "atmosphere": {
+  "color": "#1a2238",
+  "amount": 0.12
+ },
+ "focus": {
+  "z": 0.5,
+  "blur": 3
+ },
+ "lights": [
+  {
+   "id": "moon",
+   "kind": "moon",
+   "x": 28.5,
+   "y": 7,
+   "color": "#f3e7b8",
+   "intensity": 0.4,
+   "glow": 90,
+   "under": true,
+   "z": 0.05
+  },
+  {
+   "id": "window",
+   "x": 52.1,
+   "y": 33.9,
+   "color": "#cfe0ff",
+   "intensity": 0.45,
+   "radius": 800,
+   "glow": 0,
+   "z": 0.1
+  },
+  {
+   "id": "monitor",
+   "x": 84.4,
+   "y": 52.1,
+   "color": "#7fd8ff",
+   "intensity": 0.7,
+   "radius": 600,
+   "glow": 30,
+   "flicker": 0.05,
+   "z": 0.4
+  }
+ ],
+ "layers": [
+  {
+   "id": "sky",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/museum-office-ai/museum-office-ai-sky.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.2,
+   "haze": 0
+  },
+  {
+   "id": "ground",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/museum-office-ai/museum-office-ai-ground.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.35
+  },
+  {
+   "id": "dust",
+   "type": "ambient",
+   "kind": "dust",
+   "area": [
+    35,
+    20,
+    35,
+    35
+   ],
+   "count": 18,
+   "z": 0.3
+  },
+  {
+   "id": "near",
+   "type": "image",
+   "src": "lib:universes/noxverse/sets/museum-office-ai/museum-office-ai-near.png",
+   "x": 50,
+   "y": 50,
+   "w": 1160,
+   "h": 2062,
+   "z": 0.6,
+   "front": true
+  }
+ ]
+}

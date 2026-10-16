@@ -6,7 +6,7 @@ export type Color = string;
 
 export type EnterPreset =
   | 'none' | 'fade' | 'rise' | 'drop' | 'slideLeft' | 'slideRight' | 'pop' | 'slam'
-  | 'blurIn' | 'maskUp' | 'maskDown' | 'maskLeft' | 'maskRight' | 'zoomOut' | 'spinIn' | 'flipUp';
+  | 'blurIn' | 'maskUp' | 'maskDown' | 'maskLeft' | 'maskRight' | 'zoomOut' | 'spinIn' | 'flipUp' | 'emerge';
 
 export type Motion = { preset: EnterPreset; at?: number; dur?: number };
 export type Loop = 'float' | 'pulse' | 'sway' | 'spin' | 'breathe';

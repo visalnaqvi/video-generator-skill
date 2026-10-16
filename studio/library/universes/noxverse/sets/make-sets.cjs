@@ -71,15 +71,73 @@ const SETS = {
     lights: [L('porch', 'point', 54, 44, { color: '#ffcf7a', intensity: 0.9, radius: 750, glow: 34, flicker: 0.1, z: 0.35 })],
     layers: (s) => [sky(s), amb('stars', 'stars', [0, 0, 100, 45], { count: 35, z: 0.05 }), ground(s), near(s), amb('moths', 'moths', [48, 40, 12, 7], { count: 5, z: 0.4 }), amb('fireflies', 'fireflies', [0, 58, 100, 25], { count: 6, size: 0.8, z: 0.5 }), frontGrass],
   },
+  'backyard-night-ai': {
+    name: 'Back garden at night (AI)', pick: 1, created: '2026-10-16', tags: ['night', 'backyard', 'garden', 'yard', 'house', 'suburb', 'fence', 'digging', 'lawn'], ...night,
+    desc: 'Suburban back garden under a full moon (top right): the house on the left with one warm kitchen window, a wooden fence and neighbour roofs behind, a freshly dug hole with a shovel in the middle of the lawn, a raised bed, a wheelbarrow on the right, tall grass in front.',
+    stage: { horizon: 57, floor: 'lawn from y 60 % down; the dug hole at (48 %, 66 %) — put the chest in it; stand Alex beside it (x 30–40 or 60–70)', scale: 'feet at y 68 % → 480 px · 78 % → 700 px · 90 % → 940 px', bestAngles: ['wide from the grass (as drawn)', 'low angle over the hole up at Alex with the moon behind', 'back view toward the lit kitchen window'] },
+    lights: [
+      L('moon', 'moon', 77, 11, { color: '#f3e7b8', intensity: 0.5, glow: 120, under: true, z: 0.05 }),
+      L('kitchen', 'point', 18, 44, { color: '#ffcf7a', intensity: 0.7, radius: 700, glow: 30, z: 0.3 }),
+      L('neighbour', 'point', 49, 39, { color: '#ffcf7a', intensity: 0.25, radius: 250, glow: 14, flicker: 0.05, z: 0.15 }),
+    ],
+    layers: (s) => [sky(s), amb('stars', 'stars', [0, 0, 100, 40], { count: 30, z: 0.05 }), ground(s), amb('fireflies', 'fireflies', [0, 55, 100, 25], { count: 5, size: 0.8, z: 0.5 }), near(s), frontGrass],
+  },
+  'penthouse-night-ai': {
+    name: 'Penthouse at night (AI)', pick: 3, created: '2026-10-16', tags: ['interior', 'penthouse', 'apartment', 'luxury', 'rich', 'city', 'skyline', 'window', 'night'],
+    ambient: { color: '#3e4a78', amount: 0.45 }, atmosphere: { color: '#1a2238', amount: 0.12 }, focus: { z: 0.5, blur: 3 },
+    desc: 'Luxury apartment at night: a floor-to-ceiling window wall over a glittering skyline (amber windows, pink neon tops), a dark sofa and coffee table on a plum rug, a warm floor lamp on the right, a polished floor reflecting the city.',
+    stage: { horizon: 0, floor: 'polished floor from y 67 % down; sofa at (47 %, 62 %) — Alex stands in front of it (feet 74–82 %) or at the window (back view)', scale: 'feet at y 75 % → 640 px · 85 % → 860 px · 95 % → 1080 px', bestAngles: ['wide from the room toward the window (as drawn)', 'back view at the window over the city', 'close on the face lit by the phone with the city out of focus'] },
+    lights: [
+      L('city', 'point', 50, 34, { color: '#9fb8ff', intensity: 0.35, radius: 1400, glow: 0, z: 0.1 }),
+      L('lamp', 'point', 91, 50, { color: '#ffcf7a', intensity: 0.75, radius: 700, glow: 34, z: 0.35 }),
+    ],
+    layers: (s) => [room(s), amb('dust', 'dust', [70, 40, 28, 25], { count: 12, z: 0.4 }), near(s, 0.6)],
+  },
+  'collector-study-ai': {
+    name: "Collector's study at night (AI)", pick: 2, created: '2026-10-16', tags: ['interior', 'study', 'collector', 'coins', 'cabinets', 'desk', 'lamp', 'rich', 'dealer'],
+    ambient: { color: '#3e4a78', amount: 0.5 }, atmosphere: { color: '#1a2238', amount: 0.12 }, focus: { z: 0.5, blur: 3 },
+    desc: 'A private coin collector study: three glass cabinets of gold coins lit amber on the dark panelled back wall, a red-topped desk across the room with papers and a green banker lamp on the right.',
+    stage: { horizon: 0, floor: 'desk top from image y 55 % (front plane: everything below 55 % draws in front of characters); stand characters behind it at x 25–75', scale: 'behind the desk: h 1000 at y 51 (hips at the desk top) · a guest at the side: h 1100 at y 55, x 85–92', bestAngles: ['across the desk (as drawn): the collector behind it, the cabinets above', 'close on the collector with the lamp light', 'over the shoulder of a guest in the foreground (setHide the near plane)'] },
+    lights: [
+      L('cab-1', 'point', 18, 26, { color: '#ffc35a', intensity: 0.45, radius: 450, glow: 30, z: 0.1 }),
+      L('cab-2', 'point', 50, 32, { color: '#ffc35a', intensity: 0.45, radius: 500, glow: 30, z: 0.1 }),
+      L('cab-3', 'point', 82, 26, { color: '#ffc35a', intensity: 0.45, radius: 450, glow: 30, z: 0.1 }),
+      L('lamp', 'point', 86, 48, { color: '#ffd98a', intensity: 0.7, radius: 600, glow: 26, z: 0.35 }),
+    ],
+    layers: (s) => [room(s), ground(s), amb('dust', 'dust', [20, 20, 60, 35], { count: 16, z: 0.3 }), { ...near(s, 0.6), front: true }],
+  },
+  'museum-office-ai': {
+    name: 'Museum curator office at night (AI)', pick: 2, created: '2026-10-16', tags: ['interior', 'museum', 'office', 'curator', 'library', 'bookshelves', 'archive', 'monitor', 'desk'],
+    ambient: { color: '#3e4a78', amount: 0.5 }, atmosphere: { color: '#1a2238', amount: 0.12 }, focus: { z: 0.5, blur: 3 },
+    desc: 'A curator office lined with tall shelves of old catalogues: an arched moonlit window in the middle, a wooden desk with an open old book and a glowing monitor on the right, the moon top left.',
+    stage: { horizon: 0, floor: 'desk top from image y 56 % (front plane below it); stand characters behind the desk at x 25–70 (the monitor sits at x 82)', scale: 'behind the desk: h 1000 at y 51', bestAngles: ['across the desk (as drawn) toward the window', 'close on a face lit by the monitor', 'high angle onto the open book'] },
+    lights: [
+      L('moon', 'moon', 30, 10, { color: '#f3e7b8', intensity: 0.4, glow: 90, under: true, z: 0.05 }),
+      L('window', 'point', 52, 35, { color: '#cfe0ff', intensity: 0.45, radius: 800, glow: 0, z: 0.1 }),
+      L('monitor', 'point', 82, 52, { color: '#7fd8ff', intensity: 0.7, radius: 600, glow: 30, flicker: 0.05, z: 0.4 }),
+    ],
+    layers: (s) => [room(s), ground(s), amb('dust', 'dust', [35, 20, 35, 35], { count: 18, z: 0.3 }), { ...near(s, 0.6), front: true }],
+  },
+  'investigator-office-ai': {
+    name: 'Investigator office at night (AI)', pick: 2, created: '2026-10-16', tags: ['interior', 'police', 'investigator', 'detective', 'office', 'cork board', 'evidence', 'interrogation', 'desk'],
+    ambient: { color: '#3e4a78', amount: 0.5 }, atmosphere: { color: '#1a2238', amount: 0.12 }, focus: { z: 0.5, blur: 3 },
+    desc: 'A bare investigator office: a big empty cork board on the back wall (pin the evidence-board component over it), window blinds with city lights on the right, a bare bulb and a hanging lamp, a grey metal desk across the foreground.',
+    stage: { horizon: 0, floor: 'desk top from image y 67 % (front plane below it); the cork board spans x 32–66, y 30–60 — keep it clear or cover it with noxverse/evidence-board (x 49, y 45, ~620×560)', scale: 'behind the desk: h 1100 at y 62 (x 70–85 leaves the board visible)', bestAngles: ['across the desk (as drawn) with the board behind', 'over the shoulder at the board (back view in the foreground)', 'low angle on the investigator under the lamp'] },
+    lights: [
+      L('bulb', 'point', 30, 10, { color: '#fff1c4', intensity: 0.5, radius: 650, glow: 30, z: 0.2 }),
+      L('lamp', 'point', 52, 22, { color: '#ffcf7a', intensity: 0.6, radius: 800, glow: 24, z: 0.3 }),
+      L('city', 'point', 92, 40, { color: '#9fb8ff', intensity: 0.35, radius: 700, glow: 0, z: 0.1 }),
+    ],
+    layers: (s) => [room(s), ground(s), amb('dust', 'dust', [30, 15, 40, 40], { count: 14, z: 0.3 }), { ...near(s, 0.6), front: true }],
+  },
 };
-
 const only = process.argv.slice(2);
 for (const [id, s] of Object.entries(SETS)) {
   if (only.length && !only.includes(id)) continue;
   const file = path.join(DIR, `${id}.json`);
   const prev = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
   const out = {
-    id, name: s.name, status: prev.status ?? 'review', created: '2026-10-15', description: s.desc,
+    id, name: s.name, status: prev.status ?? 'review', created: s.created ?? '2026-10-15', description: s.desc,
     source: `sets/${id}/ — init.png (code layout) → cand-${s.pick}.png = source-ai.png (Flux detail, prompts.json) → source-graded.png (grade.mjs) → planes`,
     tags: s.tags, stage: s.stage, ambient: s.ambient, atmosphere: s.atmosphere, focus: s.focus, lights: s.lights, layers: s.layers(id),
   };

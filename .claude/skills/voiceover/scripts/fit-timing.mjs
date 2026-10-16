@@ -94,10 +94,21 @@ sb.scenes.forEach((s, i) => {
   };
   // Library components keep timed moments inside props as `{ sync }` objects → they get `at`.
   const walkProps = (v) => { if (Array.isArray(v)) v.forEach(walkProps); else if (v && typeof v === 'object') { if (typeof v.sync === 'string') resolveSync(v, 'sfx'); Object.values(v).forEach(walkProps); } };
-  const walk = (layers) => (layers ?? []).forEach((l) => { resolveSync(l, 'layer'); resolveExit(l); if (l.type === 'group') walk(l.layers); if (l.type === 'component') walkProps(l.props); });
+  // Raw rig layers carry their own acting beats ({ sync, syncOffset, syncNth } → at); walks that would run past the
+  // end of the (re-timed) shot are shortened so the character arrives on screen.
+  const rigTiming = (l) => {
+    (l.acting ?? []).forEach((b) => resolveSync(b, 'sfx'));
+    const walks = Array.isArray(l.walk) ? l.walk : l.walk ? [l.walk] : [];
+    for (const w of walks) {
+      const room = s.durationInFrames - tf(s, last) - Math.round(0.4 * fps) - (w.at ?? 0);
+      if (w.dur > room) { warnings.push(`${s.id}: walk shortened ${w.dur} → ${Math.max(12, room)} frames to finish inside the shot`); w.dur = Math.max(12, room); }
+    }
+  };
+  const walk = (layers) => (layers ?? []).forEach((l) => { resolveSync(l, 'layer'); resolveExit(l); if (l.type === 'group') walk(l.layers); if (l.type === 'component') walkProps(l.props); if (l.type === 'rig') rigTiming(l); });
   walk(s.props?.layers);
   (s.sfx ?? []).forEach((x) => resolveSync(x, 'cue'));
   (s.props?.effects ?? []).forEach((x) => resolveSync(x, 'sfx'));
+  (s.props?.lights ?? []).forEach((x) => resolveSync(x, 'sfx'));
   (s.props?.camera?.shake ?? []).forEach((x) => resolveSync(x, 'sfx'));
   // Contact sheet / deck still: after the last anchored moment has landed (~0.8 s), inside the shot.
   const lastAt = Math.max(-1, ...anchors.map((x) => Number(x.split('@')[1])));

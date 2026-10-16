@@ -43,7 +43,9 @@ const total = t / fps;
 // ---------- sfx events ----------
 const lib = JSON.parse(await readFile(join(ROOT, 'studio/library/sfx/index.json'), 'utf8'));
 const entries = [...(lib.custom ?? []), ...lib.generated];
-const pick = (cue) => entries.find((e) => e.keywords.some((k) => cue.toLowerCase().includes(k)));
+// a keyword matches at the start of a word ("whoosh" ⊂ "whooshes", but "ping" ⊄ "scraping", "pin" ⊄ "spinning")
+const esc = (k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const pick = (cue) => entries.find((e) => e.keywords.some((k) => new RegExp(`(^|[^a-z0-9])${esc(k.toLowerCase())}`).test(cue.toLowerCase())));
 const events = [];
 const missing = [];
 sb.scenes.forEach((s, i) => {

@@ -75,6 +75,8 @@ export function enterStyle(preset: EnterPreset, p: number, u: number): React.CSS
     case 'flipUp': return { opacity: p, transform: `perspective(${1200 * u}px) rotateX(${q * 85}deg)`, transformOrigin: 'bottom' };
     case 'maskUp': return { clipPath: `inset(${q * 100}% 0 0 0)`, transform: `translateY(${q * 30 * u}px)` };
     case 'maskDown': return { clipPath: `inset(0 0 ${q * 100}% 0)` };
+    // rises out of the ground by its own height, cut off at its resting bottom edge (out of a hole, a box, water)
+    case 'emerge': return { transform: `translateY(${q * 100}%)`, clipPath: `inset(0 0 ${q * 100}% 0)` };
     case 'maskLeft': return { clipPath: `inset(0 0 0 ${q * 100}%)` };
     case 'maskRight': return { clipPath: `inset(0 ${q * 100}% 0 0)` };
     default: return {};

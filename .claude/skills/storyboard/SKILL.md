@@ -39,6 +39,14 @@ come from the universe, and missing pieces are added to the universe, not drawn 
 `storyboard.json` gets `"universe": "<u>"` (+ `brand` only if the brief has one). No `universe:`
 in the brief → never use universe assets; follow the steps below as written.
 
+**Universe story videos — fast path: read [references/board-kit.md](references/board-kit.md) first.**
+It holds what the user asked for on "Gold in the Backyard": every beat is a **scene where the characters act
+the narration** (no explainer cards — words only as overlays on scenes), side roles as named universe
+characters, the board written as a small script with `studio/scripts/lib/board-kit.mjs`, held props at
+measured hands (`studio/scripts/hands.mjs`), desk props via `<u>/prop`, framing one size wider on the
+big-head rig, a big hook title on frame 0, a separate pre-hook clip, and one-beat-at-a-time review renders
+(`studio/scripts/render-beats.mjs`, 432p).
+
 **Words are not yours to change.** On-screen text comes from the script's ON-SCREEN lines
 (splitting a line across layers, reusing its words as a label, or echoing a word the VO is
 speaking — e.g. a handwritten "Kaise?" — is fine; adding new claims, names, numbers or
@@ -134,7 +142,13 @@ Format: [references/storyboard-format.md](references/storyboard-format.md).
 effect or template), say what's missing and the closest alternative; build it only with
 the user's approval (in `studio/remotion/src/compose/`, documented in compose.md). In a universe
 video, a reusable element that existing layers can already express becomes a universe component
-instead (universe skill) — no engine change needed.
+instead (universe skill) — no engine change needed. When the user asks for a specific animation (e.g. "the
+chest comes up out of the hole"), that request is the approval: build the smallest opt-in engine piece (like
+the `emerge` enter preset), document it in compose.md, and prove it on a frame strip before the full board.
+
+**Checking frames cheaply:** before a contact sheet or clip, put just the shots you changed into a temporary
+board with the `sheetFrame`s you want to see (start, mid-action, landed) and render `--sheet --scale 0.22` —
+one small image instead of a preview MP4.
 
 ## Step 4 — Review: contact sheet + deck
 

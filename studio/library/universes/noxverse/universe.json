@@ -15,7 +15,10 @@
     "handwritten": "Caveat (font: hand)"
   },
   "characters": {
-    "nox": "lead — cap + hoodie everyman; 5 poses, 3 busts (characters/nox/character.json)"
+    "nox": "lead — cap + hoodie everyman; 5 poses, 3 busts (characters/nox/character.json)",
+    "alex": "Alex — Nox rig, cream cap + burgundy hoodie + grey jeans; lead of Gold in the Backyard (characters/alex/character.json)",
+    "victor": "Victor — collector/dealer; tan cap + olive jacket (characters/victor/character.json)",
+    "mira": "Mira — curator/expert (she/her); plum cap + indigo hoodie (characters/mira/character.json)"
   },
   "rig": "rig.mjs — shared body, outline, proportions, ARMS (down, crossed, up, sign) and FACES (worried, smug, shock, focused, sideeye). New characters = new character.json on the same rig.",
   "components": [
@@ -27,7 +30,10 @@
     "noxverse/searchlight",
     "noxverse/choice-buttons",
     "noxverse/character",
-    "noxverse/call-bar"
+    "noxverse/call-bar",
+    "noxverse/social-post",
+    "noxverse/evidence-board",
+    "noxverse/prop"
   ],
   "scenes": "scenes/index.json (night sea, empty boat, shore, helicopter + beam, motel exterior, front desk + counter, TV frame, room with door, prairie road at night, car in a ditch, car headlights, barbed-wire fence, river at night, search dog, farmhouse porch light)",
   "sets": "sets/*.json — whole lit locations used as \"set\": \"noxverse/<id>\". AI sets (route B, local Flux + depth planes, graded to the code palette): prairie-road-ai, coast-night-ai, motel-exterior-ai, motel-desk-ai, motel-room-ai, river-night-ai, farm-porch-ai (all approved 2026-10-15). Code-drawn: prairie-road. Prompts: sets/prompts.json; measured lights + stage notes: sets/make-sets.cjs.",

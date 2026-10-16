@@ -39,7 +39,8 @@ something below is unclear.
 Every layer: `enter {preset, at, dur}`, `exit`, `loop` float/pulse/sway/spin/breathe,
 `shadow` soft/hard/long, `glow`, `rotate`, `opacity`, `blend`. Scene light (below): `lit`,
 `rim`, `castShadow`, `feet`, `haze`.
-Enter presets: `fade rise drop slideLeft slideRight pop slam blurIn maskUp maskDown maskLeft maskRight zoomOut spinIn flipUp`.
+Enter presets: `fade rise drop slideLeft slideRight pop slam blurIn maskUp maskDown maskLeft maskRight zoomOut spinIn flipUp emerge`
+(`emerge`: rises out of the ground by its own height, cut at its resting bottom edge — a chest out of a hole; give it `dur` 24–36).
 
 ## Background, camera, effects
 

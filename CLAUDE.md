@@ -75,6 +75,13 @@ content often Hinglish. Quality first, but token-conscious.
   action, a time anchor for every new event, and the next beat answers the question the last one
   opened (write skill → script-craft.md §3; show the Joins line). The user has had to repeat this
   — check it before showing any script.
+- **Story videos are acted, not explained.** Every beat is a scene where the characters do what the narration
+  says; script words appear only as overlays/stamps on those scenes — no explainer cards (the user rejected a
+  board where half the shots were cards). New side roles get a named, reusable universe character.
+- **Hooks hit in the first second.** Big title on frame 0, the number slamming on its spoken word, something
+  happening on screen at once; a pre-hook cold open is welcome when the user asks for one.
+- **Review beat by beat.** On longer videos the user changes a few beats at a time: render only the changed
+  beats as 432p clips (`render-beats.mjs`), and tidy the grammar of lines they paste (say what was fixed).
 - **Restrained sound.** Only signature moments (≈ 1 cue per 2 s at most), SFX ≈ -12 dB under
   voice and music, no whoosh on every transition (opt-in). Every sound matches what is on screen
   (no footsteps unless the character walks, ambience fits the place, no tone over a silent text
@@ -173,5 +180,12 @@ Next:
 - Storyboard QC for universe boards (2026-10-15, Phase 5): `node studio/scripts/board-check.mjs <video>`
   (coverage + staging: pasted-on characters, framing variety, horizon, foreground, screen direction)
   → storyboard-check.json; status.mjs blocks storyboard approval while it has errors.
+- Story-video fast path (2026-10-16, "Gold in the Backyard", 101 s, final): story-first universe boards (every
+  beat a scene, words as overlays) written as code with `studio/scripts/lib/board-kit.mjs`; held props at hands
+  measured with `studio/scripts/hands.mjs`; `emerge` enter preset; `noxverse/prop`, `evidence-board`,
+  `social-post` components; cast Alex · Victor · Mira; one-beat-at-a-time 432p review clips
+  (`studio/scripts/render-beats.mjs`); a pre-hook in `<video>/prehook/` joined by `studio/scripts/master.mjs`
+  → `<video>/master/` for music, SFX, captions and the final. fit-timing now also retimes rig acting beats and
+  lights. Guide: `.claude/skills/storyboard/references/board-kit.md`.
 - Python lives in `.venv/` (edge-tts for the free voice). Paid tools (ElevenLabs) run only
   after the user asks or approves in chat — never by default.

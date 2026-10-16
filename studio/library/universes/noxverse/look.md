@@ -69,6 +69,27 @@ Low angle for threat (headlights, a figure), high angle when he is small and alo
 0.2–0.3 only in tense moments. HUDs (score bar, call bar) are `fixed`. Test:
 `demo/camera-views/`; turnaround and walk cycle: `characters/nox/views.png`.
 
+## Story scenes (2026-10-16, "Gold in the Backyard" — the user's preferred style for stories)
+
+- **Act it out, don't explain it.** Every beat is a scene with characters; cream cards are a last resort. The
+  script's on-screen words ride on the scenes (gold/pink titles, mono labels on a panel, stamps, call bars,
+  phone posts, the evidence board). Fast path and recipes: `.claude/skills/storyboard/references/board-kit.md`.
+- **Cast:** Nox (lead; plays investigators, never named unless the script names him), Alex (cream cap,
+  burgundy hoodie), Victor (collector — tan cap, olive jacket), Mira (curator, she/her — plum cap, indigo
+  hoodie). New side roles get a named character on the rig.
+- **Story sets (AI, graded):** backyard-night, collector-study, museum-office, penthouse-night,
+  investigator-office (cork board + desk; doubles as the interrogation room) — plus the older coast, motel,
+  prairie, river and farm sets.
+- **Story props (code-drawn, `scenes/`):** chest-open / chest-closed (same canvas — crossfade to open) + hole-lip,
+  gold-coin (the one coin with the scratch), cash-bundle, paper-doc, catalogue-open, phone / phone-coin,
+  magnifier, soldier-photo, cupboard + cupboard-door-l/-r, jail-bars, plant-fg (interior foreground).
+- **Components for story beats:** `noxverse/evidence-board` (pins items on words, red string, rings),
+  `noxverse/social-post` (photo post + a comment that pops), `noxverse/prop` (an object on a desk),
+  `noxverse/call-bar` (who is on the phone).
+- **Signature moves:** the chest `emerge`s from its hole and bursts open on the word (flash + shake + gold
+  light switching on); a pre-hook flash-forward (prize → interrogation flash → behind bars) before the hook;
+  doors slamming shut on the last word of a beat; the evidence board filling shot by shot.
+
 ## Sound and voice
 
 - Music: `make-music.mjs --mood tense`, lift on the turn word, `--silence` before the cliffhanger sound, ticking clock under the vote.
